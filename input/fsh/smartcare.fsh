@@ -31,21 +31,17 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/nrc"
 
 * name 1..*
-
 * name.given 1..*
-* name.given ^slicing.discriminator.type = #exists
-* name.given ^slicing.discriminator.path = "value"
-* name.given ^slicing.rules = #open
-* name.given ^slicing.ordered = false
-* name.given ^slicing.description = "Slice based on the type of name."
-* name.given contains
-    firstName 1..1 and
-    middleName 0..1 MS
-
-* name.given[firstName].value 1..1
-* name.given[middleName].value 1..1
-* name.given[middleName].value ^definition =
-    "reason(s) why this should be supported."
-
 * name.family 1..1
 * name.use 1..1
+
+* gender 1..1
+* birthDate 1..1
+* birthDate.extension contains patient-birthTime named birthTime 0..1 MS
+* birthDate.extension[birthTime] ^definition =
+    "reason(s) why this should be supported."
+
+* extension contains BornInZambia named BIZ 1..1
+* extension contains IsEstimatedDateOfBirth named IsEstimatedDOB 0..1 MS
+* extension[ISEstimatedDOB] ^definition =
+    "reason(s) why this should be supported."
