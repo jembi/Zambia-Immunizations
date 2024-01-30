@@ -43,5 +43,5 @@ Description: "Is used to document demographics and other administrative informat
 
 * extension contains BornInZambia named BIZ 1..1
 * extension contains IsEstimatedDateOfBirth named IsEstimatedDOB 0..1 MS
-* extension[ISEstimatedDOB] ^definition =
+* extension[IsEstimatedDOB] ^definition =
     "reason(s) why this should be supported."

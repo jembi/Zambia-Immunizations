@@ -1,0 +1,11 @@
+/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender'
+/// name = 'AdministrativeSexToAdministrativeGender'
+/// title = 'Administrative Sex To Administrative Gender'
+/// status = 'active'
+
+uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias PatientProfile as source
+uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
+
+group makePatient(source pat, target patient : Patient) {
+     pat.gender as gender -> patient.gender = translate(gender, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender', 'code') "SetGender";
+}

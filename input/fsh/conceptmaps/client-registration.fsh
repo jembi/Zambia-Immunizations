@@ -22,4 +22,3 @@ Usage:        #definition
   * target = $SEX
   * insert ElementMap(male, M, equivalent)
   * insert ElementMap(female, F, equivalent)
-  * element[=].target[=].comment = "The source concept is more specific than the target"
