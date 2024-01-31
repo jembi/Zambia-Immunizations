@@ -1,0 +1,14 @@
+/*/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel'
+/// name = 'PropietaryEducationLevelToLOINCEducationLevel'
+/// description = 'Maps the Propietary Educational Level codes To LOINC Educational Level codes.'
+/// title = 'Propietary Educational Level To LOINC Educational Level'
+/// status = 'active'
+
+uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias PatientProfile as source
+uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias Patient as target
+
+group SetPatientEducationalLevel(source pat : PatientProfile, target patient : Patient) {
+     pat.extension:EduLevelAttained as eduLevelAttained -> patient as patty then {
+          //eduLevelAttained -> patty.code = translate(eduLevelAttained, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/PropietaryEducationLevelToLOINCEducationLevel', 'code') "SetEducationalLevel";
+     }
+}*/

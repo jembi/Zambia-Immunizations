@@ -5,8 +5,8 @@
 /// status = 'active'
 
 uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias PatientProfile as source
-uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
+uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias Patient as target
 
-group makePatient(source pat : PatientProfile, target patient : Patient) {
+group SetPatientGender(source pat : PatientProfile, target patient : Patient) {
      pat.gender as gender -> patient.gender = translate(gender, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender', 'code') "SetGender";
 }

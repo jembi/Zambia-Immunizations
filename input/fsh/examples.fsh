@@ -16,3 +16,5 @@ Description: "Is used to document demographics and other administrative informat
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
 * extension[BIZ].valueBoolean = true
 * extension[IsEstimatedDOB].valueBoolean = false
+* extension[EducationLevelAttained].valueCodeableConcept.coding.code = $LNC#LA42-7
+* extension[EducationLevelAttained].valueCodeableConcept.coding.system = "http://loinc.org"

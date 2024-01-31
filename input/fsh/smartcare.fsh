@@ -41,7 +41,14 @@ Description: "Is used to document demographics and other administrative informat
 * birthDate.extension[birthTime] ^definition =
     "reason(s) why this should be supported."
 
+* address.district 0..1 MS
+* address.district ^definition =
+    "reason(s) why this should be supported."
+
 * extension contains BornInZambia named BIZ 1..1
 * extension contains IsEstimatedDateOfBirth named IsEstimatedDOB 0..1 MS
 * extension[IsEstimatedDOB] ^definition =
+    "reason(s) why this should be supported."
+* extension contains EducationLevelAttained named EduLevelAttained 0..1 MS
+* extension[EduLevelAttained] ^definition =
     "reason(s) why this should be supported."
