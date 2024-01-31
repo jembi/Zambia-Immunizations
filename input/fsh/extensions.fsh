@@ -14,7 +14,7 @@ Description: "This is an extension to capture whether the patient's date of birt
 * value[x] only boolean
 * value[x] 1..
 * ^context[+].type = #element
-* ^context[=].expression = "Patient"
+* ^context[=].expression = "Patient.birthDate"
 
 Extension: EducationLevelAttained
 Id: education-level-attained
@@ -27,3 +27,12 @@ Description: "A list of education levels."
 * valueCodeableConcept.coding.code 1..1
 * ^context[0].type = #element
 * ^context[0].expression = "Patient"
+
+Extension: DateOfFirstMarriage
+Id: date-of-first-marriage
+Title: "Patient's Date of First Marriage"
+Description: "This is an extension to capture the date when the patient first got married."
+* value[x] only dateTime
+* value[x] 1..
+* ^context[+].type = #element
+* ^context[=].expression = "Patient.maritalStatus"
