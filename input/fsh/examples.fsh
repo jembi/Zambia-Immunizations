@@ -19,8 +19,6 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 * maritalStatus.extension[DateFirstMarried].valueDateTime = "2001-11-10T12:05:17+02:00"
 * extension[BIZ].valueBoolean = true
-* extension[EducationLevelAttained].valueCodeableConcept.coding.code = $LNC#LA42-7
-* extension[EducationLevelAttained].valueCodeableConcept.coding.system = "http://loinc.org"
 * link[+].other = Reference(SpouseRelatedPersonExample)
 * link[=].type = #seealso
 
@@ -35,3 +33,37 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
 * telecom[=][phone].value = "+27821234567"
+
+Instance: PatientEducationalLevelObservationExample
+InstanceOf: PatientEducationalLevelObservation
+Usage: #example
+Title: "Highest education level attained"
+Description: "A patient's highest education level attained"
+* status = #final
+* code = $LNC#LL5338-0
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueCodeableConcept = $LNC#LA42-7
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+
+Instance: TargetFacilityEncounterExample
+InstanceOf: TargetFacilityEncounter
+Usage: #example
+Title: "Target Facility Encounter" 
+Description: "Represents the current facility at which the patient is receiving health services."
+* status = #completed
+* class.coding.code = #AMB
+* class.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* subject = Reference(ImmunizationPatientExample)
+* actualPeriod.start = "2022-12-01"
+* actualPeriod.end = "2023-01-20"
+
+Instance: OrganizationExample
+InstanceOf: ServiceProvider
+Usage: #example
+Title: "Organization"
+Description: "Organization providing health related services."
+* name = "Some Health Facility"

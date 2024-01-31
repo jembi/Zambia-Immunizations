@@ -49,9 +49,6 @@ Description: "Is used to document demographics and other administrative informat
     "reason(s) why this should be supported."
 
 * extension contains BornInZambia named BIZ 1..1
-* extension contains EducationLevelAttained named EduLevelAttained 0..1 MS
-* extension[EduLevelAttained] ^definition =
-    "reason(s) why this should be supported."
 
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1
@@ -92,18 +89,68 @@ Description: "The husband or wife, considered in relation to the patient."
 * telecom[phone].system 1..1
 * telecom[phone].system = #phone
 
-Profile: EducationalLevelObservation
+Profile: PatientEducationalLevelObservation
 Parent: Observation
 Id: educational-level
-Title: "Patient's highest education level attained"
-Description: ""
+Title: "Highest education level attained"
+Description: "A patient's highest education level attained"
 * status 1..1
 * code 1..1
+* code = $LNC#LL5338-0
 * category 1..1
 * category.coding.code 1..1
 * category.coding.code = #social-history
 * category.coding.system 1..1
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
 * subject 1..1
-* focus 1..1
-* focus only Reference(SpouseRelatedPerson)
+* subject only Reference(ImmunizationPatient)
+* effectiveDateTime 0..1 MS
+* effectiveDateTime ^definition =
+  "reason(s) why this should be supported."
+* valueCodeableConcept from VSLOINCEducationLevelAttained (required)
+* valueCodeableConcept.coding.system 1..1
+* valueCodeableConcept.coding.code 1..1
+
+Profile: TargetFacilityEncounter
+Parent: Encounter
+Id: target-facility-encounter
+Title: "Target Facility Encounter" 
+Description: "Represents the current facility at which the patient is receiving health services."
+* status 1..1
+* class 1..1
+* class.coding.code = #AMB
+* subject 1..1
+* actualPeriod 1..1
+
+Profile: ServiceProvider
+Parent: Organization
+Id: organization
+Title: "Organization"
+Description: "Organization providing health related services."
+* name 1..1
+
+Profile: SpouseOccupationObservation
+Parent: Observation
+Id: spouse-occupation
+Title: "Occupation"
+Description: "Records the current occupation for an individual"
+* status 1..1
+* code 1..1
+* code = $SCT#447057006
+* category 1..1
+* category.coding.code 1..1
+* category.coding.code = #social-history
+* category.coding.system 1..1
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* subject 1..1
+* subject only Reference(ImmunizationPatient)
+* effectivePeriod 0..1 MS
+* effectivePeriod ^definition =
+  "reason(s) why this should be supported."
+* valueCodeableConcept from $2.16.840.1.114222.4.11.7901 (extensible)
+* valueCodeableConcept.coding.system 1..1
+* valueCodeableConcept.coding.code 1..1

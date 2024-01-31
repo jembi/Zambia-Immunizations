@@ -16,7 +16,7 @@ Description: "This is an extension to capture whether the patient's date of birt
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.birthDate"
 
-Extension: EducationLevelAttained
+/*Extension: EducationLevelAttained
 Id: education-level-attained
 Title: "Patient's highest education level attained"
 Description: "A list of education levels."
@@ -26,7 +26,7 @@ Description: "A list of education levels."
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.code 1..1
 * ^context[0].type = #element
-* ^context[0].expression = "Patient"
+* ^context[0].expression = "Patient"*/
 
 Extension: DateOfFirstMarriage
 Id: date-of-first-marriage

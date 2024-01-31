@@ -1,9 +1,9 @@
 Alias: $LNC = http://loinc.org
-
+Alias: $SCT = http://snomed.info/sct
 Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
-
 Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-propietary-education-level-attained
+Alias: $2.16.840.1.114222.4.11.7901 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901
 
 CodeSystem: CSPropietaryEducationLevelAttained
 Id: cs-propietary-education-level-attained
