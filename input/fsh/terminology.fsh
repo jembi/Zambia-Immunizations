@@ -34,7 +34,6 @@ Title: "Patient's highest education level attained (LOINC)"
 Description: "A list of LOINC education levels."
 * ^experimental = false
 * $LNC#LA35-1 "No schooling"
-* $LNC#LA42-7 "Graduate degree"
 * $LNC#LA30193-9 "More than high school"
 * $LNC#LA32469-1 "University undergraduate degree"
 * $LNC#LA32466-7 "Primary school education"
@@ -42,6 +41,7 @@ Description: "A list of LOINC education levels."
 * $LNC#LA37-7 "9-11 grades"
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
+* $LNC#LA12459-6 "Associate degree (e.g., AA, AS)"
 
 ValueSet: VSIndividualOccupation
 Id: vs-occupation

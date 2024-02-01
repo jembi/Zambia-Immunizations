@@ -40,8 +40,8 @@ Usage:        #definition
   * source = $PROPRIETARY_EDU_LEVEL
   * target = $LNC
   * insert ElementMap(CertificateGraduate, LA30193-9, equivalent)
-  * insert ElementMap(DegreeGraduate, LA42-7, equivalent)
-  * insert ElementMap(DiplomaGraduate, LA32469-1, equivalent)
+  * insert ElementMap(DegreeGraduate, LA32469-1, equivalent)
+  * insert ElementMap(DiplomaGraduate, LA12459-6, equivalent)
   * insert ElementMap(JuniorSecondary, LA36-9, equivalent)
   * insert ElementMap(MastersGraduate, LA12461-2, equivalent)
   * insert ElementMap(NoFormalEducation, LA35-1, equivalent)
@@ -53,8 +53,8 @@ Usage:        #definition
   * source = $LNC
   * target = $PROPRIETARY_EDU_LEVEL
   * insert ElementMap(LA30193-9, CertificateGraduate, equivalent)
-  * insert ElementMap(LA42-7, DegreeGraduate, equivalent)
-  * insert ElementMap(LA32469-1, DiplomaGraduate, equivalent)
+  * insert ElementMap(LA32469-1, DegreeGraduate, equivalent)
+  * insert ElementMap(LA12459-6, DiplomaGraduate, equivalent)
   * insert ElementMap(LA36-9, JuniorSecondary, equivalent)
   * insert ElementMap(LA12461-2, MastersGraduate, equivalent)
   * insert ElementMap(LA35-1, NoFormalEducation, equivalent)

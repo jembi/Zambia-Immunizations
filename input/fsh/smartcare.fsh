@@ -83,7 +83,7 @@ Description: "Is used to document demographics and other administrative informat
 //* maritalStatus.extension[DateFirstMarried] ^definition =
 //    "reason(s) why this should be supported."
 * link 1..*
-* link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson or PatientMotherRelatedPerson or PatientFatherRelatedPerson or RelativeRelatedPerson)
+* link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson or PatientMotherRelatedPerson or PatientFatherRelatedPerson or RelativeRelatedPerson or ChiefAtBirthRelatedPerson)
 * contact 0..* MS
 * contact ^definition =
     "reason(s) why this should be supported."
@@ -154,6 +154,8 @@ Id: spouse-relation-to-patient
 Title: "Spouse Relation to Patient"
 Description: "The husband or wife, considered in relation to the patient."
 * relationship from VSSpouseRelationCodes (required)
+* name.given 1..1
+* name.family 1..1
 
 Profile: GuardianRelatedPerson
 Parent: RelationToPatient
@@ -161,6 +163,8 @@ Id: guardian-relation-to-patient
 Title: "Guardian Relation to Patient"
 Description: "A guardian to the patient."
 * relationship = $SCT#394619001
+* name.given 1..1
+* name.family 1..1
 
 Profile: PatientEducationalLevelObservation
 Parent: GenericObservation
@@ -269,6 +273,8 @@ Id: mother-relation-to-patient
 Title: "Mother Relation to Patient"
 Description: "The patient's mother."
 * relationship = $PARENT_RELATIONSHIP_CODES#MTH
+* name.given 1..1
+* name.family 1..1
 
 Profile: PatientFatherRelatedPerson
 Parent: RelationToPatient
@@ -276,6 +282,7 @@ Id: father-relation-to-patient
 Title: "Father Relation to Patient"
 Description: "The patient's father."
 * relationship = $PARENT_RELATIONSHIP_CODES#FTH
+* name.given 1..1
 
 Profile: RelativeRelatedPerson
 Parent: RelationToPatient
@@ -283,3 +290,11 @@ Id: relative-relation-to-patient
 Title: "Relative Relation to Patient"
 Description: "The patient's relative."
 * relationship = $SCT#125677006
+
+Profile: ChiefAtBirthRelatedPerson
+Parent: RelationToPatient
+Id: chief-at-birth-relation-to-patient
+Title: "Chief at Birth"
+Description: "Patient'a chief at birth."
+* relationship = $SCT#303119007
+* name.family 1..1
