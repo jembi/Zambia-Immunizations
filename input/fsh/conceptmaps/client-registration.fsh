@@ -23,21 +23,21 @@ Usage:        #definition
   * insert ElementMap(male, M, equivalent)
   * insert ElementMap(female, F, equivalent)
 
-Instance:     PropietaryEducationLevelToLOINCEducationLevel
+Instance:     ProprietaryEducationLevelToLOINCEducationLevel
 InstanceOf:   ConceptMap
-Title:     "Propietary Education Level to LOINC Education Level"
-Description:  "Mapping to and from Propietary Education Level to LOINC Education Level."
+Title:     "Proprietary Education Level to LOINC Education Level"
+Description:  "Mapping to and from Proprietary Education Level to LOINC Education Level."
 Usage:        #definition
 
-* name = "PropietaryEducationLevelToLOINCEducationLevel"
-* description = "Mapping to and from Propietary Education Level to LOINC Education Level."
-* title = "ConceptMap to and From propietary education level to LOINC education Level"
+* name = "ProprietaryEducationLevelToLOINCEducationLevel"
+* description = "Mapping to and from Proprietary Education Level to LOINC Education Level."
+* title = "ConceptMap to and From proprietary education level to LOINC education Level"
 * status = #active
 * experimental = false
 * date = "2024-01-31"
 
 * group[+]
-  * source = $PROPRIETARY_EDU_LEVEL
+  * source = $PROPRrietary_EDU_LEVEL
   * target = $LNC
   * insert ElementMap(CertificateGraduate, LA30193-9, equivalent)
   * insert ElementMap(DegreeGraduate, LA32469-1, equivalent)
@@ -51,7 +51,7 @@ Usage:        #definition
 
 * group[+]
   * source = $LNC
-  * target = $PROPRIETARY_EDU_LEVEL
+  * target = $PROPRrietary_EDU_LEVEL
   * insert ElementMap(LA30193-9, CertificateGraduate, equivalent)
   * insert ElementMap(LA32469-1, DegreeGraduate, equivalent)
   * insert ElementMap(LA12459-6, DiplomaGraduate, equivalent)

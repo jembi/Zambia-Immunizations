@@ -2,13 +2,13 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
-Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-propietary-education-level-attained
+Alias: $PROPRrietary_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
-CodeSystem: CSPropietaryEducationLevelAttained
-Id: cs-propietary-education-level-attained
-Title: "Patient's highest education level attained (Propietary)"
-Description: "A list of propietary education levels."
+CodeSystem: CSProprietaryEducationLevelAttained
+Id: cs-proprietary-education-level-attained
+Title: "Patient's highest education level attained (Proprietary)"
+Description: "A list of proprietary education levels."
 * ^experimental = false
 * ^caseSensitive = true
 * #CertificateGraduate "Certificate Graduate" "The description"
@@ -21,12 +21,12 @@ Description: "A list of propietary education levels."
 * #Primary "Primary" "The description"
 * #SeniorSecondary "Senior Secondary" "The description"
 
-ValueSet: VSPropietaryEducationLevelAttained
-Id: vs-propietary-education-level-attained
-Title: "Patient's highest education level attained (Propietary)"
-Description: "A list of propietary education levels."
+ValueSet: VSProprietaryEducationLevelAttained
+Id: vs-proprietary-education-level-attained
+Title: "Patient's highest education level attained (Proprietary)"
+Description: "A list of proprietary education levels."
 * ^experimental = false
-* include codes from system CSPropietaryEducationLevelAttained
+* include codes from system CSProprietaryEducationLevelAttained
 
 ValueSet: VSLOINCEducationLevelAttained
 Id: vs-loinc-education-level-attained
