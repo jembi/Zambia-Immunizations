@@ -3,14 +3,14 @@ InstanceOf: ImmunizationPatient
 Usage: #example
 Title: "Immunization Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
-* identifier[NUPIN][+].value = "12-999-22-2338"
-* identifier[NUPIN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/nupin"
-* identifier[NRC][+].value = "12-999-22-2338"
-* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/nrc"
-* name[+].use = #official
-* name[=].family = "Smith"
-* name[=].given[+] = "Jane"
-* name[=].given[+] = "Maria"
+* identifier[NUPIN][+].value = "1001-XXGB0-12345-5"
+* identifier[NUPIN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin"
+* identifier[NRC][+].value = "999999/99/9"
+* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
+* name[+][official].use = #official
+* name[=][official].family = "Smith"
+* name[=][official].given[+] = "Jane"
+* name[=][official].given[+] = "Maria"
 * gender = #female
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
