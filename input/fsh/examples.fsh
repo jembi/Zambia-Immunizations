@@ -48,8 +48,8 @@ Description: "A patient's highest education level attained"
 * code = $LNC#LL5338-0
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
-* valueCodeableConcept = $LNC#LA42-7
-* valueCodeableConcept.text = "Graduate degree"
+* valueCodeableConcept = $LNC#LA32469-1
+* valueCodeableConcept.text = "University undergraduate degree"
 * category.coding.code = #social-history
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
