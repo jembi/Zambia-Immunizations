@@ -24,6 +24,7 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion].valueCodeableConcept.coding.code = #1013
 * extension[religion].valueCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
 * extension[religion].valueCodeableConcept.text = "Christian (non-Catholic, non-specific)"
+* managingOrganization = Reference(OrganizationExample)
 
 Instance: SpouseRelatedPersonExample
 InstanceOf: SpouseRelatedPerson

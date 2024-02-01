@@ -97,6 +97,10 @@ Description: "Is used to document demographics and other administrative informat
 * contact.name.family 0..1 MS
 * contact.name.family ^definition =
     "reason(s) why this should be supported."
+* managingOrganization 0..1 MS
+* managingOrganization ^definition =
+    "reason(s) why this should be supported."
+* managingOrganization only Reference(ServiceProvider)
 
 Profile: RelationToPatient
 Parent: RelatedPerson
