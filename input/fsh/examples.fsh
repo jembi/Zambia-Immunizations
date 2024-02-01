@@ -17,7 +17,7 @@ Description: "Is used to document demographics and other administrative informat
 * birthDate.extension[IsEstimatedDOB].valueBoolean = false
 * maritalStatus.coding.code = #M
 * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-* maritalStatus.extension[DateFirstMarried].valueDateTime = "2001-11-10T12:05:17+02:00"
+//* maritalStatus.extension[DateFirstMarried].valueDateTime = "2001-11-10T12:05:17+02:00"
 * extension[BIZ].valueBoolean = true
 * link[+].other = Reference(SpouseRelatedPersonExample)
 * link[=].type = #seealso
@@ -33,6 +33,7 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
 * telecom[=][phone].value = "+27821234567"
+* relationship = $SCT#127850001
 
 Instance: PatientEducationalLevelObservationExample
 InstanceOf: PatientEducationalLevelObservation
@@ -44,6 +45,7 @@ Description: "A patient's highest education level attained"
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
 * valueCodeableConcept = $LNC#LA42-7
+* valueCodeableConcept.text = "Graduate degree"
 * category.coding.code = #social-history
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)

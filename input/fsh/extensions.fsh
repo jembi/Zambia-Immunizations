@@ -28,11 +28,11 @@ Description: "A list of education levels."
 * ^context[0].type = #element
 * ^context[0].expression = "Patient"*/
 
-Extension: DateOfFirstMarriage
+/*Extension: DateOfFirstMarriage
 Id: date-of-first-marriage
 Title: "Patient's Date of First Marriage"
 Description: "This is an extension to capture the date when the patient first got married."
 * value[x] only dateTime
 * value[x] 1..
 * ^context[+].type = #element
-* ^context[=].expression = "Patient.maritalStatus"
+* ^context[=].expression = "Patient.maritalStatus"*/

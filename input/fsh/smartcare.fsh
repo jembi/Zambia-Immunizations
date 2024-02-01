@@ -56,19 +56,22 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.system 1..1
 * maritalStatus ^definition =
     "reason(s) why this should be supported."
-* maritalStatus.extension contains DateOfFirstMarriage named DateFirstMarried 0..1 MS
-* maritalStatus.extension[DateFirstMarried] ^definition =
-    "reason(s) why this should be supported."
+//* maritalStatus.extension contains DateOfFirstMarriage named DateFirstMarried 0..1 MS
+//* maritalStatus.extension[DateFirstMarried] ^definition =
+//    "reason(s) why this should be supported."
 * link 1..*
 * link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson)
 
-Profile: SpouseRelatedPerson
+Profile: RelationToPatient
 Parent: RelatedPerson
-Id: spouse-relation-to-patient
-Title: "Spouse Relation to Patient"
-Description: "The husband or wife, considered in relation to the patient."
+Id: relation-to-patient
+Title: "Generic Relation to Patient"
+Description: "This profile acts as a base profile from which more specific RelatedPerson profiles can be derived."
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
+* relationship 1..1
+* relationship.coding.code 1..1
+* relationship.coding.system 1..1
 * name 0..* MS
 * name ^definition =
     "reason(s) why this should be supported."
@@ -95,29 +98,30 @@ Description: "The husband or wife, considered in relation to the patient."
 * telecom[phone].system 1..1
 * telecom[phone].system = #phone
 
+Profile: SpouseRelatedPerson
+Parent: RelationToPatient
+Id: spouse-relation-to-patient
+Title: "Spouse Relation to Patient"
+Description: "The husband or wife, considered in relation to the patient."
+* relationship from VSSpouseRelationCodes (required)
+
+Profile: GuardianRelatedPerson
+Parent: RelationToPatient
+Id: guardian-relation-to-patient
+Title: "Guardian Relation to Patient"
+Description: "A guardian to the patient."
+* relationship = $SCT#394619001
+
 Profile: PatientEducationalLevelObservation
-Parent: Observation
+Parent: GenericObservation
 Id: patient-educational-level
 Title: "Highest education level attained"
 Description: "A patient's highest education level attained"
-* status 1..1
-* code 1..1
 * code = $LNC#LL5338-0
-* category 1..1
-* category.coding.code 1..1
-* category.coding.code = #social-history
-* category.coding.system 1..1
-* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
-* encounter 1..1
-* encounter only Reference(TargetFacilityEncounter)
-* subject 1..1
-* subject only Reference(ImmunizationPatient)
 * effectiveDateTime 0..1 MS
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept from VSLOINCEducationLevelAttained (required)
-* valueCodeableConcept.coding.system 1..1
-* valueCodeableConcept.coding.code 1..1
 
 Profile: TargetFacilityEncounter
 Parent: Encounter
@@ -137,11 +141,11 @@ Title: "Organization"
 Description: "Organization providing health related services."
 * name 1..1
 
-Profile: GenericOccupationObservation
+Profile: GenericObservation
 Parent: Observation
-Id: generic-occupation
-Title: "Generic Occupation Profile"
-Description: "Records the current occupation for an individual"
+Id: generic-observation-profile
+Title: "Generic Observation Profile"
+Description: "This profile acts as a base profile from which more specific observation profiles can be derived."
 * status 1..1
 * code 1..1
 * category 1..1
@@ -153,36 +157,47 @@ Description: "Records the current occupation for an individual"
 * encounter only Reference(TargetFacilityEncounter)
 * subject 1..1
 * subject only Reference(ImmunizationPatient)
-* effectivePeriod 0..1 MS
-* effectivePeriod ^definition =
-  "reason(s) why this should be supported."
 * valueCodeableConcept only CodeableConcept
-* valueCodeableConcept from VSIndividualOccupationCodeSystem (extensible)
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.code 1..1
-
-Profile: GuardianRelatedPerson
-Parent: RelatedPerson
-Id: guardian-relation-to-patient
-Title: "Guardian Relation to Patient"
-Description: "The husband or wife, considered in relation to the patient."
-* patient 1..1
-* patient only Reference(ImmunizationPatient)
-* name 0..* MS
-* name ^definition =
-    "reason(s) why this should be supported."
-* name.given 0..1 MS
-* name.given ^definition =
-    "reason(s) why this should be supported."
-* name.family 0..1 MS
-* name.family ^definition =
-    "reason(s) why this should be supported."
-* name.use 1..1
+* valueCodeableConcept.text 1..1
+* performer 0..*
+* performer ^definition =
+  "reason(s) why this should be supported."
 
 Profile: SpouseOccupationObservation
-Parent: GenericOccupationObservation
+Parent: GenericObservation
 Id: spouse-occupation
 Title: "Spouse Occupation"
 Description: "Records the current occupation for the spouse"
 * code = $SCT#447057006
-* valueCodeableConcept.text 1..1
+* effectivePeriod 0..1 MS
+* effectivePeriod ^definition =
+  "reason(s) why this should be supported."
+* valueCodeableConcept from VSIndividualOccupation (extensible)
+
+Profile: DatePatientFirstMarriedObservation
+Parent: GenericObservation
+Id: date-patient-first-married
+Title: "Patient's Date of First Marriage"
+Description: "Records the date when the patient was first married"
+* status 1..1
+* code 1..1
+* code = $SCT#365581002
+* effectiveDateTime 0..1 MS
+* effectiveDateTime ^definition =
+  "reason(s) why this should be supported."
+* category 1..1
+* category.coding.code 1..1
+* category.coding.code = #social-history
+* category.coding.system 1..1
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* subject 1..1
+* subject only Reference(ImmunizationPatient)
+* performer 0..*
+* performer ^definition =
+  "reason(s) why this should be supported."
+* valueDateTime 1..1
+* valueDateTime only dateTime

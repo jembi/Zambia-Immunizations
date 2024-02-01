@@ -42,10 +42,18 @@ Description: "A list of LOINC education levels."
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
 
-ValueSet: VSIndividualOccupationCodeSystem
+ValueSet: VSIndividualOccupation
 Id: vs-occupation
 Title: "Occupation"
 Description: "Codes for classifying an individual's occupation."
 * ^experimental = false
 * include codes from system $SCT
     where concept descendent-of #14679004
+
+ValueSet: VSSpouseRelationCodes
+Id: vs-spouse-relation-type
+Title: "Spouse Relation Types"
+Description: "Codes for classifying the type of spouse."
+* ^experimental = false
+* include codes from system $SCT
+    where concept descendent-of #127848009
