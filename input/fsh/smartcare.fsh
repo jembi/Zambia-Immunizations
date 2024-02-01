@@ -60,21 +60,27 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.extension[DateFirstMarried] ^definition =
     "reason(s) why this should be supported."
 * link 1..*
-* link.other only Reference(SpouseRelatedPerson)
+* link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson)
 
 Profile: SpouseRelatedPerson
 Parent: RelatedPerson
-Id: spouse
-Title: "Spouse"
+Id: spouse-relation-to-patient
+Title: "Spouse Relation to Patient"
 Description: "The husband or wife, considered in relation to the patient."
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
-* name 1..*
-* name.given 1..1
-* name.family 1..1
+* name 0..* MS
+* name ^definition =
+    "reason(s) why this should be supported."
+* name.given 0..1 MS
+* name.given ^definition =
+    "reason(s) why this should be supported."
+* name.family 0..1 MS
+* name.family ^definition =
+    "reason(s) why this should be supported."
 * name.use 1..1
 
-* telecom 1..*
+* telecom 0..*
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
 * telecom ^slicing.rules = #open
@@ -91,7 +97,7 @@ Description: "The husband or wife, considered in relation to the patient."
 
 Profile: PatientEducationalLevelObservation
 Parent: Observation
-Id: educational-level
+Id: patient-educational-level
 Title: "Highest education level attained"
 Description: "A patient's highest education level attained"
 * status 1..1
@@ -131,14 +137,13 @@ Title: "Organization"
 Description: "Organization providing health related services."
 * name 1..1
 
-Profile: SpouseOccupationObservation
+Profile: GenericOccupationObservation
 Parent: Observation
-Id: spouse-occupation
-Title: "Occupation"
+Id: generic-occupation
+Title: "Generic Occupation Profile"
 Description: "Records the current occupation for an individual"
 * status 1..1
 * code 1..1
-* code = $SCT#447057006
 * category 1..1
 * category.coding.code 1..1
 * category.coding.code = #social-history
@@ -151,6 +156,33 @@ Description: "Records the current occupation for an individual"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
-* valueCodeableConcept from $2.16.840.1.114222.4.11.7901 (extensible)
+* valueCodeableConcept only CodeableConcept
+* valueCodeableConcept from VSIndividualOccupationCodeSystem (extensible)
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.code 1..1
+
+Profile: GuardianRelatedPerson
+Parent: RelatedPerson
+Id: guardian-relation-to-patient
+Title: "Guardian Relation to Patient"
+Description: "The husband or wife, considered in relation to the patient."
+* patient 1..1
+* patient only Reference(ImmunizationPatient)
+* name 0..* MS
+* name ^definition =
+    "reason(s) why this should be supported."
+* name.given 0..1 MS
+* name.given ^definition =
+    "reason(s) why this should be supported."
+* name.family 0..1 MS
+* name.family ^definition =
+    "reason(s) why this should be supported."
+* name.use 1..1
+
+Profile: SpouseOccupationObservation
+Parent: GenericOccupationObservation
+Id: spouse-occupation
+Title: "Spouse Occupation"
+Description: "Records the current occupation for the spouse"
+* code = $SCT#447057006
+* valueCodeableConcept.text 1..1

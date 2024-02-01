@@ -3,7 +3,6 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
 Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-propietary-education-level-attained
-Alias: $2.16.840.1.114222.4.11.7901 = http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901
 
 CodeSystem: CSPropietaryEducationLevelAttained
 Id: cs-propietary-education-level-attained
@@ -42,3 +41,11 @@ Description: "A list of LOINC education levels."
 * $LNC#LA37-7 "9-11 grades"
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
+
+ValueSet: VSIndividualOccupationCodeSystem
+Id: vs-occupation
+Title: "Occupation"
+Description: "Codes for classifying an individual's occupation."
+* ^experimental = false
+* include codes from system $SCT
+    where concept descendent-of #14679004
