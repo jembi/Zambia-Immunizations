@@ -21,6 +21,9 @@ Description: "Is used to document demographics and other administrative informat
 * extension[bornInZambia].valueBoolean = true
 * link[+].other = Reference(SpouseRelatedPersonExample)
 * link[=].type = #seealso
+* extension[religion].valueCodeableConcept.coding.code = #1013
+* extension[religion].valueCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
+* extension[religion].valueCodeableConcept.text = "Christian (non-Catholic, non-specific)"
 
 Instance: SpouseRelatedPersonExample
 InstanceOf: SpouseRelatedPerson
@@ -68,7 +71,12 @@ InstanceOf: ServiceProvider
 Usage: #example
 Title: "Organization"
 Description: "Organization providing health related services."
-* name = "Some Health Facility"
+* identifier[XX].value = "facility-1"
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/organization"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Organization identifier"
+* name = "Facility one"
 
 Instance: ChiefAtBirthRelatedPersonExample
 InstanceOf: ChiefAtBirthRelatedPerson

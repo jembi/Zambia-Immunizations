@@ -72,6 +72,10 @@ Description: "Is used to document demographics and other administrative informat
     "reason(s) why this should be supported."
 
 * extension contains BornInZambia named bornInZambia 1..1
+* extension contains patient-religion named religion 0..1 MS
+* extension[religion] ^definition =
+    "reason(s) why this should be supported."
+* extension[religion].valueCodeableConcept.text 1..1
 
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1
@@ -195,6 +199,21 @@ Parent: Organization
 Id: organization
 Title: "Organization"
 Description: "Organization providing health related services."
+* identifier 0..*
+* identifier ^definition =
+  "reason(s) why this should be supported."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    XX 1..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/organization"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Organization identifier"
 * name 1..1
 
 Profile: GenericObservation
