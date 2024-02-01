@@ -71,7 +71,7 @@ Description: "Is used to document demographics and other administrative informat
 * address.district ^definition =
     "reason(s) why this should be supported."
 
-* extension contains BornInZambia named BIZ 1..1
+* extension contains BornInZambia named bornInZambia 1..1
 
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1

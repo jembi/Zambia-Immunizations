@@ -18,7 +18,7 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.code = #M
 * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 //* maritalStatus.extension[DateFirstMarried].valueDateTime = "2001-11-10T12:05:17+02:00"
-* extension[BIZ].valueBoolean = true
+* extension[bornInZambia].valueBoolean = true
 * link[+].other = Reference(SpouseRelatedPersonExample)
 * link[=].type = #seealso
 
