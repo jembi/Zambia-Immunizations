@@ -58,3 +58,39 @@ Description: "Codes for classifying the type of spouse."
 * ^experimental = false
 * include codes from system $SCT
     where concept descendent-of #127848009
+
+CodeSystem: CSHomeLanguage
+Id: cs-home-language
+Title: "Patient's Home Language"
+Description: "A list of languages."
+* ^experimental = false
+* ^caseSensitive = true
+* #Ambo "Ambo"
+* #Aushi "Aushi"
+* #Bemba "Bemba"
+* #Bisa "Bisa"
+* #Chewa "Chewa"
+* #Chikunda "Chikunda"
+* #Chokwe "Chokwe"
+* #Cishinga "Cishinga"
+* #English "English"
+* #Gova "Gova"
+* #Ila "Ila"
+* #Iwa "Iwa"
+* #Kabende "Kabende"
+* #Kaonde "Kaonde"
+* #Lamba "Lamba"
+* #Lenje "Lenje"
+* #Lozi "Lozi"
+* #Luvale "Luvale"
+* #Namwanga "Namwanga"
+* #Ngoni "Ngoni"
+* #Soli "Soli"
+* #Tonga "Tonga"
+
+ValueSet: VSHomeLanguage
+Id: vs-home-language
+Title: "Patient's Home Language"
+Description: "A list of languages."
+* ^experimental = false
+* include codes from system CSHomeLanguage

@@ -306,3 +306,15 @@ Description: "Patient'a chief at birth."
 * relationship 1..1
 * relationship = $SCT#303119007
 * name.family 1..1
+
+Profile: PatientHomeLanguageObservation
+Parent: GenericObservation
+Id: patient-home-language
+Title: "Patient's Home Language"
+Description: "Records the home language for the patient"
+* code = $SCT#224076006
+* effectiveDateTime 0..1 MS
+* effectiveDateTime ^definition =
+  "reason(s) why this should be supported."
+* valueCodeableConcept 1..1
+* valueCodeableConcept from VSHomeLanguage (extensible)

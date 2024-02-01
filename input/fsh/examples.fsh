@@ -196,3 +196,20 @@ Description: "Records the current occupation for the spouse"
 * performer = Reference(OrganizationExample)
 * valueCodeableConcept = $SCT#11205001
 * valueCodeableConcept.text = "Judge"
+
+Instance: PatientHomeLanguageObservationExample
+InstanceOf: PatientHomeLanguageObservation
+Usage: #example
+Title: "Patient's Home Language"
+Description: "Records the home language for the patient"
+* status = #final
+* code = $SCT#224076006
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+* valueCodeableConcept.coding.code = #Chokwe
+* valueCodeableConcept.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"
+* valueCodeableConcept.text = "Chokwe"
