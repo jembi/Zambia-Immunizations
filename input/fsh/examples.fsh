@@ -69,3 +69,130 @@ Usage: #example
 Title: "Organization"
 Description: "Organization providing health related services."
 * name = "Some Health Facility"
+
+Instance: ChiefAtBirthRelatedPersonExample
+InstanceOf: ChiefAtBirthRelatedPerson
+Usage: #example
+Title: "Chief at Birth"
+Description: "Patient'a chief at birth."
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].family = "Jones"
+* relationship = $SCT#303119007
+
+Instance: DatePatientFirstMarriedObservationExample
+InstanceOf: DatePatientFirstMarriedObservation
+Usage: #example
+Title: "Patient's Date of First Marriage"
+Description: "Records the date when the patient was first married"
+* status = #final
+* code = $SCT#365581002
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueDateTime = "1983-05-22T16:40:17+02:00"
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+
+Instance: PatientFatherRelatedPersonExample
+InstanceOf: PatientFatherRelatedPerson
+Usage: #example
+Title: "Father Relation to Patient"
+Description: "The patient's father."
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Mike"
+* relationship = $PARENT_RELATIONSHIP_CODES#FTH
+
+Instance: GenericObservationExample
+InstanceOf: GenericObservation
+Usage: #example
+Title: "Generic Social History Observation Profile"
+Description: "This profile acts as a base profile from which more specific social history observation profiles can be derived."
+* status = #final
+* code = $SCT#160476009
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+
+Instance: GuardianOccupationObservationExample
+InstanceOf: GuardianOccupationObservation
+Usage: #example
+Title: "Guardian Occupation"
+Description: "Records the current occupation for the guardian"
+* status = #final
+* code = $LNC#11341-5
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+* valueCodeableConcept = $SCT#79859009
+* valueCodeableConcept.text = "Computer programmer"
+
+Instance: GuardianRelatedPersonExample
+InstanceOf: GuardianRelatedPerson
+Usage: #example
+Title: "Guardian Relation to Patient"
+Description: "A guardian to the patient."
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Mike"
+* name[=].family = "Smith"
+* relationship = $SCT#394619001
+
+Instance: PatientMotherRelatedPersonExample
+InstanceOf: PatientMotherRelatedPerson
+Usage: #example
+Title: "Mother Relation to Patient"
+Description: "The patient's mother."
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Olivia"
+* name[=].family = "Smith"
+* relationship = $PARENT_RELATIONSHIP_CODES#MTH
+
+Instance: RelationToPatientExample
+InstanceOf: RelationToPatient
+Usage: #example
+Title: "Generic Relation to Patient"
+Description: "This profile acts as a base profile from which more specific RelatedPerson profiles can be derived."
+* identifier[NRC][+].value = "999999/99/9"
+* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/relative-nrc"
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Olivia"
+* name[=].family = "Smith"
+* relationship = $PARENT_RELATIONSHIP_CODES#MTH
+
+Instance: RelativeRelatedPersonExample
+InstanceOf: RelativeRelatedPerson
+Usage: #example
+Title: "Relative Relation to Patient"
+Description: "The patient's relative."
+* patient = Reference(ImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Olivia"
+* name[=].family = "Smith"
+* relationship = $SCT#125677006
+
+Instance: SpouseOccupationObservationExample
+InstanceOf: SpouseOccupationObservation
+Usage: #example
+Title: "Spouse Occupation"
+Description: "Records the current occupation for the spouse"
+* status = #final
+* code = $SCT#447057006
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectivePeriod.start = "2017-03-01"
+* category.coding.code = #social-history
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject = Reference (ImmunizationPatientExample)
+* performer = Reference(OrganizationExample)
+* valueCodeableConcept = $SCT#11205001
+* valueCodeableConcept.text = "Judge"

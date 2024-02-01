@@ -119,7 +119,6 @@ Description: "This profile acts as a base profile from which more specific Relat
 
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
-* relationship 1..1
 * relationship.coding.code 1..1
 * relationship.coding.system 1..1
 * name 0..* MS
@@ -153,6 +152,7 @@ Parent: RelationToPatient
 Id: spouse-relation-to-patient
 Title: "Spouse Relation to Patient"
 Description: "The husband or wife, considered in relation to the patient."
+* relationship 1..1
 * relationship from VSSpouseRelationCodes (required)
 * name.given 1..1
 * name.family 1..1
@@ -162,6 +162,7 @@ Parent: RelationToPatient
 Id: guardian-relation-to-patient
 Title: "Guardian Relation to Patient"
 Description: "A guardian to the patient."
+* relationship 1..1
 * relationship = $SCT#394619001
 * name.given 1..1
 * name.family 1..1
@@ -175,6 +176,7 @@ Description: "A patient's highest education level attained"
 * effectiveDateTime 0..1 MS
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
+* valueCodeableConcept 1..1
 * valueCodeableConcept from VSLOINCEducationLevelAttained (required)
 
 Profile: TargetFacilityEncounter
@@ -228,6 +230,7 @@ Description: "Records the current occupation for the spouse"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
+* valueCodeableConcept 1..1
 * valueCodeableConcept from VSIndividualOccupation (extensible)
 
 Profile: GuardianOccupationObservation
@@ -239,6 +242,7 @@ Description: "Records the current occupation for the guardian"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
+* valueCodeableConcept 1..1
 * valueCodeableConcept from VSIndividualOccupation (extensible)
 
 Profile: DatePatientFirstMarriedObservation
@@ -272,6 +276,7 @@ Parent: RelationToPatient
 Id: mother-relation-to-patient
 Title: "Mother Relation to Patient"
 Description: "The patient's mother."
+* relationship 1..1
 * relationship = $PARENT_RELATIONSHIP_CODES#MTH
 * name.given 1..1
 * name.family 1..1
@@ -281,6 +286,7 @@ Parent: RelationToPatient
 Id: father-relation-to-patient
 Title: "Father Relation to Patient"
 Description: "The patient's father."
+* relationship 1..1
 * relationship = $PARENT_RELATIONSHIP_CODES#FTH
 * name.given 1..1
 
@@ -289,6 +295,7 @@ Parent: RelationToPatient
 Id: relative-relation-to-patient
 Title: "Relative Relation to Patient"
 Description: "The patient's relative."
+* relationship 1..1
 * relationship = $SCT#125677006
 
 Profile: ChiefAtBirthRelatedPerson
@@ -296,5 +303,6 @@ Parent: RelationToPatient
 Id: chief-at-birth-relation-to-patient
 Title: "Chief at Birth"
 Description: "Patient'a chief at birth."
+* relationship 1..1
 * relationship = $SCT#303119007
 * name.family 1..1
