@@ -37,7 +37,7 @@ Usage:        #definition
 * date = "2024-01-31"
 
 * group[+]
-  * source = $PROPRrietary_EDU_LEVEL
+  * source = $PROPRIETARY_EDU_LEVEL
   * target = $LNC
   * insert ElementMap(CertificateGraduate, LA30193-9, equivalent)
   * insert ElementMap(DegreeGraduate, LA32469-1, equivalent)
@@ -51,7 +51,7 @@ Usage:        #definition
 
 * group[+]
   * source = $LNC
-  * target = $PROPRrietary_EDU_LEVEL
+  * target = $PROPRIETARY_EDU_LEVEL
   * insert ElementMap(LA30193-9, CertificateGraduate, equivalent)
   * insert ElementMap(LA32469-1, DegreeGraduate, equivalent)
   * insert ElementMap(LA12459-6, DiplomaGraduate, equivalent)

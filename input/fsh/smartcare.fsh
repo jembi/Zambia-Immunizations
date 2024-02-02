@@ -36,25 +36,23 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
 
 * name 1..*
-* name 1..*
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
 * name ^slicing.ordered = false
 * name ^slicing.description = "Slice based on the type of identifier."
 * name contains
-    official 1..1 and
+    otherName 1..1 and
     nickname 0..1 MS
 
-* name[official].given 1..*
-* name[official].family 1..1
-* name[official].use 1..1
-* name[official].use = #official
+* name[otherName].given 1..*
+* name[otherName].family 1..1
+* name[otherName].use 1..1
+* name[otherName].use from HumanNameCodes (required)
 
 * name[nickname] ^definition =
     "reason(s) why this should be supported."
 * name[nickname].given 1..*
-* name[nickname].family 1..1
 * name[nickname].use 1..1
 * name[nickname].use = #nickname
 
@@ -76,6 +74,9 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion] ^definition =
     "reason(s) why this should be supported."
 * extension[religion].valueCodeableConcept.text 1..1
+* extension[religion].valueCodeableConcept.coding 1..1
+* extension[religion].valueCodeableConcept.coding.system 1..1
+* extension[religion].valueCodeableConcept.coding.code 1..1
 
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1
@@ -83,9 +84,6 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.system 1..1
 * maritalStatus ^definition =
     "reason(s) why this should be supported."
-//* maritalStatus.extension contains DateOfFirstMarriage named DateFirstMarried 0..1 MS
-//* maritalStatus.extension[DateFirstMarried] ^definition =
-//    "reason(s) why this should be supported."
 * link 1..*
 * link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson or PatientMotherRelatedPerson or PatientFatherRelatedPerson or RelativeRelatedPerson or ChiefAtBirthRelatedPerson)
 * contact 0..* MS
@@ -127,6 +125,7 @@ Description: "This profile acts as a base profile from which more specific Relat
 
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
+* relationship.coding 1..1
 * relationship.coding.code 1..1
 * relationship.coding.system 1..1
 * name 0..* MS
@@ -185,6 +184,9 @@ Description: "A patient's highest education level attained"
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
+* valueCodeableConcept.coding 1..1
+* valueCodeableConcept.coding.code 1..1
+* valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept from VSLOINCEducationLevelAttained (required)
 
 Profile: TargetFacilityEncounter
@@ -194,31 +196,11 @@ Title: "Target Facility Encounter"
 Description: "Represents the current facility at which the patient is receiving health services."
 * status 1..1
 * class 1..1
+* class.coding 1..1
 * class.coding.code = #AMB
+* class.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * subject 1..1
 * actualPeriod 1..1
-
-Profile: ServiceProvider
-Parent: Organization
-Id: organization
-Title: "Organization"
-Description: "Organization providing health related services."
-* identifier 0..*
-* identifier ^definition =
-  "reason(s) why this should be supported."
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    XX 1..1
-* identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/organization"
-* identifier[XX].type.coding.code = #XX
-* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.text = "Organization identifier"
-* name 1..1
 
 Profile: GenericObservation
 Parent: Observation
@@ -228,6 +210,7 @@ Description: "This profile acts as a base profile from which more specific socia
 * status 1..1
 * code 1..1
 * category 1..1
+* category.coding 1..1
 * category.coding.code 1..1
 * category.coding.code = #social-history
 * category.coding.system 1..1
@@ -237,6 +220,7 @@ Description: "This profile acts as a base profile from which more specific socia
 * subject 1..1
 * subject only Reference(ImmunizationPatient)
 * valueCodeableConcept only CodeableConcept
+* valueCodeableConcept.coding 1..1
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.code 1..1
 * valueCodeableConcept.text 1..1
@@ -341,3 +325,94 @@ Description: "Records the home language for the patient"
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSHomeLanguage (extensible)
+
+Profile: MedicalInsurance
+Parent: Coverage
+Id: medical-insurance
+Title: "Insurance or Medical Plan"
+Description: "Insurance or medical plan details"
+* status 1..1
+* kind 1..1
+* kind = #insurance
+* beneficiary only Reference(ImmunizationPatient)
+* subscriberId 1..1
+* subscriberId.value 1..1
+* subscriberId.system 1..1
+* subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
+* policyHolder 1..1
+* policyHolder only Reference(MedicalInsuranceCompany)
+
+Profile: MedicalInsuranceCompany
+Parent: Organization
+Id: medical-insurance-company
+Title: "Medical Insurance Company"
+Description: "A company that provides insurance to its subscribers that may include healthcare related policies."
+* identifier 0..*
+* identifier ^definition =
+  "reason(s) why this should be supported."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    XX 0..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Medical insurance company identifier"
+* type 1..1
+* type.coding 1..1
+* type.coding.code 1..1
+* type.coding.system 1..1
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #ins
+* name 1..1
+
+Profile: ServiceProvider
+Parent: Organization
+Id: healthcare-service-provider
+Title: "Healthcare Service Provider"
+Description: "An organization that provides healthcare services."
+* identifier 0..*
+* identifier ^definition =
+  "reason(s) why this should be supported."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    XX 1..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/healthcare-service-provider"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Healthcare service provider identifier"
+* type 1..1
+* type.coding 1..1
+* type.coding.code 1..1
+* type.coding.system 1..1
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #prov
+* name 1..1
+
+Profile: Vaccines
+Parent: Immunization
+Id: Vaccines
+Title: "Vaccine Administration"
+Description: "Records the vaccine administered to the patient."
+* status 1..1
+* vaccineCode 1..1
+* vaccineCode.coding 1..1
+* vaccineCode.coding.code 1..1
+* vaccineCode.coding.system 1..1
+* vaccineCode from VSVaccines (extensible)
+* patient 1..1
+* patient only Reference(ImmunizationPatient)
+* occurrenceDateTime 1..1
+* occurrenceDateTime only dateTime
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* protocolApplied.doseNumber
