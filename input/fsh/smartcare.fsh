@@ -83,9 +83,6 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.system 1..1
 * maritalStatus ^definition =
     "reason(s) why this should be supported."
-//* maritalStatus.extension contains DateOfFirstMarriage named DateFirstMarried 0..1 MS
-//* maritalStatus.extension[DateFirstMarried] ^definition =
-//    "reason(s) why this should be supported."
 * link 1..*
 * link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson or PatientMotherRelatedPerson or PatientFatherRelatedPerson or RelativeRelatedPerson or ChiefAtBirthRelatedPerson)
 * contact 0..* MS

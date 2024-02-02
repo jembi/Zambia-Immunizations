@@ -15,24 +15,3 @@ Description: "This is an extension to capture whether the patient's date of birt
 * value[x] 1..
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.birthDate"
-
-/*Extension: EducationLevelAttained
-Id: education-level-attained
-Title: "Patient's highest education level attained"
-Description: "A list of education levels."
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSLOINCEducationLevelAttained (required)
-* valueCodeableConcept.text = "Highest education level attained"
-* valueCodeableConcept.coding.system 1..1
-* valueCodeableConcept.coding.code 1..1
-* ^context[0].type = #element
-* ^context[0].expression = "Patient"*/
-
-/*Extension: DateOfFirstMarriage
-Id: date-of-first-marriage
-Title: "Patient's Date of First Marriage"
-Description: "This is an extension to capture the date when the patient first got married."
-* value[x] only dateTime
-* value[x] 1..
-* ^context[+].type = #element
-* ^context[=].expression = "Patient.maritalStatus"*/
