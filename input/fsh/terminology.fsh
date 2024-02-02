@@ -96,7 +96,7 @@ Description: "A list of languages."
 * ^experimental = false
 * include codes from system CSHomeLanguage
 
-ValueSet: CCVaccines
+ValueSet: VSVaccines
 Id: vs-vaccines
 Title: "Vaccine Codes"
 Description: "A List of Vaccine Codes Use In Zambia"

@@ -386,3 +386,19 @@ Description: "An organization that provides healthcare services."
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type.coding.code = #prov
 * name 1..1
+
+Profile: Vaccines
+Parent: Immunization
+Id: Vaccines
+Title: "Vaccine Administration"
+Description: "Records the vaccine administered to the patient."
+* status 1..1
+* vaccineCode 1..1
+* vaccineCode from VSVaccines (extensible)
+* patient 1..1
+* patient only Reference(ImmunizationPatient)
+* occurrenceDateTime 1..1
+* occurrenceDateTime only dateTime
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* protocolApplied.doseNumber

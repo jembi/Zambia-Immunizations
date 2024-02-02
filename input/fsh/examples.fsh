@@ -249,3 +249,15 @@ Description: "Insurance or medical plan details"
 * subscriberId.value = "504342245"
 * subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
 * policyHolder = Reference(MedicalInsuranceCompanyExample)
+
+Instance: VaccinesExample
+InstanceOf: Vaccines
+Usage: #example
+Title: "Vaccine Administration"
+Description: "Records the vaccine administered to the patient."
+* status = #completed
+* vaccineCode = $SCT#82622003
+* patient = Reference(ImmunizationPatientExample)
+* occurrenceDateTime = "2022-11-30"
+* encounter = Reference(TargetFacilityEncounterExample)
+* protocolApplied.doseNumber = "0"
