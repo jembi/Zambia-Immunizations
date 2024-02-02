@@ -198,28 +198,6 @@ Description: "Represents the current facility at which the patient is receiving 
 * subject 1..1
 * actualPeriod 1..1
 
-Profile: ServiceProvider
-Parent: Organization
-Id: organization
-Title: "Organization"
-Description: "Organization providing health related services."
-* identifier 0..*
-* identifier ^definition =
-  "reason(s) why this should be supported."
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    XX 1..1
-* identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/organization"
-* identifier[XX].type.coding.code = #XX
-* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.text = "Organization identifier"
-* name 1..1
-
 Profile: GenericObservation
 Parent: Observation
 Id: generic-social-hsitory-observation-profile
@@ -341,3 +319,73 @@ Description: "Records the home language for the patient"
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSHomeLanguage (extensible)
+
+Profile: MedicalInsurance
+Parent: Coverage
+Id: medical-insurance
+Title: "Insurance or Medical Plan"
+Description: "Insurance or medical plan details"
+* status 1..1
+* kind 1..1
+* kind = #insurance
+* beneficiary only Reference(ImmunizationPatient)
+* subscriberId 1..1
+* subscriberId.value 1..1
+* subscriberId.system 1..1
+* subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
+* policyHolder 1..1
+* policyHolder only Reference(MedicalInsuranceCompany)
+
+Profile: MedicalInsuranceCompany
+Parent: Organization
+Id: medical-insurance-company
+Title: "Medical Insurance Company"
+Description: "A company that provides insurance to its subscribers that may include healthcare related policies."
+* identifier 0..*
+* identifier ^definition =
+  "reason(s) why this should be supported."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    XX 0..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Medical insurance company identifier"
+* type 1..1
+* type.coding.code 1..1
+* type.coding.system 1..1
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #ins
+* name 1..1
+
+Profile: ServiceProvider
+Parent: Organization
+Id: healthcare-service-provider
+Title: "Healthcare Service Provider"
+Description: "An organization that provides healthcare services."
+* identifier 0..*
+* identifier ^definition =
+  "reason(s) why this should be supported."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    XX 1..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/healthcare-service-provider"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Healthcare service provider identifier"
+* type 1..1
+* type.coding.code 1..1
+* type.coding.system 1..1
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #prov
+* name 1..1

@@ -70,13 +70,15 @@ Description: "Represents the current facility at which the patient is receiving 
 Instance: OrganizationExample
 InstanceOf: ServiceProvider
 Usage: #example
-Title: "Organization"
-Description: "Organization providing health related services."
+Title: "Healthcare Service Provider"
+Description: "An organization that provides healthcare services."
 * identifier[XX].value = "facility-1"
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/organization"
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/healthcare-service-provider"
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.text = "Organization identifier"
+* identifier[XX].type.text = "Healthcare service provider identifier"
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #prov
 * name = "Facility one"
 
 Instance: ChiefAtBirthRelatedPersonExample
@@ -136,7 +138,7 @@ Description: "Records the current occupation for the guardian"
 * status = #final
 * code = $LNC#11341-5
 * encounter = Reference(TargetFacilityEncounterExample)
-* effectiveDateTime = "2022-11-30"
+* effectivePeriod.start = "2017-03-01"
 * category.coding.code = #social-history
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
@@ -222,3 +224,29 @@ Description: "Records the home language for the patient"
 * valueCodeableConcept.coding.code = #Chokwe
 * valueCodeableConcept.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"
 * valueCodeableConcept.text = "Chokwe"
+
+Instance: MedicalInsuranceCompanyExample
+InstanceOf: MedicalInsuranceCompany
+Usage: #example
+Title: "Medical Insurance Company"
+Description: "A company that provides insurance to its subscribers that may include healthcare related policies."
+* identifier[XX].value = "medical-insurance-company-1"
+* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[XX].type.text = "Medical insurance company identifier"
+* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
+* type.coding.code = #ins
+* name = "Medical Insurance Company 1"
+
+Instance: MedicalInsuranceExample
+InstanceOf: MedicalInsurance
+Usage: #example
+Title: "Insurance or Medical Plan"
+Description: "Insurance or medical plan details"
+* status = #active
+* kind = #insurance
+* beneficiary = Reference(ImmunizationPatientExample)
+* subscriberId.value = "504342245"
+* subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
+* policyHolder = Reference(MedicalInsuranceCompanyExample)
