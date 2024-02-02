@@ -7,10 +7,15 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NUPIN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin"
 * identifier[NRC][+].value = "999999/99/9"
 * identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
-* name[+][official].use = #official
-* name[=][official].family = "Smith"
-* name[=][official].given[+] = "Jane"
-* name[=][official].given[+] = "Maria"
+
+* name[+][otherName].use = #official
+* name[=][otherName].family = "Smith"
+* name[=][otherName].given[+] = "Jane"
+* name[=][otherName].given[+] = "Maria"
+
+* name[+][nickname].use = #nickname
+* name[=][nickname].given[+] = "Smitty"
+
 * gender = #female
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
@@ -178,7 +183,6 @@ Description: "This profile acts as a base profile from which more specific Relat
 * name[+].use = #official
 * name[=].given[+] = "Olivia"
 * name[=].family = "Smith"
-* relationship = $PARENT_RELATIONSHIP_CODES#MTH
 
 Instance: RelativeRelatedPersonExample
 InstanceOf: RelativeRelatedPerson

@@ -5,6 +5,7 @@ Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
 Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $ICD11 = http://id.who.int/icd11/mms
+Alias: $HumanName = http://hl7.org/fhir/name-use
 
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
@@ -145,3 +146,11 @@ Description: "A List of Vaccine Codes Use In Zambia"
 * $ICD11#J07AN01 "tuberculosis, live attenuated"
 * $SCT#82622003 "Vitamin A"
 * $ICD11#XM52P3 "ZyCov-D"
+
+ValueSet: HumanNameCodes
+Id: vs-human-name-codes
+Title: "HumanName Codes"
+Description: "A List of HumanName Codes Exlcuding Nickname"
+* ^experimental = false
+* include codes from system $HumanName
+* exclude $HumanName#nickname
