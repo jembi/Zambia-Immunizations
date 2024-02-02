@@ -1,5 +1,5 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/IG 
+Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://id.who.int/icd11/mms' could not be found, so the code cannot be validated)
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://id.who.int/icd11/mms
