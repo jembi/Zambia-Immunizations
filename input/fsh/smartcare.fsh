@@ -78,6 +78,9 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion].valueCodeableConcept.coding.system 1..1
 * extension[religion].valueCodeableConcept.coding.code 1..1
 
+* extension contains patient-structure-map named AdministrativeSexToAdministrativeGenderMap 1..1
+* extension[AdministrativeSexToAdministrativeGenderMap].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"
+
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1
 * maritalStatus.coding.code 1..1
@@ -204,7 +207,7 @@ Description: "Represents the current facility at which the patient is receiving 
 
 Profile: GenericObservation
 Parent: Observation
-Id: generic-social-hsitory-observation-profile
+Id: generic-social-history-observation-profile
 Title: "Generic Social History Observation Profile"
 Description: "This profile acts as a base profile from which more specific social history observation profiles can be derived."
 * status 1..1
