@@ -59,6 +59,7 @@ Description: "A patient's highest education level attained"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
+* extension[PropietaryEducationLevelToLOINCEducationLevel].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel"
 
 Instance: TargetFacilityEncounterExample
 InstanceOf: TargetFacilityEncounter

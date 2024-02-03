@@ -78,7 +78,7 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion].valueCodeableConcept.coding.system 1..1
 * extension[religion].valueCodeableConcept.coding.code 1..1
 
-* extension contains patient-structure-map named AdministrativeSexToAdministrativeGenderMap 1..1
+* extension contains structure-map named AdministrativeSexToAdministrativeGenderMap 1..1
 * extension[AdministrativeSexToAdministrativeGenderMap].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"
 
 * maritalStatus 0..1 MS
@@ -191,6 +191,8 @@ Description: "A patient's highest education level attained"
 * valueCodeableConcept.coding.code 1..1
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept from VSLOINCEducationLevelAttained (required)
+* extension contains structure-map named PropietaryEducationLevelToLOINCEducationLevel 1..1
+* extension[PropietaryEducationLevelToLOINCEducationLevel].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel"
 
 Profile: TargetFacilityEncounter
 Parent: Encounter

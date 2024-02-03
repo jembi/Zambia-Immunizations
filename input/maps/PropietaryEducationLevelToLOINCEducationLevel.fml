@@ -21,10 +21,8 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
     //    coding -> educationLevel.coding = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
     //} "SetEducationalLevelCode";
 
-     obs.value as srcCodeable, 
-        srcCodeable.coding as srcCoding -> 
-    observation.value as tgtCodeable, 
-        tgtCodeable.coding as tgtCoding,
-        tgtCoding = translate(srcCoding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') 
-        "SetPatientEducation";
+    obs.value as srcValue ->  observation.value as tgtValue,  tgtValue.coding as coding then {
+        srcValue.system as system -> coding.system = system "set vaccine code system";
+        srcValue.code as code -> coding.code = code "set vaccine code";
+    } "set vaccine";
 }
