@@ -1,14 +1,31 @@
-/*/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel'
+/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel'
 /// name = 'PropietaryEducationLevelToLOINCEducationLevel'
 /// description = 'Maps the Propietary Educational Level codes To LOINC Educational Level codes.'
 /// title = 'Propietary Educational Level To LOINC Educational Level'
 /// status = 'active'
 
-uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias PatientProfile as source
-uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient" alias Patient as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias srcObservation as source
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias tgtObservation as target
 
-group SetPatientEducationalLevel(source pat : PatientProfile, target patient : Patient) {
-     pat.extension:EduLevelAttained as eduLevelAttained -> patient as patty then {
-          //eduLevelAttained -> patty.code = translate(eduLevelAttained, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/PropietaryEducationLevelToLOINCEducationLevel', 'code') "SetEducationalLevel";
-     }
-}*/
+group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) {
+    /*obs.value -> observation.value = create('CodeableConcept') as value then {
+        obs.value -> value.coding = create('Coding') as coding then {
+            obs.value -> coding = translate(obs.value, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
+        } "SetEducationalLevelCoding";
+    } "SetEducationalLevelCode";
+    obs.value -> observation.value = obs.value  "SetPatientEducationalLevel";*/
+
+    //pat.value as coding -> observation.value = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
+
+    //obs.value.first() as coding -> observation.value as educationLevel then {
+    //    coding -> educationLevel.coding = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
+    //} "SetEducationalLevelCode";
+
+    /*obs.value first as valueCodeableConcept then {
+        valueCodeableConcept -> observation.value as educationalLevel then {
+            valueCodeableConcept -> valueCodeableConcept then mapCodingtoCodeableConcept(valueCodeableConcept) "set code";
+        } "set code";
+    } "set";*/
+
+    //obs.value : CodeableConcept -> observation.value;
+}

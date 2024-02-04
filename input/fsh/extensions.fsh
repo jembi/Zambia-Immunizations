@@ -15,3 +15,14 @@ Description: "This is an extension to capture whether the patient's date of birt
 * value[x] 1..
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.birthDate"
+
+Extension: StructureMaps
+Id: structure-map
+Title: "Structure Map"
+Description: "Structure maps used in this implementation guide."
+* value[x] 1..
+* value[x] only Canonical(StructureMap)
+* ^context[+].type = #element
+* ^context[=].expression = "Patient"
+* ^context[+].type = #element
+* ^context[=].expression = "Observation"
