@@ -4,10 +4,8 @@
 /// title = 'Propietary Educational Level To LOINC Educational Level'
 /// status = 'active'
 
-uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-educational-level" alias srcObservation as source
-uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-educational-level" alias tgtObservation as target
-
-imports "http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper"
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias srcObservation as source
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias tgtObservation as target
 
 group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) {
     /*obs.value -> observation.value = create('CodeableConcept') as value then {
@@ -28,4 +26,6 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
             valueCodeableConcept -> valueCodeableConcept then mapCodingtoCodeableConcept(valueCodeableConcept) "set code";
         } "set code";
     } "set";*/
+
+    //obs.value : CodeableConcept -> observation.value;
 }
