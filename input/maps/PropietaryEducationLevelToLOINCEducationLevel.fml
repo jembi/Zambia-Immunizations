@@ -7,6 +7,8 @@
 uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-educational-level" alias srcObservation as source
 uses "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-educational-level" alias tgtObservation as target
 
+imports "http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper"
+
 group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) {
     /*obs.value -> observation.value = create('CodeableConcept') as value then {
         obs.value -> value.coding = create('Coding') as coding then {
@@ -21,8 +23,9 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
     //    coding -> educationLevel.coding = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
     //} "SetEducationalLevelCode";
 
-    obs.value as srcValue ->  observation.value as tgtValue,  tgtValue.coding as coding then {
-        srcValue.system as system -> coding.system = system "set vaccine code system";
-        srcValue.code as code -> coding.code = code "set vaccine code";
-    } "set vaccine";
+    /*obs.value first as valueCodeableConcept then {
+        valueCodeableConcept -> observation.value as educationalLevel then {
+            valueCodeableConcept -> valueCodeableConcept then mapCodingtoCodeableConcept(valueCodeableConcept) "set code";
+        } "set code";
+    } "set";*/
 }

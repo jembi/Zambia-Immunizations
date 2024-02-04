@@ -1,0 +1,9 @@
+/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper'
+/// name = 'MetaDataTypesHelper'
+/// description = 'Structure maps helper.'
+/// title = 'Structure Maps Helper'
+/// status = 'active'
+
+group mapCodingtoCodeableConcept (source coding: Coding, target codeableConcept : CodeableConcept) {
+  coding -> codeableConcept.coding = coding "set coding";
+}
