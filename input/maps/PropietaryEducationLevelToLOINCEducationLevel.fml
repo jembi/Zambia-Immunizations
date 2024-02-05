@@ -7,7 +7,7 @@
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias srcObservation as source
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias tgtObservation as target
 
-group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) {
+group SetPatientEducationalLevel(source obs : srcObservation, source coding: Coding, target observation : tgtObservation, target codeableConcept : CodeableConcept) {
     /*obs.value -> observation.value = create('CodeableConcept') as value then {
         obs.value -> value.coding = create('Coding') as coding then {
             obs.value -> coding = translate(obs.value, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
@@ -15,7 +15,7 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
     } "SetEducationalLevelCode";
     obs.value -> observation.value = obs.value  "SetPatientEducationalLevel";*/
 
-    //pat.value as coding -> observation.value = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
+
 
     //obs.value.first() as coding -> observation.value as educationLevel then {
     //    coding -> educationLevel.coding = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
@@ -27,5 +27,11 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
         } "set code";
     } "set";*/
 
-    //obs.value : CodeableConcept -> observation.value;
+    /*obs.value : CodeableConcept as value,
+    value first as srcValueCodeableConcept,
+    observation.value : CodeableConcept as dstValueCodeableConcept then {
+        srcValueCodeableConcept -> dstValueCodeableConcept = translate(srcValueCodeableConcept, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducation";
+    } "TEST";*/
+
+     
 }

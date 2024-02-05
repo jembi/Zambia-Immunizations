@@ -91,7 +91,7 @@ Instance: ChiefAtBirthRelatedPersonExample
 InstanceOf: ChiefAtBirthRelatedPerson
 Usage: #example
 Title: "Chief at Birth"
-Description: "Patient'a chief at birth."
+Description: "Patient's chief at birth."
 * patient = Reference(ImmunizationPatientExample)
 * name[+].use = #official
 * name[=].family = "Jones"

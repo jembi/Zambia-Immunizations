@@ -314,7 +314,7 @@ Profile: ChiefAtBirthRelatedPerson
 Parent: RelationToPatient
 Id: chief-at-birth-relation-to-patient
 Title: "Chief at Birth"
-Description: "Patient'a chief at birth."
+Description: "Patient's chief at birth."
 * relationship 1..1
 * relationship = $SCT#303119007
 * name.family 1..1
