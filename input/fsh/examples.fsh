@@ -16,7 +16,6 @@ Description: "Is used to document demographics and other administrative informat
 * name[+][nickname].use = #nickname
 * name[=][nickname].given[+] = "Smitty"
 
-* gender = #female
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
 * birthDate.extension[IsEstimatedDOB].valueBoolean = false
@@ -29,7 +28,7 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion].valueCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
 * extension[religion].valueCodeableConcept.text = "Christian (non-Catholic, non-specific)"
 * managingOrganization = Reference(OrganizationExample)
-* extension[AdministrativeSexToAdministrativeGenderMap].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"
+* extension[sex].valueCodeableConcept = $SEX#F
 
 Instance: SpouseRelatedPersonExample
 InstanceOf: SpouseRelatedPerson
@@ -59,7 +58,6 @@ Description: "A patient's highest education level attained"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
-* extension[PropietaryEducationLevelToLOINCEducationLevel].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel"
 
 Instance: TargetFacilityEncounterExample
 InstanceOf: TargetFacilityEncounter

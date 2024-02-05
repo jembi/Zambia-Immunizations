@@ -154,3 +154,11 @@ Description: "A List of HumanName Codes Exlcuding Nickname"
 * ^experimental = false
 * include codes from system $HumanName
 * exclude $HumanName#nickname
+
+ValueSet: AdministrativeSex
+Id: vs-administrative-sex
+Title: "Administrative Sex"
+Description: "A List of Administrative Sex codes."
+* ^experimental = false
+* $SEX#M "Male"
+* $SEX#F "Female"

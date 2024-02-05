@@ -56,7 +56,6 @@ Description: "Is used to document demographics and other administrative informat
 * name[nickname].use 1..1
 * name[nickname].use = #nickname
 
-* gender 1..1
 * birthDate 1..1
 * birthDate.extension contains patient-birthTime named birthTime 0..1 MS
 * birthDate.extension[birthTime] ^definition =
@@ -78,8 +77,7 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion].valueCodeableConcept.coding.system 1..1
 * extension[religion].valueCodeableConcept.coding.code 1..1
 
-* extension contains structure-map named AdministrativeSexToAdministrativeGenderMap 1..1
-* extension[AdministrativeSexToAdministrativeGenderMap].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"
+* extension contains AdministrativeSex named sex 1..1
 
 * maritalStatus 0..1 MS
 * maritalStatus.coding 1..1
@@ -191,8 +189,6 @@ Description: "A patient's highest education level attained"
 * valueCodeableConcept.coding.code 1..1
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept from VSLOINCEducationLevelAttained (required)
-* extension contains structure-map named PropietaryEducationLevelToLOINCEducationLevel 1..1
-* extension[PropietaryEducationLevelToLOINCEducationLevel].valueCanonical = "http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel"
 
 Profile: TargetFacilityEncounter
 Parent: Encounter
