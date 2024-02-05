@@ -16,13 +16,12 @@ Description: "This is an extension to capture whether the patient's date of birt
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.birthDate"
 
-Extension: StructureMaps
-Id: structure-map
-Title: "Structure Map"
-Description: "Structure maps used in this implementation guide."
+Extension: AdministrativeSex
+Id: administrative-sex
+Title: "Administrative Sex"
+Description: "This is an extension to capture that patient's administrative sex."
+* value[x] only CodeableConcept
+* valueCodeableConcept from AdministrativeSex (required)
 * value[x] 1..
-* value[x] only Canonical(StructureMap)
 * ^context[+].type = #element
 * ^context[=].expression = "Patient"
-* ^context[+].type = #element
-* ^context[=].expression = "Observation"
