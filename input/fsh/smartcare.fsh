@@ -239,7 +239,7 @@ Description: "Records the current occupation for the spouse"
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
-* valueCodeableConcept from VSIndividualOccupation (extensible)
+* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
 
 Profile: GuardianOccupationObservation
 Parent: GenericObservation
@@ -251,7 +251,7 @@ Description: "Records the current occupation for the guardian"
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
-* valueCodeableConcept from VSIndividualOccupation (extensible)
+* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
 
 Profile: DatePatientFirstMarriedObservation
 Parent: Observation
