@@ -147,8 +147,8 @@ Description: "Records the current occupation for the guardian"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
-* valueCodeableConcept = $SCT#79859009
-* valueCodeableConcept.text = "Computer programmer"
+* valueCodeableConcept = $Occupation_CDC#41-3011.00.000158
+* valueCodeableConcept.text = "Accounts Manager [Advertising Sales Agents]"
 
 Instance: GuardianRelatedPersonExample
 InstanceOf: GuardianRelatedPerson
@@ -208,8 +208,8 @@ Description: "Records the current occupation for the spouse"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
-* valueCodeableConcept = $SCT#11205001
-* valueCodeableConcept.text = "Judge"
+* valueCodeableConcept = $Occupation_CDC#15-1131.00.000002
+* valueCodeableConcept.text = ".NET Programmer [Computer Programmers]"
 
 Instance: PatientHomeLanguageObservationExample
 InstanceOf: PatientHomeLanguageObservation

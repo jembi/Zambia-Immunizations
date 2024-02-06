@@ -6,6 +6,7 @@ Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/Cod
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $ICD11 = http://id.who.int/icd11/mms
 Alias: $HumanName = http://hl7.org/fhir/name-use
+Alias: $Occupation_CDC = urn:oid:2.16.840.1.114222.4.5.327
 
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
@@ -45,13 +46,13 @@ Description: "A list of LOINC education levels."
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
 * $LNC#LA12459-6 "Associate degree (e.g., AA, AS)"
 
-ValueSet: VSIndividualOccupation
+/*ValueSet: VSIndividualOccupation
 Id: vs-occupation
 Title: "Occupation"
 Description: "Codes for classifying an individual's occupation."
 * ^experimental = false
-* include codes from system $SCT
-    where concept descendent-of #14679004
+* include codes from system $Occupation_CDC
+    //where concept descendent-of #14679004*/
 
 ValueSet: VSSpouseRelationCodes
 Id: vs-spouse-relation-type
@@ -144,7 +145,7 @@ Description: "A List of Vaccine Codes Use In Zambia"
 * $ICD11#XM5QM6 "Sputnik-Light"
 * $ICD11#J07AM51 "tetanus toxoid, combinations with diphtheria toxoid"
 * $ICD11#J07AN01 "tuberculosis, live attenuated"
-* $SCT#82622003 "Vitamin A"
+* $LNC#LP31687-4 "Vitamin A"
 * $ICD11#XM52P3 "ZyCov-D"
 
 ValueSet: HumanNameCodes
