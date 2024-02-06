@@ -96,7 +96,9 @@ Description: "Is used to document demographics and other administrative informat
 * maritalStatus.coding.system 1..1
 * maritalStatus ^definition =
     "reason(s) why this should be supported."
-* link 1..*
+* link 0..* MS
+* link ^definition =
+    "reason(s) why this should be supported."
 * link.other only Reference(SpouseRelatedPerson or GuardianRelatedPerson or PatientMotherRelatedPerson or PatientFatherRelatedPerson or RelativeRelatedPerson or ChiefAtBirthRelatedPerson)
 * contact 0..* MS
 * contact ^definition =
@@ -199,7 +201,7 @@ Description: "A patient's highest education level attained"
 * valueCodeableConcept.coding 1..1
 * valueCodeableConcept.coding.code 1..1
 * valueCodeableConcept.coding.system 1..1
-* valueCodeableConcept from VSLOINCEducationLevelAttained (required)
+* valueCodeableConcept from VSProprietaryEducationLevelAttained (required)
 
 Profile: TargetFacilityEncounter
 Parent: Encounter

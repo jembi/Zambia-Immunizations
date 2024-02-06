@@ -41,7 +41,7 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
 * telecom[=][phone].value = "+27821234567"
-* relationship = $SCT#127850001
+* relationship = $SCT#127849001
 
 Instance: PatientEducationalLevelObservationExample
 InstanceOf: PatientEducationalLevelObservation
@@ -52,7 +52,7 @@ Description: "A patient's highest education level attained"
 * code = $LNC#LL5338-0
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
-* valueCodeableConcept = $LNC#LA32469-1
+* valueCodeableConcept = $PROPRIETARY_EDU_LEVEL#DegreeGraduate
 * valueCodeableConcept.text = "University undergraduate degree"
 * category.coding.code = #social-history
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
