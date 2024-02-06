@@ -8,13 +8,13 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC][+].value = "999999/99/9"
 * identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
 
-* name[otherName].use = #official
-* name[otherName].family = "Smith"
-* name[otherName].given[+] = "Jane"
-* name[otherName].given[+] = "Maria"
+* name[+].use = #official
+* name[=].family = "Smith"
+* name[=].given[+] = "Jane"
+* name[=].given[+] = "Maria"
 
-* name[nickname].use = #nickname
-* name[nickname].given[+] = "Smitty"
+* name[+].use = #nickname
+* name[=].given[+] = "Smitty"
 
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"

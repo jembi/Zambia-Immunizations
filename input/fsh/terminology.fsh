@@ -148,13 +148,13 @@ Description: "A List of Vaccine Codes Use In Zambia"
 * $LNC#LP31687-4 "Vitamin A"
 * $ICD11#XM52P3 "ZyCov-D"
 
-ValueSet: HumanNameCodes
+/*ValueSet: HumanNameCodes
 Id: vs-human-name-codes
 Title: "HumanName Codes"
 Description: "A List of HumanName Codes Exlcuding Nickname"
 * ^experimental = false
 * include codes from system $HumanName
-* exclude $HumanName#nickname
+* exclude $HumanName#nickname*/
 
 ValueSet: AdministrativeSex
 Id: vs-administrative-sex
