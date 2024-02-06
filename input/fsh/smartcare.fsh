@@ -8,6 +8,11 @@ Description: "Only special characters (forward slash) and numbers are allowed. F
 Expression: "$this.matches('[0-9]{1,6}/[0-9]{1,2}/[0-9]{1}')"
 Severity: #error
 
+Invariant: PatientName-Smartcare-1
+Description: "If name.use is NOT nickname then name.family SHALL be present."
+Expression: "use.exists() and use != 'nickname' implies family.exists()"
+Severity: #error
+
 Profile: ImmunizationPatient
 Parent: Patient
 Id: immunization-patient
@@ -36,7 +41,13 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
 
 * name 1..*
-* name ^slicing.discriminator.type = #value
+  * obeys PatientName-Smartcare-1
+* name.given 1..*
+* name.family 0..1 MS
+* name.family ^definition =
+    "reason(s) why this should be supported."
+* name.use 1..1
+/** name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
 * name ^slicing.ordered = false
@@ -54,7 +65,7 @@ Description: "Is used to document demographics and other administrative informat
     "reason(s) why this should be supported."
 * name[nickname].given 1..*
 * name[nickname].use 1..1
-* name[nickname].use = #nickname
+* name[nickname].use = #nickname*/
 
 * birthDate 1..1
 * birthDate.extension contains patient-birthTime named birthTime 0..1 MS
@@ -385,7 +396,7 @@ Description: "An organization that provides healthcare services."
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    XX 1..1
+    XX 0..1
 * identifier[XX].value 1..1
 * identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/healthcare-service-provider"
 * identifier[XX].type.coding.code = #XX
