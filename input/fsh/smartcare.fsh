@@ -42,13 +42,13 @@ Description: "Is used to document demographics and other administrative informat
 * name ^slicing.ordered = false
 * name ^slicing.description = "Slice based on the type of identifier."
 * name contains
-    //otherName 1..1 and
+    otherName 1..1 and
     nickname 0..1 MS
 
-/* name[otherName].given 1..*
+* name[otherName].given 1..*
 * name[otherName].family 1..1
 * name[otherName].use 1..1
-* name[otherName].use from HumanNameCodes (required)*/
+* name[otherName].use from HumanNameCodes (required)
 
 * name[nickname] ^definition =
     "reason(s) why this should be supported."
