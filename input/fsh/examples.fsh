@@ -81,8 +81,7 @@ Description: "An organization that provides healthcare services."
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Healthcare service provider identifier"
-* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type.coding.code = #prov
+* type = $LNC#LA30302-6
 * name = "Facility one"
 
 Instance: ChiefAtBirthRelatedPersonExample
@@ -240,8 +239,7 @@ Description: "A company that provides insurance to its subscribers that may incl
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Medical insurance company identifier"
-* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type.coding.code = #ins
+* type = $LNC#64290-0
 * name = "Medical Insurance Company 1"
 
 Instance: MedicalInsuranceExample

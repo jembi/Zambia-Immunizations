@@ -192,7 +192,7 @@ Description: "A patient's highest education level attained"
 * valueCodeableConcept 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept.text 1..1
-* valueCodeableConcept from VSProprietaryEducationLevelAttained (required)
+* valueCodeableConcept from VSProprietaryEducationLevelAttained (extensible)
 
 Profile: TargetFacilityEncounter
 Parent: Encounter
@@ -363,8 +363,7 @@ Description: "A company that provides insurance to its subscribers that may incl
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Medical insurance company identifier"
 * type 1..1
-* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type.coding.code = #ins
+* type = $LNC#64290-0
 * name 1..1
 
 Profile: ServiceProvider
@@ -388,8 +387,7 @@ Description: "An organization that provides healthcare services."
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Healthcare service provider identifier"
 * type 1..1
-* type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type.coding.code = #prov
+* type = $LNC#LA30302-6
 * name 1..1
 
 Profile: Vaccines
