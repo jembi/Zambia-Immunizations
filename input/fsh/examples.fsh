@@ -41,7 +41,7 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
 * telecom[=][phone].value = "+27821234567"
-* relationship = $SCT#127849001
+* relationship = $PARENT_RELATIONSHIP_CODES#SPS
 
 Instance: PatientEducationalLevelObservationExample
 InstanceOf: PatientEducationalLevelObservation
@@ -159,7 +159,7 @@ Description: "A guardian to the patient."
 * name[+].use = #official
 * name[=].given[+] = "Mike"
 * name[=].family = "Smith"
-* relationship = $SCT#394619001
+* relationship = $PARENT_RELATIONSHIP_CODES#GUARD
 
 Instance: PatientMotherRelatedPersonExample
 InstanceOf: PatientMotherRelatedPerson
@@ -193,7 +193,7 @@ Description: "The patient's relative."
 * name[+].use = #official
 * name[=].given[+] = "Olivia"
 * name[=].family = "Smith"
-* relationship = $SCT#125677006
+* relationship = $PARENT_RELATIONSHIP_CODES#FAMMEMB
 
 Instance: SpouseOccupationObservationExample
 InstanceOf: SpouseOccupationObservation
