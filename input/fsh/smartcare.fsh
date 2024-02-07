@@ -84,16 +84,10 @@ Description: "Is used to document demographics and other administrative informat
 * extension[religion] ^definition =
     "reason(s) why this should be supported."
 * extension[religion].valueCodeableConcept.text 1..1
-* extension[religion].valueCodeableConcept.coding 1..1
-* extension[religion].valueCodeableConcept.coding.system 1..1
-* extension[religion].valueCodeableConcept.coding.code 1..1
 
 * extension contains AdministrativeSex named sex 1..1
 
 * maritalStatus 0..1 MS
-* maritalStatus.coding 1..1
-* maritalStatus.coding.code 1..1
-* maritalStatus.coding.system 1..1
 * maritalStatus ^definition =
     "reason(s) why this should be supported."
 * link 0..* MS
@@ -139,9 +133,6 @@ Description: "This profile acts as a base profile from which more specific Relat
 
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
-* relationship.coding 1..1
-* relationship.coding.code 1..1
-* relationship.coding.system 1..1
 * name 0..* MS
 * name ^definition =
     "reason(s) why this should be supported."
@@ -174,7 +165,7 @@ Id: spouse-relation-to-patient
 Title: "Spouse Relation to Patient"
 Description: "The husband or wife, considered in relation to the patient."
 * relationship 1..1
-* relationship.coding.code = $PARENT_RELATIONSHIP_CODES#SPS
+* relationship = $PARENT_RELATIONSHIP_CODES#SPS
 //* relationship from VSSpouseRelationCodes (required)
 * name.given 1..1
 * name.family 1..1
@@ -199,9 +190,6 @@ Description: "A patient's highest education level attained"
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
-* valueCodeableConcept.coding 1..1
-* valueCodeableConcept.coding.code 1..1
-* valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept from VSProprietaryEducationLevelAttained (required)
 
 Profile: TargetFacilityEncounter
@@ -211,7 +199,6 @@ Title: "Target Facility Encounter"
 Description: "Represents the current facility at which the patient is receiving health services."
 * status 1..1
 * class 1..1
-* class.coding 1..1
 * class.coding.code = #AMB
 * class.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * subject 1..1
@@ -225,19 +212,13 @@ Description: "This profile acts as a base profile from which more specific socia
 * status 1..1
 * code 1..1
 * category 1..1
-* category.coding 1..1
-* category.coding.code 1..1
 * category.coding.code = #social-history
-* category.coding.system 1..1
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * encounter 1..1
 * encounter only Reference(TargetFacilityEncounter)
 * subject 1..1
 * subject only Reference(ImmunizationPatient)
-* valueCodeableConcept only CodeableConcept
-* valueCodeableConcept.coding 1..1
-* valueCodeableConcept.coding.system 1..1
-* valueCodeableConcept.coding.code 1..1
+* value[x] only CodeableConcept
 * valueCodeableConcept.text 1..1
 * performer 0..*
 * performer ^definition =
@@ -279,9 +260,7 @@ Description: "Records the date when the patient was first married"
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
 * category 1..1
-* category.coding.code 1..1
 * category.coding.code = #social-history
-* category.coding.system 1..1
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * encounter 1..1
 * encounter only Reference(TargetFacilityEncounter)
@@ -291,7 +270,7 @@ Description: "Records the date when the patient was first married"
 * performer ^definition =
   "reason(s) why this should be supported."
 * valueDateTime 1..1
-* valueDateTime only dateTime
+* value[x] only dateTime
 
 Profile: PatientMotherRelatedPerson
 Parent: RelationToPatient
@@ -378,9 +357,6 @@ Description: "A company that provides insurance to its subscribers that may incl
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Medical insurance company identifier"
 * type 1..1
-* type.coding 1..1
-* type.coding.code 1..1
-* type.coding.system 1..1
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type.coding.code = #ins
 * name 1..1
@@ -406,9 +382,6 @@ Description: "An organization that provides healthcare services."
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Healthcare service provider identifier"
 * type 1..1
-* type.coding 1..1
-* type.coding.code 1..1
-* type.coding.system 1..1
 * type.coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type.coding.code = #prov
 * name 1..1
@@ -420,9 +393,6 @@ Title: "Vaccine Administration"
 Description: "Records the vaccine administered to the patient."
 * status 1..1
 * vaccineCode 1..1
-* vaccineCode.coding 1..1
-* vaccineCode.coding.code 1..1
-* vaccineCode.coding.system 1..1
 * vaccineCode from VSVaccines (extensible)
 * patient 1..1
 * patient only Reference(ImmunizationPatient)
