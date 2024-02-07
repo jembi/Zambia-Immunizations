@@ -7,12 +7,11 @@
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias srcObservation as source
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias tgtObservation as target
 
-group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) {
-    obs.value : CodeableConcept as vs -> observation.value = create('CodeableConcept') as vt then MapCodeableConcept(vs, vt);
-}
+group SetPatientEducationalLevel(source obs : srcObservation, target observation : tgtObservation) <<type+>> {
+    obs.value : CodeableConcept as vs -> observation.value = create('CodeableConcept') as vt then {
 
-group MapCodeableConcept (source srcCodeableConcept: CodeableConcept, target tgtCodeableConcept : CodeableConcept) {
-    srcCodeableConcept.coding as coding then {
-        coding -> tgtCodeableConcept = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducationCode";
-    } "SetPatientEducationCoding";
+        vs.coding as coding then {
+            coding -> vt = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducationCode";
+        } "SetPatientEducationCoding";
+    } "SetEducationLevel";
 }

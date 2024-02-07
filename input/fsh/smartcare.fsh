@@ -174,7 +174,8 @@ Id: spouse-relation-to-patient
 Title: "Spouse Relation to Patient"
 Description: "The husband or wife, considered in relation to the patient."
 * relationship 1..1
-* relationship from VSSpouseRelationCodes (required)
+* relationship.coding.code = $PARENT_RELATIONSHIP_CODES#SPS
+//* relationship from VSSpouseRelationCodes (required)
 * name.given 1..1
 * name.family 1..1
 
@@ -184,7 +185,7 @@ Id: guardian-relation-to-patient
 Title: "Guardian Relation to Patient"
 Description: "A guardian to the patient."
 * relationship 1..1
-* relationship = $SCT#394619001
+* relationship = $PARENT_RELATIONSHIP_CODES#GUARD
 * name.given 1..1
 * name.family 1..1
 
@@ -317,7 +318,7 @@ Id: relative-relation-to-patient
 Title: "Relative Relation to Patient"
 Description: "The patient's relative."
 * relationship 1..1
-* relationship = $SCT#125677006
+* relationship = $PARENT_RELATIONSHIP_CODES#FAMMEMB
 
 Profile: ChiefAtBirthRelatedPerson
 Parent: RelationToPatient

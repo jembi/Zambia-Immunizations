@@ -54,13 +54,13 @@ Description: "Codes for classifying an individual's occupation."
 * include codes from system $Occupation_CDC
     //where concept descendent-of #14679004*/
 
-ValueSet: VSSpouseRelationCodes
+/*ValueSet: VSSpouseRelationCodes
 Id: vs-spouse-relation-type
 Title: "Spouse Relation Types"
 Description: "Codes for classifying the type of spouse."
 * ^experimental = false
 * $SCT#127849001 "Husband"
-* $SCT#127850001 "Wife"
+* $SCT#127850001 "Wife"*/
 
 CodeSystem: CSHomeLanguage
 Id: cs-home-language
