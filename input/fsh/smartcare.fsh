@@ -218,7 +218,7 @@ Description: "This profile acts as a base profile from which more specific socia
 * encounter only Reference(TargetFacilityEncounter)
 * subject 1..1
 * subject only Reference(ImmunizationPatient)
-* valueCodeableConcept only CodeableConcept
+* value[x] only CodeableConcept
 * valueCodeableConcept.text 1..1
 * performer 0..*
 * performer ^definition =
@@ -270,7 +270,7 @@ Description: "Records the date when the patient was first married"
 * performer ^definition =
   "reason(s) why this should be supported."
 * valueDateTime 1..1
-* valueDateTime only dateTime
+* value[x] only dateTime
 
 Profile: PatientMotherRelatedPerson
 Parent: RelationToPatient
