@@ -52,8 +52,7 @@ Description: "A patient's highest education level attained"
 * code = $LNC#LL5338-0
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
-* valueCodeableConcept.coding.system = $PROPRIETARY_EDU_LEVEL
-* valueCodeableConcept.coding.code = #DegreeGraduate
+* valueCodeableConcept = $PROPRIETARY_EDU_LEVEL#DegreeGraduate
 * valueCodeableConcept.text = "University undergraduate degree"
 * category.coding.code = #social-history
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -149,7 +148,7 @@ Description: "Records the current occupation for the guardian"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
 * valueCodeableConcept.coding.code = #41-3011.00.000158
-* valueCodeableConcept.coding.system = $Occupation_CDC
+* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.114222.4.5.327"
 * valueCodeableConcept.text = "Accounts Manager [Advertising Sales Agents]"
 
 Instance: GuardianRelatedPersonExample
@@ -211,7 +210,7 @@ Description: "Records the current occupation for the spouse"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
 * valueCodeableConcept.coding.code = #15-1131.00.000002
-* valueCodeableConcept.coding.system = $Occupation_CDC
+* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.114222.4.5.327"
 * valueCodeableConcept.text = ".NET Programmer [Computer Programmers]"
 
 Instance: PatientHomeLanguageObservationExample
