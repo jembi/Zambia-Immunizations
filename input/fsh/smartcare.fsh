@@ -190,6 +190,8 @@ Description: "A patient's highest education level attained"
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept.text 1..1
 * valueCodeableConcept from VSProprietaryEducationLevelAttained (required)
 
 Profile: TargetFacilityEncounter
@@ -218,8 +220,6 @@ Description: "This profile acts as a base profile from which more specific socia
 * encounter only Reference(TargetFacilityEncounter)
 * subject 1..1
 * subject only Reference(ImmunizationPatient)
-* value[x] only CodeableConcept
-* valueCodeableConcept.text 1..1
 * performer 0..*
 * performer ^definition =
   "reason(s) why this should be supported."
@@ -234,6 +234,8 @@ Description: "Records the current occupation for the spouse"
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept.text 1..1
 * valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
 
 Profile: GuardianOccupationObservation
@@ -246,6 +248,8 @@ Description: "Records the current occupation for the guardian"
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
 * valueCodeableConcept 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept.text 1..1
 * valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
 
 Profile: DatePatientFirstMarriedObservation
@@ -317,6 +321,8 @@ Description: "Records the home language for the patient"
 * effectiveDateTime 0..1 MS
 * effectiveDateTime ^definition =
   "reason(s) why this should be supported."
+* value[x] only CodeableConcept
+* valueCodeableConcept.text 1..1
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSHomeLanguage (extensible)
 

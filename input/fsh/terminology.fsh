@@ -6,7 +6,7 @@ Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/Cod
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $ICD11 = http://id.who.int/icd11/mms
 Alias: $HumanName = http://hl7.org/fhir/name-use
-Alias: $Occupation_CDC = urn:oid:2.16.840.1.114222.4.5.327
+//Alias: $Occupation_CDC = urn:oid:2.16.840.1.114222.4.5.327
 
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
@@ -14,15 +14,15 @@ Title: "Patient's highest education level attained (Proprietary)"
 Description: "A list of proprietary education levels."
 * ^experimental = false
 * ^caseSensitive = true
-* #CertificateGraduate "Certificate Graduate" "The description"
-* #DegreeGraduate "Degree Graduate" "The description"
-* #DiplomaGraduate "Diploma Graduate" "The description"
-* #JuniorSecondary "Junior Secondary" "The description"
-* #MastersGraduate "Masters Graduate" "The description"
-* #NoFormalEducation "No Formal Education" "The description"
-* #PhDGraduate "PhD Graduate" "The description"
-* #Primary "Primary" "The description"
-* #SeniorSecondary "Senior Secondary" "The description"
+* #CertificateGraduate "Certificate Graduate"
+* #DegreeGraduate "Degree Graduate"
+* #DiplomaGraduate "Diploma Graduate"
+* #JuniorSecondary "Junior Secondary"
+* #MastersGraduate "Masters Graduate"
+* #NoFormalEducation "No Formal Education"
+* #PhDGraduate "PhD Graduate"
+* #Primary "Primary"
+* #SeniorSecondary "Senior Secondary"
 
 ValueSet: VSProprietaryEducationLevelAttained
 Id: vs-proprietary-education-level-attained
