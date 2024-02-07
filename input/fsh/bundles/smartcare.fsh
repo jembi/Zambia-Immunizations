@@ -80,10 +80,10 @@ Description: "A bundle containing all Smartcare FHIR resources."
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Organization/MedicalInsuranceCompanyExample"
 
-* entry[+].fullUrl = "http://hapi-fhir:8080/MedicalInsurance/MedicalInsuranceExample"
+* entry[+].fullUrl = "http://hapi-fhir:8080/Coverage/MedicalInsuranceExample"
 * entry[=].resource = MedicalInsuranceExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "MedicalInsurance/MedicalInsuranceExample"
+* entry[=].request.url = "Coverage/MedicalInsuranceExample"
 
 * entry[+].fullUrl = "http://hapi-fhir:8080/Immunization/VaccinesExample"
 * entry[=].resource = VaccinesExample
