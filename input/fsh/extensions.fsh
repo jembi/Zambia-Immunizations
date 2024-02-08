@@ -25,3 +25,21 @@ Description: "This is an extension to capture that patient's administrative sex.
 * value[x] 1..
 * ^context[+].type = #element
 * ^context[=].expression = "Patient"
+* ^context[+].type = #element
+* ^context[=].expression = "Observation"
+
+Extension: HPVPatientVaccinationRegistrationDate
+Id: hpv-vaccination-patient-registration-date
+Title: "HPV Patient Registration Date"
+Description: "A date representing when the patient was registered for HPV vaccination."
+* value[x] only dateTime
+* ^context[0].type = #element
+* ^context[0].expression = "Immunization"
+
+Extension: HPVVaccineBatchNumber
+Id: hpv-vaccine-batch-number
+Title: "HPV Vaccine Batch Number"
+Description: "This is to document the vaccine batch number."
+* value[x] only string
+* ^context[0].type = #element
+* ^context[0].expression = "Immunization"
