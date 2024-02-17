@@ -5,10 +5,10 @@ Title: "Smartcare Bundle"
 Description: "A bundle containing all Smartcare FHIR resources."
 * type = #transaction
 
-* entry[+].fullUrl = "http://hapi-fhir:8080/Patient/ImmunizationPatientExample"
-* entry[=].resource = ImmunizationPatientExample
+* entry[+].fullUrl = "http://hapi-fhir:8080/Patient/SmartcareImmunizationPatientExample"
+* entry[=].resource = SmartcareImmunizationPatientExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/ImmunizationPatientExample"
+* entry[=].request.url = "Patient/SmartcareImmunizationPatientExample"
 
 * entry[+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SpouseRelatedPersonExample"
 * entry[=].resource = SpouseRelatedPersonExample
@@ -20,10 +20,10 @@ Description: "A bundle containing all Smartcare FHIR resources."
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/PatientEducationalLevelObservationExample"
 
-* entry[+].fullUrl = "http://hapi-fhir:8080/Encounter/TargetFacilityEncounterExample"
-* entry[=].resource = TargetFacilityEncounterExample
+* entry[+].fullUrl = "http://hapi-fhir:8080/Encounter/SmartcareTargetFacilityEncounterExample"
+* entry[=].resource = SmartcareTargetFacilityEncounterExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+* entry[=].request.url = "Encounter/SmartcareTargetFacilityEncounterExample"
 
 * entry[+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/ChiefAtBirthRelatedPersonExample"
 * entry[=].resource = ChiefAtBirthRelatedPersonExample
@@ -45,10 +45,10 @@ Description: "A bundle containing all Smartcare FHIR resources."
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/GuardianOccupationObservationExample"
 
-* entry[+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/GuardianRelatedPersonExample"
-* entry[=].resource = GuardianRelatedPersonExample
+* entry[+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SmartcareGuardianRelatedPersonExample"
+* entry[=].resource = SmartcareGuardianRelatedPersonExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "RelatedPerson/GuardianRelatedPersonExample"
+* entry[=].request.url = "RelatedPerson/SmartcareGuardianRelatedPersonExample"
 
 * entry[+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/PatientMotherRelatedPersonExample"
 * entry[=].resource = PatientMotherRelatedPersonExample

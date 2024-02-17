@@ -25,7 +25,7 @@ Description: "A list of proprietary education levels."
 
 CodeSystem: CSProprietarySmartcareVaccinationSite
 Id: cs-proprietary-smartcare-vaccination-site
-Title: "Vaccination site type (Proprietary)"
+Title: "Vaccination site types in Smartcare (Proprietary)"
 Description: "A list of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
 * ^caseSensitive = true
@@ -34,7 +34,7 @@ Description: "A list of vaccination sites (posts) where the vaccination was admi
 
 ValueSet: VSProprietarySmartcareVaccinationSite
 Id: vs-proprietary-smartcare-vaccination-site
-Title: "Vaccination site type (Proprietary)"
+Title: "Vaccination site types in Smartcare (Proprietary)"
 Description: "A list of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
 * include codes from system CSProprietarySmartcareVaccinationSite
@@ -170,3 +170,20 @@ Description: "A List of Administrative Sex codes."
 * ^experimental = false
 * $SEX#M "Male"
 * $SEX#F "Female"
+
+CodeSystem: CSProprietaryHPVVaccinationSite
+Id: cs-proprietary-hpv-vaccination-site
+Title: "Vaccination site types in HPV (Proprietary)"
+Description: "A list of vaccination sites (posts) where the vaccination was administered."
+* ^experimental = false
+* ^caseSensitive = true
+* #Community "Community"
+* #Facility "Facility"
+* #School "School"
+
+ValueSet: VSProprietaryHPVVaccinationSite
+Id: vs-proprietary-hpv-vaccination-site
+Title: "Vaccination site types in HPV (Proprietary)"
+Description: "A list of vaccination sites (posts) where the vaccination was administered."
+* ^experimental = false
+* include codes from system CSProprietaryHPVVaccinationSite
