@@ -26,12 +26,17 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
 
 * name 1..*
-  * obeys PatientName-Smartcare-1
-* name.given 1..*
+  * obeys PatientName-Smartcare-1 and PatientName-Smartcare-2
+* name.given 0..* MS
+* name.given ^definition =
+    "reason(s) why this should be supported."
 * name.family 0..1 MS
 * name.family ^definition =
     "reason(s) why this should be supported."
 * name.use 1..1
+* name.text 0..1 MS
+* name.text ^definition =
+    "Used to capture the patient's nickname."
 /** name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
@@ -141,6 +146,7 @@ Description: "This profile acts as a base profile from which more specific Relat
 * telecom[phone] ^definition =
     "reason(s) why this should be supported."
 * telecom[phone].value 1..1
+  * obeys PHONE-1
 * telecom[phone].system 1..1
 * telecom[phone].system = #phone
 
@@ -218,10 +224,8 @@ Description: "Records the current occupation for the spouse"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
-* valueCodeableConcept 1..1
-* value[x] only CodeableConcept
-* valueCodeableConcept.text 1..1
-* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
+* value[x] only string
+* valueString 1..1
 
 Profile: GuardianOccupationObservation
 Parent: GenericObservation
@@ -232,10 +236,8 @@ Description: "Records the current occupation for the guardian"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
-* valueCodeableConcept 1..1
-* value[x] only CodeableConcept
-* valueCodeableConcept.text 1..1
-* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
+* value[x] only string
+* valueString 1..1
 
 Profile: DatePatientFirstMarriedObservation
 Parent: Observation
@@ -389,4 +391,20 @@ Description: "Records the vaccine administered to the patient."
 * occurrenceDateTime only dateTime
 * encounter 1..1
 * encounter only Reference(TargetFacilityEncounter)
-* protocolApplied.doseNumber
+* protocolApplied 0..1 MS
+* protocolApplied ^definition =
+  "reason(s) why this should be supported."
+* protocolApplied.doseNumber 1..1
+* performer 1..*
+* performer.actor 1..1
+* performer.actor only Reference(SmartcareVaccinationSiteType)
+
+
+Profile: SmartcareVaccinationSiteType
+Parent: Organization
+Id: smartcare-vaccination-site-type
+Title: "Vaccination site type"
+Description: "Indicates whether the vaccination was administered at the facility or at an outreach post."
+* name 1..1
+* type 1..1
+* type from VSProprietarySmartcareVaccinationSite (required)

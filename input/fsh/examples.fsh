@@ -14,7 +14,7 @@ Description: "Is used to document demographics and other administrative informat
 * name[=].given[+] = "Maria"
 
 * name[+].use = #nickname
-* name[=].given[+] = "Smitty"
+* name[=].text = "Smitty"
 
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
@@ -40,7 +40,7 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].family = "Jones"
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
-* telecom[=][phone].value = "+27821234567"
+* telecom[=][phone].value = "+26095705784"
 * relationship = $PARENT_RELATIONSHIP_CODES#SPS
 
 Instance: PatientEducationalLevelObservationExample
@@ -146,9 +146,7 @@ Description: "Records the current occupation for the guardian"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
-* valueCodeableConcept.coding.code = #41-3011.00.000158
-* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.114222.4.5.327"
-* valueCodeableConcept.text = "Accounts Manager [Advertising Sales Agents]"
+* valueString = "Accounts Manager"
 
 Instance: GuardianRelatedPersonExample
 InstanceOf: GuardianRelatedPerson
@@ -208,9 +206,7 @@ Description: "Records the current occupation for the spouse"
 * category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject = Reference (ImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
-* valueCodeableConcept.coding.code = #15-1131.00.000002
-* valueCodeableConcept.coding.system = "urn:oid:2.16.840.1.114222.4.5.327"
-* valueCodeableConcept.text = ".NET Programmer [Computer Programmers]"
+* valueString = ".NET Programmer"
 
 Instance: PatientHomeLanguageObservationExample
 InstanceOf: PatientHomeLanguageObservation
@@ -265,3 +261,13 @@ Description: "Records the vaccine administered to the patient."
 * occurrenceDateTime = "2022-11-30"
 * encounter = Reference(TargetFacilityEncounterExample)
 * protocolApplied.doseNumber = "0"
+* performer.actor = Reference(SmartcareVaccinationSiteTypeExample)
+
+Instance: SmartcareVaccinationSiteTypeExample
+InstanceOf: SmartcareVaccinationSiteType
+Usage: #example
+Title: "Vaccination site type"
+Description: "Indicates whether the vaccination was administered at the facility or at an outreach post."
+* type.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site"
+* type.coding.code = #Outreach
+* name = "facility name"
