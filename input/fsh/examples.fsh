@@ -14,7 +14,7 @@ Description: "Is used to document demographics and other administrative informat
 * name[=].given[+] = "Maria"
 
 * name[+].use = #nickname
-* name[=].given[+] = "Smitty"
+* name[=].text = "Smitty"
 
 * birthDate = "1990-12-12"
 * birthDate.extension[birthTime].valueDateTime = "1983-05-22T16:40:17+02:00"
@@ -40,7 +40,7 @@ Description: "The husband or wife, considered in relation to the patient."
 * name[=].family = "Jones"
 * name[=].given[+] = "Mike"
 * telecom[+][phone].system = #phone
-* telecom[=][phone].value = "083-123-1234"
+* telecom[=][phone].value = "+26095705784"
 * relationship = $PARENT_RELATIONSHIP_CODES#SPS
 
 Instance: PatientEducationalLevelObservationExample

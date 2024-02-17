@@ -10,12 +10,17 @@ Severity: #error
 
 Invariant: PatientName-Smartcare-1
 Description: "If name.use is NOT nickname then name.family SHALL be present."
-Expression: "use.exists() and use != 'nickname' implies family.exists()"
+Expression: "use.exists() and use != 'nickname' implies family.exists() and given.exists()"
+Severity: #error
+
+Invariant: PatientName-Smartcare-2
+Description: "If name.use is nickname then name.text SHALL be present."
+Expression: "use.exists() and use = 'nickname' implies text.exists()"
 Severity: #error
 
 Invariant: PHONE-1
-Description: "Only special characters (dash) and numbers are allowed. For example: 083-123-1234"
-Expression: "$this.matches('[0-9]{1,3}-[0-9]{1,3}-[0-9]{4}')"
+Description: "Only special characters (+) and numbers are allowed. For example: 0831231234, +27831231234"
+Expression: "$this.matches('^[+]?{1}[0-9]{10,12}$')"
 Severity: #error
 
 Profile: ImmunizationPatient
@@ -46,12 +51,17 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
 
 * name 1..*
-  * obeys PatientName-Smartcare-1
-* name.given 1..*
+  * obeys PatientName-Smartcare-1 and PatientName-Smartcare-2
+* name.given 0..* MS
+* name.given ^definition =
+    "reason(s) why this should be supported."
 * name.family 0..1 MS
 * name.family ^definition =
     "reason(s) why this should be supported."
 * name.use 1..1
+* name.text 0..1 MS
+* name.text ^definition =
+    "Used to capture the patient's nickname."
 /** name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
