@@ -33,13 +33,6 @@ Id: hpv-vaccination-patient-registration-date
 Title: "HPV Patient Registration Date"
 Description: "A date representing when the patient was registered for HPV vaccination."
 * value[x] only dateTime
-* ^context[0].type = #element
-* ^context[0].expression = "Immunization"
-
-Extension: HPVVaccineBatchNumber
-Id: hpv-vaccine-batch-number
-Title: "HPV Vaccine Batch Number"
-Description: "This is to document the vaccine batch number."
-* value[x] only string
+* value[x] 1..
 * ^context[0].type = #element
 * ^context[0].expression = "Immunization"

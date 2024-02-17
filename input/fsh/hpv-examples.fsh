@@ -1,56 +1,52 @@
-Instance: HPVPatientExample
-InstanceOf: HPVPatient
+Instance: HPVImmunizationPatientExample
+InstanceOf: HPVImmunizationPatient
 Usage: #example
-Title: "HPV Patient Example"
+Title: "Immunization Patient in HPV"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
-* identifier[CN].value = "CN0000000"
-* identifier[CN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/cn" (exactly)
-* identifier[PN].value = "PN0000000"
-* identifier[PN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/pn" (exactly)
-* identifier[PN].type.coding.code = #PPN
-* identifier[PN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PN].type.coding.display = "Passport number"
-* identifier[PN].type.text = "Patient passport number"
+* identifier[CN][+].value = "CN0000000"
+* identifier[CN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-card-number"
 
-* name.family = "Zinga"
-* name.given[0] = "Zam"
-* name.given[1] = "Bia"
-* name.given[0] = "Dolo"
+* identifier[PN][+].value = "PN15685241"
+* identifier[PN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-passport"
+
+* identifier[NRC][+].value = "999999/99/9"
+* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
+
+* name[+].use = #official
+* name[=].family = "Jones"
+* name[=].given[+] = "Tom"
+* name[=].given[+] = "Jack"
 
 * birthDate = "2000-01-01"
-* link.other = Reference(HPVRelatedPersonExample)
-* link.type = #refer
+* link[+].other = Reference(HPVGuardianRelatedPersonExample)
+* link[=].type = #seealso
 
-* telecom[email].value = "mail@mail.com"
-* telecom[email].system = #email
-* telecom[phone].value = "+27821234567"
-* telecom[phone].system  = #phone
+* telecom[email][+].value = "mail@mail.com"
+* telecom[email][=].system = #email
+* telecom[phone][+].value = "+27821234567"
+* telecom[phone][=].system  = #phone
 
-* address.city = "Ndola"
-* address.line[0] = "100"
-* address.line[1] = "Zimi Road"
-* address.line[2] = "Ndola City"
-* address.district = "Ndola District"
-* address.state = "Copperbelt Province"
-* address.country = "Zambia"
+* address[+].city = "Ndola"
+* address[=].line[+] = "100"
+* address[=].line[+] = "Zimi Road"
+* address[=].line[+] = "Ndola City"
+* address[=].district = "Ndola District"
+* address[=].state = "Copperbelt Province"
+* address[=].country = "Zambia"
 
 * managingOrganization = Reference(OrganizationExample)
 * extension[sex].valueCodeableConcept = $SEX#F
 
-Instance: HPVRelatedPersonExample
-InstanceOf: HPVRelatedPerson
+Instance: HPVGuardianRelatedPersonExample
+InstanceOf: GuardianRelatedPerson
 Usage: #example
-Title: "HPV Related Person Example"
-Description: "This is used to document details of the guardian related to the HPV Patient."
-* identifier[CN].value = "CN0000000"
-* identifier[CN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/cn" (exactly)
-* identifier[PN].value = "PN0000000"
-* identifier[PN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/pn" (exactly)
-* identifier[PN].type.coding.code = #PPN
-* identifier[PN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PN].type.coding.display = "Passport number"
-* identifier[PN].type.text = "Patient passport number"
-* patient = Reference(HPVPatientExample)
+Title: "Guardian Relation to Patient in HPV"
+Description: "A guardian to the patient."
+* patient = Reference(HPVImmunizationPatientExample)
+* name[+].use = #official
+* name[=].given[+] = "Mike"
+* name[=].family = "Smith"
+* relationship = $PARENT_RELATIONSHIP_CODES#GUARD
 
 Instance: HPVImmunocomprommisedExample
 InstanceOf: HPVImmunocomprommised
@@ -58,28 +54,28 @@ Usage: #example
 Title: "HPV Immunocomprommised"
 Description: "This is to document whether the HPV patient has been observed to be immunocomprommised."
 * status = #final
-* code.coding.code = #370388006
-* code.coding.system = $SCT
-* code.coding.display = "Patient immunocompromised (finding)"
-* code.text = "Immunocompromised"
-* subject = Reference(HPVPatientExample)
-* encounter = Reference(HPVEncounterExample)
+* category.coding.code = #laboratory
+* category.coding.system  = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code = $ICD11#4A0Z
+* code.text = "Primary immunodeficiencies, unspecified"
+* subject = Reference(HPVImmunizationPatientExample)
+* encounter = Reference(HPVTargetFacilityEncounterExample)
 * effectiveDateTime = "2024-01-31"
 * valueBoolean = true
 * performer = Reference(OrganizationExample)
 
-Instance: HPVEncounterExample
-InstanceOf: HPVEncounter
+Instance: HPVTargetFacilityEncounterExample
+InstanceOf: TargetFacilityEncounter
 Usage: #example
-Title: "HPV Encounter Example"
-Description: "This is to document the patient visit at the facility related to HPV."
+Title: "Target Facility Encounter in HPV" 
+Description: "Represents the current facility at which the patient is receiving health services."
 * status = #completed
 * class.coding.code = #AMB
 * class.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* subject = Reference(HPVPatientExample)
+* subject = Reference(ImmunizationPatientExample)
+* actualPeriod.start = "2022-12-01"
+* actualPeriod.end = "2023-01-20"
 * serviceProvider = Reference(OrganizationExample)
-* actualPeriod.start = "2024-01-31"
-* actualPeriod.end = "2024-01-31"
 
 Instance: HPVImmunizationExample
 InstanceOf: HPVImmunization
@@ -88,13 +84,27 @@ Title: "HPV Immunization Example"
 Description: "Records the vaccine administered to the patient."
 * status = #completed
 * occurrenceDateTime = "2024-01-31"
-* vaccineCode.coding.code = #836374004
-* vaccineCode.coding.system = $SCT
-* vaccineCode.coding.display = "Hepatitis B virus antigen-containing vaccine product"
-* vaccineCode.text = "Vaccine Name"
-* patient = Reference(HPVPatientExample)
-* encounter = Reference(HPVEncounterExample)
+* vaccineCode = $ICD11#J07BM01
+* patient = Reference(HPVImmunizationPatientExample)
+* encounter = Reference(HPVTargetFacilityEncounterExample)
 * performer.actor = Reference(OrganizationExample)
 * protocolApplied.doseNumber = "DN0000000"
-* extension[HPVPatientVaccinationRegistrationDate].valueDateTime = "2024-01-31"
-* extension[HVBN].valueString = "BN0000000"
+* extension[RegistrationDate].valueDateTime = "2024-01-31"
+* administeredProduct.reference = Reference(HPVVaccineExample)
+
+Instance: HPVVaccineExample
+InstanceOf: HPVVaccine
+Usage: #example
+Title: "HPV Vaccine Details"
+Description: "Records the batch number for the vaccine."
+* code = $ICD11#J07BM01
+* batch.lotNumber = "123"
+
+Instance: HPVVaccinationSiteTypeExample
+InstanceOf: HPVVaccinationSiteType
+Usage: #example
+Title: "Vaccination site type in HPV"
+Description: "Indicates whether the vaccination was administered at the facility or at an outreach post."
+* type.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site"
+* type.coding.code = #Community
+* name = "facility name"
