@@ -6,7 +6,6 @@ Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/Cod
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $ICD11 = http://id.who.int/icd11/mms
 Alias: $HumanName = http://hl7.org/fhir/name-use
-//Alias: $Occupation_CDC = urn:oid:2.16.840.1.114222.4.5.327
 
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
@@ -23,6 +22,22 @@ Description: "A list of proprietary education levels."
 * #PhDGraduate "PhD Graduate"
 * #Primary "Primary"
 * #SeniorSecondary "Senior Secondary"
+
+CodeSystem: CSProprietarySmartcareVaccinationSite
+Id: cs-proprietary-smartcare-vaccination-site
+Title: "Vaccination site type (Proprietary)"
+Description: "A list of vaccination sites (posts) where the vaccination was administered."
+* ^experimental = false
+* ^caseSensitive = true
+* #Static "Static"
+* #Outreach "Outreach"
+
+ValueSet: VSProprietarySmartcareVaccinationSite
+Id: vs-proprietary-smartcare-vaccination-site
+Title: "Vaccination site type (Proprietary)"
+Description: "A list of vaccination sites (posts) where the vaccination was administered."
+* ^experimental = false
+* include codes from system CSProprietarySmartcareVaccinationSite
 
 ValueSet: VSProprietaryEducationLevelAttained
 Id: vs-proprietary-education-level-attained
@@ -45,14 +60,6 @@ Description: "A list of LOINC education levels."
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
 * $LNC#LA12459-6 "Associate degree (e.g., AA, AS)"
-
-/*ValueSet: VSIndividualOccupation
-Id: vs-occupation
-Title: "Occupation"
-Description: "Codes for classifying an individual's occupation."
-* ^experimental = false
-* include codes from system $Occupation_CDC
-    //where concept descendent-of #14679004*/
 
 /*ValueSet: VSSpouseRelationCodes
 Id: vs-spouse-relation-type

@@ -13,6 +13,11 @@ Description: "If name.use is NOT nickname then name.family SHALL be present."
 Expression: "use.exists() and use != 'nickname' implies family.exists()"
 Severity: #error
 
+Invariant: PHONE-1
+Description: "Only special characters (dash) and numbers are allowed. For example: 083-123-1234"
+Expression: "$this.matches('[0-9]{1,3}-[0-9]{1,3}-[0-9]{4}')"
+Severity: #error
+
 Profile: ImmunizationPatient
 Parent: Patient
 Id: immunization-patient
@@ -156,6 +161,7 @@ Description: "This profile acts as a base profile from which more specific Relat
 * telecom[phone] ^definition =
     "reason(s) why this should be supported."
 * telecom[phone].value 1..1
+  * obeys PHONE-1
 * telecom[phone].system 1..1
 * telecom[phone].system = #phone
 
@@ -233,10 +239,8 @@ Description: "Records the current occupation for the spouse"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
-* valueCodeableConcept 1..1
-* value[x] only CodeableConcept
-* valueCodeableConcept.text 1..1
-* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
+* value[x] only string
+* valueString 1..1
 
 Profile: GuardianOccupationObservation
 Parent: GenericObservation
@@ -247,10 +251,8 @@ Description: "Records the current occupation for the guardian"
 * effectivePeriod 0..1 MS
 * effectivePeriod ^definition =
   "reason(s) why this should be supported."
-* valueCodeableConcept 1..1
-* value[x] only CodeableConcept
-* valueCodeableConcept.text 1..1
-* valueCodeableConcept from PHVS_Occupation_CDC_ONET-SOC2010_ODH (extensible)
+* value[x] only string
+* valueString 1..1
 
 Profile: DatePatientFirstMarriedObservation
 Parent: Observation
@@ -404,4 +406,20 @@ Description: "Records the vaccine administered to the patient."
 * occurrenceDateTime only dateTime
 * encounter 1..1
 * encounter only Reference(TargetFacilityEncounter)
-* protocolApplied.doseNumber
+* protocolApplied 0..1 MS
+* protocolApplied ^definition =
+  "reason(s) why this should be supported."
+* protocolApplied.doseNumber 1..1
+* performer 1..*
+* performer.actor 1..1
+* performer.actor only Reference(SmartcareVaccinationSiteType)
+
+
+Profile: SmartcareVaccinationSiteType
+Parent: Organization
+Id: smartcare-vaccination-site-type
+Title: "Vaccination site type"
+Description: "Indicates whether the vaccination was administered at the facility or at an outreach post."
+* name 1..1
+* type 1..1
+* type from VSProprietarySmartcareVaccinationSite (required)
