@@ -57,7 +57,7 @@ Description: "Is used to document demographics and other administrative informat
 Profile: ServiceProvider
 Parent: Organization
 Id: healthcare-service-provider
-Title: "Generic Healthcare Service Provider Profile"
+Title: "Healthcare Service Provider Profile"
 Description: "An organization that provides healthcare services."
 * identifier 0..*
 * identifier ^definition =
@@ -81,7 +81,7 @@ Description: "An organization that provides healthcare services."
 Profile: RelationToPatient
 Parent: RelatedPerson
 Id: relation-to-patient
-Title: "Generic Relation to Patient Profile"
+Title: "Relation to Patient Profile"
 Description: "This profile acts as a base profile from which more specific RelatedPerson profiles can be derived."
 * identifier 0..* MS
 * identifier ^definition =
@@ -132,7 +132,7 @@ Description: "This profile acts as a base profile from which more specific Relat
 Profile: GuardianRelatedPerson
 Parent: RelationToPatient
 Id: guardian-relation-to-patient
-Title: "Generic Guardian Relation to Patient Profile"
+Title: "Guardian Relation to Patient Profile"
 Description: "A guardian to the patient."
 * relationship 1..1
 * relationship = $PARENT_RELATIONSHIP_CODES#GUARD
@@ -143,7 +143,7 @@ Description: "A guardian to the patient."
 Profile: TargetFacilityEncounter
 Parent: Encounter
 Id: target-facility-encounter
-Title: "Generic Target Facility Encounter" 
+Title: "Target Facility Encounter" 
 Description: "Represents the current facility at which the patient is receiving health services."
 * status 1..1
 * class 1..1
