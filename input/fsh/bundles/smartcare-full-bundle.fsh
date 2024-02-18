@@ -17,8 +17,8 @@ Description: "This bundle contains all of the Smartcare resources."
 * entry ^slicing.ordered = false
 * entry ^slicing.description = "An entry resource included in Smartcare's full document bundle resource."
 * entry contains
-    SmartcareImmunizationPatient 0..1 MS  and //Must be mandatory
-    TargetFacilityEncounter 0..1 MS  and //Must be mandatory
+    SmartcareImmunizationPatient 1..1 and
+    TargetFacilityEncounter 1..1 and
     SpouseRelatedPerson 0..1 MS and
     ChiefAtBirthRelatedPerson 0..1 MS and
     GuardianRelatedPerson 0..1 MS and
@@ -33,7 +33,7 @@ Description: "This bundle contains all of the Smartcare resources."
     PatientHomeLanguageObservation 0..1 MS and
     MedicalInsuranceCompany 0..1 MS and
     MedicalInsurance 0..1 MS and
-    Vaccines 0..1 MS //Must be mandatory
+    Vaccines 1..1
 
 * insert BundleEntry(SmartcareImmunizationPatient, SmartcareImmunizationPatient, reason why this should be supported.)
 * insert BundleEntry(TargetFacilityEncounter, TargetFacilityEncounter, reason why this should be supported.)
