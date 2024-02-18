@@ -7,6 +7,9 @@ Description: "This bundle contains all of the Smartcare resources."
 * type = #transaction
 * timestamp 1..1
 * entry 1..*
+* entry.fullUrl 1..1
+* entry.resource 1..1
+* entry.request 1..1
 * entry ^definition =
   "reason(s, reason why this should be supported.) why this should be supported."
 * entry ^slicing.discriminator[+].type = #type
