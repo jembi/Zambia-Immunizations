@@ -17,36 +17,36 @@ Description: "This bundle contains all of the Smartcare resources."
 * entry ^slicing.ordered = false
 * entry ^slicing.description = "An entry resource included in Smartcare's full document bundle resource."
 * entry contains
-    SmartcareImmunizationPatient 1..1 and
-    TargetFacilityEncounter 1..1 and
-    SpouseRelatedPerson 0..1 MS and
-    ChiefAtBirthRelatedPerson 0..1 MS and
-    GuardianRelatedPerson 0..1 MS and
-    PatientMotherRelatedPerson 0..1 MS and
-    RelativeRelatedPerson 0..1 MS and
-    PatientFatherRelatedPerson 0..1 MS and
-    PatientEducationalLevelObservation 0..1 MS and
-    DatePatientFirstMarriedObservation 0..1 MS and
-    GuardianOccupationObservation 0..1 MS and
-    SpouseOccupationObservation 0..1 MS and
-    PatientHomeLanguageObservation 0..1 MS and
+    Patient 1..1 and
+    Encounter 1..1 and
+    Spouse 0..1 MS and
+    ChiefAtBirth 0..1 MS and
+    Guardian 0..1 MS and
+    Mother 0..1 MS and
+    Relative 0..1 MS and
+    Father 0..1 MS and
+    EducationalLevel 0..1 MS and
+    DateFirstMarried 0..1 MS and
+    GuardianOccupation 0..1 MS and
+    SpouseOccupation 0..1 MS and
+    HomeLanguage 0..1 MS and
     MedicalInsuranceCompany 0..1 MS and
     MedicalInsurance 0..1 MS and
     Vaccines 1..1
 
-* insert BundleEntry(SmartcareImmunizationPatient, SmartcareImmunizationPatient, reason why this should be supported.)
-* insert BundleEntry(TargetFacilityEncounter, TargetFacilityEncounter, reason why this should be supported.)
-* insert BundleEntry(SpouseRelatedPerson, SpouseRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(ChiefAtBirthRelatedPerson, ChiefAtBirthRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(GuardianRelatedPerson, GuardianRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(PatientMotherRelatedPerson, PatientMotherRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(RelativeRelatedPerson, RelativeRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(PatientFatherRelatedPerson, PatientFatherRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(PatientEducationalLevelObservation, PatientEducationalLevelObservation, reason why this should be supported.)
-* insert BundleEntry(DatePatientFirstMarriedObservation, DatePatientFirstMarriedObservation, reason why this should be supported.)
-* insert BundleEntry(GuardianOccupationObservation, GuardianOccupationObservation, reason why this should be supported.)
-* insert BundleEntry(SpouseOccupationObservation, SpouseOccupationObservation, reason why this should be supported.)
-* insert BundleEntry(PatientHomeLanguageObservation, PatientHomeLanguageObservation, reason why this should be supported.)
+* insert BundleEntry(SmartcareImmunizationPatient, Patient, reason why this should be supported.)
+* insert BundleEntry(TargetFacilityEncounter, Encounter, reason why this should be supported.)
+* insert BundleEntry(SpouseRelatedPerson, Spouse, reason why this should be supported.)
+* insert BundleEntry(ChiefAtBirthRelatedPerson, ChiefAtBirth, reason why this should be supported.)
+* insert BundleEntry(GuardianRelatedPerson, Guardian, reason why this should be supported.)
+* insert BundleEntry(PatientMotherRelatedPerson, Mother, reason why this should be supported.)
+* insert BundleEntry(RelativeRelatedPerson, Relative, reason why this should be supported.)
+* insert BundleEntry(PatientFatherRelatedPerson, Father, reason why this should be supported.)
+* insert BundleEntry(PatientEducationalLevelObservation, EducationalLevel, reason why this should be supported.)
+* insert BundleEntry(DatePatientFirstMarriedObservation, DateFirstMarried, reason why this should be supported.)
+* insert BundleEntry(GuardianOccupationObservation, GuardianOccupation, reason why this should be supported.)
+* insert BundleEntry(SpouseOccupationObservation, SpouseOccupation, reason why this should be supported.)
+* insert BundleEntry(PatientHomeLanguageObservation, HomeLanguage, reason why this should be supported.)
 * insert BundleEntry(MedicalInsuranceCompany, MedicalInsuranceCompany, reason why this should be supported.)
 * insert BundleEntry(MedicalInsurance, MedicalInsurance, reason why this should be supported.)
 * insert BundleEntry(Vaccines, Vaccines, reason why this should be supported.)

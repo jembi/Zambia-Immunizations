@@ -6,70 +6,70 @@ Description: "A bundle containing all Smartcare FHIR resources."
 * type = #transaction
 * timestamp = "2024-02-18T09:30:00+02:00"
 
-* entry[SmartcareImmunizationPatient][+].fullUrl = "http://hapi-fhir:8080/Patient/SmartcareImmunizationPatientExample"
-* entry[SmartcareImmunizationPatient][=].resource = SmartcareImmunizationPatientExample
-* entry[SmartcareImmunizationPatient][=].request.method = #PUT
-* entry[SmartcareImmunizationPatient][=].request.url = "Patient/SmartcareImmunizationPatientExample"
+* entry[Patient][+].fullUrl = "http://hapi-fhir:8080/Patient/SmartcareImmunizationPatientExample"
+* entry[Patient][=].resource = SmartcareImmunizationPatientExample
+* entry[Patient][=].request.method = #PUT
+* entry[Patient][=].request.url = "Patient/SmartcareImmunizationPatientExample"
 
-* entry[TargetFacilityEncounter][+].fullUrl = "http://hapi-fhir:8080/Encounter/SmartcareTargetFacilityEncounterExample"
-* entry[TargetFacilityEncounter][=].resource = SmartcareTargetFacilityEncounterExample
-* entry[TargetFacilityEncounter][=].request.method = #PUT
-* entry[TargetFacilityEncounter][=].request.url = "Encounter/SmartcareTargetFacilityEncounterExample"
+* entry[Encounter][+].fullUrl = "http://hapi-fhir:8080/Encounter/SmartcareTargetFacilityEncounterExample"
+* entry[Encounter][=].resource = SmartcareTargetFacilityEncounterExample
+* entry[Encounter][=].request.method = #PUT
+* entry[Encounter][=].request.url = "Encounter/SmartcareTargetFacilityEncounterExample"
 
-* entry[SpouseRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SpouseRelatedPersonExample"
-* entry[SpouseRelatedPerson][=].resource = SpouseRelatedPersonExample
-* entry[SpouseRelatedPerson][=].request.method = #PUT
-* entry[SpouseRelatedPerson][=].request.url = "RelatedPerson/SpouseRelatedPersonExample"
+* entry[Spouse][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SpouseRelatedPersonExample"
+* entry[Spouse][=].resource = SpouseRelatedPersonExample
+* entry[Spouse][=].request.method = #PUT
+* entry[Spouse][=].request.url = "RelatedPerson/SpouseRelatedPersonExample"
 
-* entry[ChiefAtBirthRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/ChiefAtBirthRelatedPersonExample"
-* entry[ChiefAtBirthRelatedPerson][=].resource = ChiefAtBirthRelatedPersonExample
-* entry[ChiefAtBirthRelatedPerson][=].request.method = #PUT
-* entry[ChiefAtBirthRelatedPerson][=].request.url = "RelatedPerson/ChiefAtBirthRelatedPersonExample"
+* entry[ChiefAtBirth][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/ChiefAtBirthRelatedPersonExample"
+* entry[ChiefAtBirth][=].resource = ChiefAtBirthRelatedPersonExample
+* entry[ChiefAtBirth][=].request.method = #PUT
+* entry[ChiefAtBirth][=].request.url = "RelatedPerson/ChiefAtBirthRelatedPersonExample"
 
-* entry[GuardianRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SmartcareGuardianRelatedPersonExample"
-* entry[GuardianRelatedPerson][=].resource = SmartcareGuardianRelatedPersonExample
-* entry[GuardianRelatedPerson][=].request.method = #PUT
-* entry[GuardianRelatedPerson][=].request.url = "RelatedPerson/SmartcareGuardianRelatedPersonExample"
+* entry[Guardian][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/SmartcareGuardianRelatedPersonExample"
+* entry[Guardian][=].resource = SmartcareGuardianRelatedPersonExample
+* entry[Guardian][=].request.method = #PUT
+* entry[Guardian][=].request.url = "RelatedPerson/SmartcareGuardianRelatedPersonExample"
 
-* entry[PatientMotherRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/PatientMotherRelatedPersonExample"
-* entry[PatientMotherRelatedPerson][=].resource = PatientMotherRelatedPersonExample
-* entry[PatientMotherRelatedPerson][=].request.method = #PUT
-* entry[PatientMotherRelatedPerson][=].request.url = "RelatedPerson/PatientMotherRelatedPersonExample"
+* entry[Mother][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/PatientMotherRelatedPersonExample"
+* entry[Mother][=].resource = PatientMotherRelatedPersonExample
+* entry[Mother][=].request.method = #PUT
+* entry[Mother][=].request.url = "RelatedPerson/PatientMotherRelatedPersonExample"
 
-* entry[RelativeRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/RelativeRelatedPersonExample"
-* entry[RelativeRelatedPerson][=].resource = RelativeRelatedPersonExample
-* entry[RelativeRelatedPerson][=].request.method = #PUT
-* entry[RelativeRelatedPerson][=].request.url = "RelatedPerson/RelativeRelatedPersonExample"
+* entry[Relative][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/RelativeRelatedPersonExample"
+* entry[Relative][=].resource = RelativeRelatedPersonExample
+* entry[Relative][=].request.method = #PUT
+* entry[Relative][=].request.url = "RelatedPerson/RelativeRelatedPersonExample"
 
-* entry[PatientFatherRelatedPerson][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/PatientFatherRelatedPersonExample"
-* entry[PatientFatherRelatedPerson][=].resource = PatientFatherRelatedPersonExample
-* entry[PatientFatherRelatedPerson][=].request.method = #PUT
-* entry[PatientFatherRelatedPerson][=].request.url = "RelatedPerson/PatientFatherRelatedPersonExample"
+* entry[Father][+].fullUrl = "http://hapi-fhir:8080/RelatedPerson/PatientFatherRelatedPersonExample"
+* entry[Father][=].resource = PatientFatherRelatedPersonExample
+* entry[Father][=].request.method = #PUT
+* entry[Father][=].request.url = "RelatedPerson/PatientFatherRelatedPersonExample"
 
-* entry[PatientEducationalLevelObservation][+].fullUrl = "http://hapi-fhir:8080/Observation/PatientEducationalLevelObservationExample"
-* entry[PatientEducationalLevelObservation][=].resource = PatientEducationalLevelObservationExample
-* entry[PatientEducationalLevelObservation][=].request.method = #PUT
-* entry[PatientEducationalLevelObservation][=].request.url = "Observation/PatientEducationalLevelObservationExample"
+* entry[EducationalLevel][+].fullUrl = "http://hapi-fhir:8080/Observation/PatientEducationalLevelObservationExample"
+* entry[EducationalLevel][=].resource = PatientEducationalLevelObservationExample
+* entry[EducationalLevel][=].request.method = #PUT
+* entry[EducationalLevel][=].request.url = "Observation/PatientEducationalLevelObservationExample"
 
-* entry[DatePatientFirstMarriedObservation][+].fullUrl = "http://hapi-fhir:8080/Observation/DatePatientFirstMarriedObservationExample"
-* entry[DatePatientFirstMarriedObservation][=].resource = DatePatientFirstMarriedObservationExample
-* entry[DatePatientFirstMarriedObservation][=].request.method = #PUT
-* entry[DatePatientFirstMarriedObservation][=].request.url = "Observation/DatePatientFirstMarriedObservationExample"
+* entry[DateFirstMarried][+].fullUrl = "http://hapi-fhir:8080/Observation/DatePatientFirstMarriedObservationExample"
+* entry[DateFirstMarried][=].resource = DatePatientFirstMarriedObservationExample
+* entry[DateFirstMarried][=].request.method = #PUT
+* entry[DateFirstMarried][=].request.url = "Observation/DatePatientFirstMarriedObservationExample"
 
-* entry[GuardianOccupationObservation][+].fullUrl = "http://hapi-fhir:8080/Observation/GuardianOccupationObservationExample"
-* entry[GuardianOccupationObservation][=].resource = GuardianOccupationObservationExample
-* entry[GuardianOccupationObservation][=].request.method = #PUT
-* entry[GuardianOccupationObservation][=].request.url = "Observation/GuardianOccupationObservationExample"
+* entry[GuardianOccupation][+].fullUrl = "http://hapi-fhir:8080/Observation/GuardianOccupationObservationExample"
+* entry[GuardianOccupation][=].resource = GuardianOccupationObservationExample
+* entry[GuardianOccupation][=].request.method = #PUT
+* entry[GuardianOccupation][=].request.url = "Observation/GuardianOccupationObservationExample"
 
-* entry[SpouseOccupationObservation][+].fullUrl = "http://hapi-fhir:8080/Observation/SpouseOccupationObservationExample"
-* entry[SpouseOccupationObservation][=].resource = SpouseOccupationObservationExample
-* entry[SpouseOccupationObservation][=].request.method = #PUT
-* entry[SpouseOccupationObservation][=].request.url = "Observation/SpouseOccupationObservationExample"
+* entry[SpouseOccupation][+].fullUrl = "http://hapi-fhir:8080/Observation/SpouseOccupationObservationExample"
+* entry[SpouseOccupation][=].resource = SpouseOccupationObservationExample
+* entry[SpouseOccupation][=].request.method = #PUT
+* entry[SpouseOccupation][=].request.url = "Observation/SpouseOccupationObservationExample"
 
-* entry[PatientHomeLanguageObservation][+].fullUrl = "http://hapi-fhir:8080/Observation/PatientHomeLanguageObservationExample"
-* entry[PatientHomeLanguageObservation][=].resource = PatientHomeLanguageObservationExample
-* entry[PatientHomeLanguageObservation][=].request.method = #PUT
-* entry[PatientHomeLanguageObservation][=].request.url = "Observation/PatientHomeLanguageObservationExample"
+* entry[HomeLanguage][+].fullUrl = "http://hapi-fhir:8080/Observation/PatientHomeLanguageObservationExample"
+* entry[HomeLanguage][=].resource = PatientHomeLanguageObservationExample
+* entry[HomeLanguage][=].request.method = #PUT
+* entry[HomeLanguage][=].request.url = "Observation/PatientHomeLanguageObservationExample"
 
 * entry[MedicalInsuranceCompany][+].fullUrl = "http://hapi-fhir:8080/Organization/MedicalInsuranceCompanyExample"
 * entry[MedicalInsuranceCompany][=].resource = MedicalInsuranceCompanyExample
