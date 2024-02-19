@@ -7,11 +7,8 @@ Description: "This bundle contains all of the Smartcare resources."
 * type = #transaction
 * timestamp 1..1
 * entry 1..*
-* entry.fullUrl 1..1
-* entry.resource 1..1
-* entry.request 1..1
 * entry ^definition =
-  "reason(s, reason why this should be supported.) why this should be supported."
+  "reason(s) why this should be supported."
 * entry ^slicing.discriminator[+].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.discriminator[+].type = #profile
@@ -26,7 +23,6 @@ Description: "This bundle contains all of the Smartcare resources."
     ChiefAtBirthRelatedPerson 0..1 MS and
     GuardianRelatedPerson 0..1 MS and
     PatientMotherRelatedPerson 0..1 MS and
-    RelationToPatient 0..1 MS and
     RelativeRelatedPerson 0..1 MS and
     PatientFatherRelatedPerson 0..1 MS and
     PatientEducationalLevelObservation 0..1 MS and
@@ -44,7 +40,6 @@ Description: "This bundle contains all of the Smartcare resources."
 * insert BundleEntry(ChiefAtBirthRelatedPerson, ChiefAtBirthRelatedPerson, reason why this should be supported.)
 * insert BundleEntry(GuardianRelatedPerson, GuardianRelatedPerson, reason why this should be supported.)
 * insert BundleEntry(PatientMotherRelatedPerson, PatientMotherRelatedPerson, reason why this should be supported.)
-* insert BundleEntry(RelationToPatient, RelationToPatient, reason why this should be supported.)
 * insert BundleEntry(RelativeRelatedPerson, RelativeRelatedPerson, reason why this should be supported.)
 * insert BundleEntry(PatientFatherRelatedPerson, PatientFatherRelatedPerson, reason why this should be supported.)
 * insert BundleEntry(PatientEducationalLevelObservation, PatientEducationalLevelObservation, reason why this should be supported.)
