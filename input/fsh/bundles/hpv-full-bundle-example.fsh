@@ -24,7 +24,7 @@ Description: "A bundle containing all HPV FHIR resources."
 * entry[Immunocomprommised][+].fullUrl = "http://hapi-fhir:8080/Observation/HPVImmunocomprommisedExample"
 * entry[Immunocomprommised][=].resource = HPVImmunocomprommisedExample
 * entry[Immunocomprommised][=].request.method = #PUT
-* entry[Immunocomprommised][=].request.url = "Organization/HPVImmunocomprommisedExample"
+* entry[Immunocomprommised][=].request.url = "Observation/HPVImmunocomprommisedExample"
 
 * entry[Vaccines][+].fullUrl = "http://hapi-fhir:8080/Immunization/HPVImmunizationExample"
 * entry[Vaccines][=].resource = HPVImmunizationExample
