@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="DatePatientFirstMarriedObservationExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/date-patient-first-married"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="DatePatientFirstMarriedObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;DatePatientFirstMarriedObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-date-patient-first-married.html">Patient's Date of First Marriage</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Finding of marital or partnership status (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#365581002)</span></p><p><b>subject</b>: <a href="Patient-ImmunizationPatientExample.html">Patient/ImmunizationPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-SmartcareTargetFacilityEncounterExample.html">Encounter/SmartcareTargetFacilityEncounterExample</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: 1983-05-22 16:40:17+0200</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="social-history"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="365581002"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ImmunizationPatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/SmartcareTargetFacilityEncounterExample"/>
+  </encounter>
+  <effectiveDateTime value="2022-11-30"/>
+  <performer>
+    <reference value="Organization/OrganizationExample"/>
+  </performer>
+  <valueDateTime value="1983-05-22T16:40:17+02:00"/>
+</Observation>

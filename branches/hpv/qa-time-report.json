@@ -1,0 +1,3084 @@
+{
+  "date" : "Sun, 18 Feb, 2024 07:08:08 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-openhie.fhir.zambia-immunizations.json",
+      "size" : 26276,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 38
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 38,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 38,
+          "length" : 66
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 2613
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 165
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 130
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Bundle-Smartcare.json",
+      "size" : 21945,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 65
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 38,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 39,
+          "length" : 970
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 588
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 115
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 92
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-cs-home-language.json",
+      "size" : 1742,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 39,
+          "length" : 11
+        },
+        {
+          "activity" : "validate",
+          "start" : 43,
+          "length" : 302
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 20
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 1389
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-cs-proprietary-education-level-attained.json",
+      "size" : 1228,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 39,
+          "length" : 7
+        },
+        {
+          "activity" : "validate",
+          "start" : 43,
+          "length" : 12
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 86
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-cs-proprietary-hpv-vaccination-site.json",
+      "size" : 714,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "scan",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 8
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 11
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 65
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-cs-proprietary-smartcare-vaccination-site.json",
+      "size" : 669,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 38,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 10
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 61
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ConceptMap-ProprietaryEducationLevelToLOINCEducationLevel.json",
+      "size" : 4452,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 17
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 11
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 416
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 32
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 30
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 40
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Coverage-MedicalInsuranceExample.json",
+      "size" : 574,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Encounter-HPVTargetFacilityEncounterExample.json",
+      "size" : 645,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 13
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Encounter-SmartcareTargetFacilityEncounterExample.json",
+      "size" : 571,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Immunization-HPVImmunizationExample.json",
+      "size" : 1050,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 94
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 11
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Immunization-VaccinesExample.json",
+      "size" : 756,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Medication-HPVVaccineExample.json",
+      "size" : 368,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-DatePatientFirstMarriedObservationExample.json",
+      "size" : 911,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 64,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-GenericObservationExample.json",
+      "size" : 863,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 45
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 45
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-GuardianOccupationObservationExample.json",
+      "size" : 897,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-HPVImmunocomprommisedExample.json",
+      "size" : 918,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-PatientEducationalLevelObservationExample.json",
+      "size" : 1123,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 11
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-PatientHomeLanguageObservationExample.json",
+      "size" : 1066,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-SpouseOccupationObservationExample.json",
+      "size" : 900,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Organization-HPVVaccinationSiteTypeExample.json",
+      "size" : 464,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Organization-MedicalInsuranceCompanyExample.json",
+      "size" : 814,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 38,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Organization-OrganizationExample.json",
+      "size" : 777,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 56
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 51
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Organization-SmartcareVaccinationSiteTypeExample.json",
+      "size" : 481,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-HPVImmunizationPatientExample.json",
+      "size" : 1742,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 7
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 14
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 12
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 7
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 85,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-ImmunizationPatientExample.json",
+      "size" : 1292,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 10
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-SmartcareImmunizationPatientExample.json",
+      "size" : 2287,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 22
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-ChiefAtBirthRelatedPersonExample.json",
+      "size" : 541,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-HPVGuardianRelatedPersonExample.json",
+      "size" : 601,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-PatientFatherRelatedPersonExample.json",
+      "size" : 571,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-PatientMotherRelatedPersonExample.json",
+      "size" : 598,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-RelationToPatientExample.json",
+      "size" : 554,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-RelativeRelatedPersonExample.json",
+      "size" : 599,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-SmartcareGuardianRelatedPersonExample.json",
+      "size" : 604,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/RelatedPerson-SpouseRelatedPersonExample.json",
+      "size" : 676,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 52,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-administrative-sex.json",
+      "size" : 1895,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 15
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 38
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 114
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 53
+        },
+        {
+          "activity" : "generate2",
+          "start" : 65,
+          "length" : 932
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-born-in-zambia.json",
+      "size" : 1652,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 11
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 48
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 48
+        },
+        {
+          "activity" : "generate2",
+          "start" : 66,
+          "length" : 147
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-chief-at-birth-relation-to-patient.json",
+      "size" : 1881,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 304
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 113
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 336
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 53,
+          "length" : 250
+        },
+        {
+          "activity" : "generate2",
+          "start" : 66,
+          "length" : 654
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 104,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-date-patient-first-married.json",
+      "size" : 4382,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 13
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 10
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 141
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 129
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 449
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 454
+        },
+        {
+          "activity" : "generate2",
+          "start" : 66,
+          "length" : 724
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 8
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-father-relation-to-patient.json",
+      "size" : 1893,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 70
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 40,
+          "length" : 69
+        },
+        {
+          "activity" : "validate",
+          "start" : 45,
+          "length" : 234
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 254
+        },
+        {
+          "activity" : "generate2",
+          "start" : 67,
+          "length" : 332
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-generic-social-history-observation-profile.json",
+      "size" : 2517,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 109
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 81
+        },
+        {
+          "activity" : "validate",
+          "start" : 45,
+          "length" : 299
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 310
+        },
+        {
+          "activity" : "generate2",
+          "start" : 67,
+          "length" : 397
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-guardian-occupation.json",
+      "size" : 2904,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 36,
+          "length" : 115
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 116
+        },
+        {
+          "activity" : "validate",
+          "start" : 45,
+          "length" : 321
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 55,
+          "length" : 395
+        },
+        {
+          "activity" : "generate2",
+          "start" : 68,
+          "length" : 764
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 7
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-guardian-relation-to-patient.json",
+      "size" : 2138,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 70
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 72
+        },
+        {
+          "activity" : "validate",
+          "start" : 45,
+          "length" : 127
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 55,
+          "length" : 264
+        },
+        {
+          "activity" : "generate2",
+          "start" : 69,
+          "length" : 461
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-healthcare-service-provider.json",
+      "size" : 3165,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 64
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 97
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 202
+        },
+        {
+          "activity" : "generate1",
+          "start" : 55,
+          "length" : 279
+        },
+        {
+          "activity" : "generate2",
+          "start" : 69,
+          "length" : 267
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-immunization-patient.json",
+      "size" : 6116,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 14
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 272
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 146
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 284
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 532
+        },
+        {
+          "activity" : "generate2",
+          "start" : 69,
+          "length" : 530
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 10
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-immunization.json",
+      "size" : 2463,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 183
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 81
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 142
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 258
+        },
+        {
+          "activity" : "generate2",
+          "start" : 70,
+          "length" : 243
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-immunocomprommised.json",
+      "size" : 3538,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 118
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 104
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 251
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 414
+        },
+        {
+          "activity" : "generate2",
+          "start" : 70,
+          "length" : 361
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-vaccination-patient-registration-date.json",
+      "size" : 1778,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 3
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 11
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 11
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 26
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 51
+        },
+        {
+          "activity" : "generate2",
+          "start" : 70,
+          "length" : 49
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-vaccination-site-type.json",
+      "size" : 1633,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 34
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 35
+        },
+        {
+          "activity" : "validate",
+          "start" : 46,
+          "length" : 77
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 133
+        },
+        {
+          "activity" : "generate2",
+          "start" : 70,
+          "length" : 124
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 81,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-hpv-vaccine-details.json",
+      "size" : 1544,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 3
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 37
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 38
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 83
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 155
+        },
+        {
+          "activity" : "generate2",
+          "start" : 71,
+          "length" : 129
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 2
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-immunization-patient.json",
+      "size" : 6296,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 105
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 267
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 396
+        },
+        {
+          "activity" : "generate2",
+          "start" : 71,
+          "length" : 349
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-is-estimated-date-of-birth.json",
+      "size" : 1758,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 10
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 27
+        },
+        {
+          "activity" : "generate1",
+          "start" : 58,
+          "length" : 49
+        },
+        {
+          "activity" : "generate2",
+          "start" : 71,
+          "length" : 85
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-medical-insurance-company.json",
+      "size" : 3203,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 64
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 41,
+          "length" : 61
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 175
+        },
+        {
+          "activity" : "generate1",
+          "start" : 58,
+          "length" : 269
+        },
+        {
+          "activity" : "generate2",
+          "start" : 71,
+          "length" : 330
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-medical-insurance.json",
+      "size" : 2627,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 37,
+          "length" : 82
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 74
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 177
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 58,
+          "length" : 291
+        },
+        {
+          "activity" : "generate2",
+          "start" : 71,
+          "length" : 428
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-mother-relation-to-patient.json",
+      "size" : 2015,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 62
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 106
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 107
+        },
+        {
+          "activity" : "generate1",
+          "start" : 58,
+          "length" : 251
+        },
+        {
+          "activity" : "generate2",
+          "start" : 72,
+          "length" : 243
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-patient-educational-level.json",
+      "size" : 3781,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 11
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 190
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 160
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 198
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 58,
+          "length" : 413
+        },
+        {
+          "activity" : "generate2",
+          "start" : 72,
+          "length" : 360
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-patient-home-language.json",
+      "size" : 3215,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 10
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 145
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 208
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 244
+        },
+        {
+          "activity" : "generate1",
+          "start" : 59,
+          "length" : 406
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 290
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 7
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-relation-to-patient.json",
+      "size" : 4653,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 13
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 76
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 98
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 59,
+          "length" : 279
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 217
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-relative-relation-to-patient.json",
+      "size" : 1780,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 3
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 87
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 65
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 89
+        },
+        {
+          "activity" : "generate1",
+          "start" : 59,
+          "length" : 236
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 264
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 4
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-smartcare-immunization-patient.json",
+      "size" : 6573,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 15
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 137
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 146
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 245
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 60,
+          "length" : 496
+        },
+        {
+          "activity" : "generate2",
+          "start" : 73,
+          "length" : 757
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-smartcare-vaccination-site-type.json",
+      "size" : 1663,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 38
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 42
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 46
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 60,
+          "length" : 134
+        },
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 200
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 2
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 104,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-spouse-occupation.json",
+      "size" : 2902,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 101
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 128
+        },
+        {
+          "activity" : "validate",
+          "start" : 48,
+          "length" : 210
+        },
+        {
+          "activity" : "generate1",
+          "start" : 60,
+          "length" : 378
+        },
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 316
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-spouse-relation-to-patient.json",
+      "size" : 2046,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 62
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 87
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 102
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 61,
+          "length" : 247
+        },
+        {
+          "activity" : "generate2",
+          "start" : 75,
+          "length" : 210
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-target-facility-encounter.json",
+      "size" : 2545,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 38,
+          "length" : 92
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 98
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 162
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 61,
+          "length" : 350
+        },
+        {
+          "activity" : "generate2",
+          "start" : 75,
+          "length" : 261
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-vaccine-administration.json",
+      "size" : 3626,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 10
+        },
+        {
+          "activity" : "scan",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 79
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 142
+        },
+        {
+          "activity" : "generate1",
+          "start" : 61,
+          "length" : 282
+        },
+        {
+          "activity" : "generate2",
+          "start" : 75,
+          "length" : 191
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 104,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-administrative-sex.json",
+      "size" : 639,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 7
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 67
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 11
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 75,
+          "length" : 2566
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-home-language.json",
+      "size" : 450,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 51
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-loinc-education-level-attained.json",
+      "size" : 1488,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 61
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 11
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 13
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 90
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-proprietary-education-level-attained.json",
+      "size" : 592,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 38,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 47
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-proprietary-hpv-vaccination-site.json",
+      "size" : 599,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 29
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-proprietary-smartcare-vaccination-site.json",
+      "size" : 629,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 22
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-vs-vaccines.json",
+      "size" : 5190,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 9
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 245
+        },
+        {
+          "activity" : "validate",
+          "start" : 44,
+          "length" : 63
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 25
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 248
+        }
+      ]
+    },
+    {
+      "name" : "input/maps/PropietaryEducationLevelToLOINCEducationLevel.fml",
+      "size" : 1047,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 35,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 36,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 43,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 49,
+          "length" : 17
+        },
+        {
+          "activity" : "generate1",
+          "start" : 62,
+          "length" : 19
+        },
+        {
+          "activity" : "generate2",
+          "start" : 78,
+          "length" : 10
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 86,
+          "length" : 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/Encounter/HPVEncounterExample> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HPVEncounterExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-encounter"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"HPVEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;HPVEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hpv-encounter.html\">HPV Encounter</a></p></div><p><b>status</b>: completed</p><p><b>class</b>: ambulatory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html\">ActCode</a>#AMB)</span></p><p><b>subject</b>: <a href=\"Patient-HPVPatientExample.html\">Patient/HPVPatientExample</a> &quot; ZINGA&quot;</p><p><b>serviceProvider</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>actualPeriod</b>: 2024-01-31 --&gt; 2024-01-31</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:class ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/zambia-immunizations/Patient/HPVPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HPVPatientExample" ]
+  ] ; # 
+  fhir:serviceProvider [
+     fhir:link <http://openhie.org/fhir/zambia-immunizations/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ; # 
+  fhir:actualPeriod [
+     fhir:start [ fhir:v "2024-01-31"^^xsd:date ] ;
+     fhir:end [ fhir:v "2024-01-31"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

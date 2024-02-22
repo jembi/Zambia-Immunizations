@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/RelatedPerson/ChiefAtBirthRelatedPersonExample> a fhir:RelatedPerson ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ChiefAtBirthRelatedPersonExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/chief-at-birth-relation-to-patient"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/StructureDefinition/chief-at-birth-relation-to-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"ChiefAtBirthRelatedPersonExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;ChiefAtBirthRelatedPersonExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-chief-at-birth-relation-to-patient.html\">Chief at Birth</a></p></div><p><b>patient</b>: <a href=\"Patient-ImmunizationPatientExample.html\">Patient/ImmunizationPatientExample</a> &quot;&quot;</p><p><b>relationship</b>: Person in the community environment (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#303119007)</span></p><p><b>name</b>: Jones (OFFICIAL)</p></div>"
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://openhie.org/fhir/zambia-immunizations/Patient/ImmunizationPatientExample> ;
+     fhir:reference [ fhir:v "Patient/ImmunizationPatientExample" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       a sct:303119007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "303119007" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Jones" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

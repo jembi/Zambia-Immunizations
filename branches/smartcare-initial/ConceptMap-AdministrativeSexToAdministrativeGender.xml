@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="AdministrativeSexToAdministrativeGender"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-01-30 by Jembi Health Systems (Jembi Health Systems: <a href="https://www.jembi.org">https://www.jembi.org</a>, <a href="mailto:info@jembi.org">info@jembi.org</a>, Richard Langford: <a href="mailto:richard.langford@jembi.org">richard.langford@jembi.org</a>). </p><div><p>Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender.</p>
+</div><br/><p><b>Group 1</b>Mapping from <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html">administrativeSex</a> to <a href="http://hl7.org/fhir/R5/codesystem-administrative-gender.html">AdministrativeGender</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>M (Male)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>male</td></tr><tr><td>F (Female)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>female</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href="http://hl7.org/fhir/R5/codesystem-administrative-gender.html">AdministrativeGender</a> to <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html">administrativeSex</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>M (Male)</td></tr><tr><td>female</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>F (Female)</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender"/>
+  <version value="1.0.0"/>
+  <name value="AdministrativeSexToAdministrativeGender"/>
+  <title value="ConceptMap to and From administrative sex to administrative gender"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-01-30"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+    <target value="http://hl7.org/fhir/administrative-gender"/>
+    <element>
+      <code value="M"/>
+      <target>
+        <code value="male"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="F"/>
+      <target>
+        <code value="female"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/administrative-gender"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+    <element>
+      <code value="male"/>
+      <target>
+        <code value="M"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="female"/>
+      <target>
+        <code value="F"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

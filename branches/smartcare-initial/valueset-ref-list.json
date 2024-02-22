@@ -1,0 +1,90 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-home-language",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSHomeLanguage",
+      "title" : "Patient's Home Language",
+      "description" : "A list of languages.",
+      "systems" : [
+        "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-home-language.html" : "Patient's Home Language"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-human-name-codes",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "HumanNameCodes",
+      "title" : "HumanName Codes",
+      "description" : "A List of HumanName Codes Exlcuding Nickname",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "uses" : {
+      },
+      "StructureDefinition-immunization-patient.html" : "Patient Profile for Immunizations"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-loinc-education-level-attained",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSLOINCEducationLevelAttained",
+      "title" : "Patient's highest education level attained (LOINC)",
+      "description" : "A list of LOINC education levels.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-patient-educational-level.html" : "Highest education level attained"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-occupation",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSIndividualOccupation",
+      "title" : "Occupation",
+      "description" : "Codes for classifying an individual's occupation.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-spouse-occupation.html" : "Spouse Occupation",
+      "StructureDefinition-guardian-occupation.html" : "Guardian Occupation"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSProprietaryEducationLevelAttained",
+      "title" : "Patient's highest education level attained (Proprietary)",
+      "description" : "A list of proprietary education levels.",
+      "systems" : [
+        "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-spouse-relation-type",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSSpouseRelationCodes",
+      "title" : "Spouse Relation Types",
+      "description" : "Codes for classifying the type of spouse.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-spouse-relation-to-patient.html" : "Spouse Relation to Patient"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-vaccines",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSVaccines",
+      "title" : "Vaccine Codes",
+      "description" : "A List of Vaccine Codes Use In Zambia",
+      "systems" : ["http://id.who.int/icd11/mms", "http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Vaccines.html" : "Vaccine Administration"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="HPVImmunizationExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-immunization"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b><a name="HPVImmunizationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization &quot;HPVImmunizationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hpv-immunization.html">HPV Immunization</a></p></div><p><b>HPV Patient Registration Date</b>: 2024-01-31</p><p><b>status</b>: completed</p><p><b>vaccineCode</b>: J07BM01 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (mms#J07BM01)</span></p><h3>AdministeredProducts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="Medication-HPVVaccineExample.html">Medication/HPVVaccineExample</a></td></tr></table><p><b>patient</b>: <a href="Patient-HPVImmunizationPatientExample.html">Patient/HPVImmunizationPatientExample</a> &quot; JONES&quot;</p><p><b>encounter</b>: <a href="Encounter-HPVTargetFacilityEncounterExample.html">Encounter/HPVTargetFacilityEncounterExample</a></p><p><b>occurrence</b>: 2024-01-31</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</td></tr></table><h3>ProtocolApplieds</h3><table class="grid"><tr><td style="display: none">-</td><td><b>DoseNumber</b></td></tr><tr><td style="display: none">*</td><td>DN0000000</td></tr></table></div>
+  </text>
+  <extension url="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-vaccination-patient-registration-date">
+    <valueDateTime value="2024-01-31"/>
+  </extension>
+  <status value="completed"/>
+  <vaccineCode>
+    <coding>
+      <system value="http://id.who.int/icd11/mms"/>
+      <code value="J07BM01"/>
+    </coding>
+  </vaccineCode>
+  <administeredProduct>
+    <reference>
+      <reference value="Medication/HPVVaccineExample"/>
+    </reference>
+  </administeredProduct>
+  <patient>
+    <reference value="Patient/HPVImmunizationPatientExample"/>
+  </patient>
+  <encounter>
+    <reference value="Encounter/HPVTargetFacilityEncounterExample"/>
+  </encounter>
+  <occurrenceDateTime value="2024-01-31"/>
+  <performer>
+    <actor>
+      <reference value="Organization/OrganizationExample"/>
+    </actor>
+  </performer>
+  <protocolApplied>
+    <doseNumber value="DN0000000"/>
+  </protocolApplied>
+</Immunization>

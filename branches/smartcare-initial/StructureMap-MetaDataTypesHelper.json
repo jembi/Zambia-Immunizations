@@ -1,0 +1,69 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "MetaDataTypesHelper",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<span style=\"color: #cc00cc\">/// <b>url</b> = </span><span style=\"color: blue\">'http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper'</span>\r\n<span style=\"color: #cc00cc\">/// <b>name</b> = </span><span style=\"color: blue\">'MetaDataTypesHelper'</span>\r\n<span style=\"color: #cc00cc\">/// <b>title</b> = </span><span style=\"color: blue\">'Structure Maps Helper'</span>\r\n<span style=\"color: #cc00cc\">/// <b>status</b> = </span><span style=\"color: blue\">'active'</span>\r\n\r\n<b>group </b>mapCodingtoCodeableConcept<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">coding</span><span style=\"color: navy\"> : </span>Coding, <b>target</b> <span style=\"color: maroon\">codeableConcept</span><span style=\"color: navy\"> : </span>CodeableConcept<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  coding<span style=\"color: navy\"><b> -&gt; </b></span>codeableConcept.coding = <span style=\"color: maroon\">coding</span> <i>&quot;set coding&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper",
+  "version" : "1.0.0",
+  "name" : "MetaDataTypesHelper",
+  "title" : "Structure Maps Helper",
+  "status" : "active",
+  "date" : "2024-02-04T10:42:21+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Structure maps helper.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "group" : [{
+    "name" : "mapCodingtoCodeableConcept",
+    "input" : [{
+      "name" : "coding",
+      "type" : "Coding",
+      "mode" : "source"
+    },
+    {
+      "name" : "codeableConcept",
+      "type" : "CodeableConcept",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "set coding",
+      "source" : [{
+        "context" : "coding"
+      }],
+      "target" : [{
+        "context" : "codeableConcept",
+        "element" : "coding",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "coding"
+        }]
+      }]
+    }]
+  }]
+}

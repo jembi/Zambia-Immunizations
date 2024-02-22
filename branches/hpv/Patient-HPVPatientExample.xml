@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="HPVPatientExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Dolo Bia Zinga </b> (no stated gender), DoB: 2000-01-01 ( <code>http://openhie.org/fhir/zambia-immunizations/identifier/cn</code>/CN0000000)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Id:</td><td colspan="3">Patient passport number/PN0000000</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Details:</td><td colspan="3"><ul><li><a href="mailto:mail@mail.com">mail@mail.com</a></li><li><a href="tel:+27821234567">+27821234567</a></li><li>100 Zimi Road Ndola City Ndola Copperbelt Province Zambia </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</li><li>Please refer to: <a href="RelatedPerson-HPVRelatedPersonExample.html">RelatedPerson/HPVRelatedPersonExample</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="This is an extension to capture that patient's administrative sex."><a href="StructureDefinition-administrative-sex.html">Administrative Sex:</a></td><td colspan="3"><ul><li><span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0001 F}">Female</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/administrative-sex">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+        <code value="F"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://openhie.org/fhir/zambia-immunizations/identifier/cn"/>
+    <value value="CN0000000"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+        <display value="Passport number"/>
+      </coding>
+      <text value="Patient passport number"/>
+    </type>
+    <system value="http://openhie.org/fhir/zambia-immunizations/identifier/pn"/>
+    <value value="PN0000000"/>
+  </identifier>
+  <name>
+    <family value="Zinga"/>
+    <given value="Dolo"/>
+    <given value="Bia"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="mail@mail.com"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="+27821234567"/>
+  </telecom>
+  <birthDate value="2000-01-01"/>
+  <address>
+    <line value="100"/>
+    <line value="Zimi Road"/>
+    <line value="Ndola City"/>
+    <city value="Ndola"/>
+    <district value="Ndola District"/>
+    <state value="Copperbelt Province"/>
+    <country value="Zambia"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/OrganizationExample"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="RelatedPerson/HPVRelatedPersonExample"/>
+    </other>
+    <type value="refer"/>
+  </link>
+</Patient>

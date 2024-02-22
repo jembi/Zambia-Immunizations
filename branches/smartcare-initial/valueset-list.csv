@@ -1,0 +1,8 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-home-language,1.0.0,active,,VSHomeLanguage,Patient's Home Language,"A list of languages.",,"Internal"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-human-name-codes,1.0.0,active,,HumanNameCodes,HumanName Codes,"A List of HumanName Codes Exlcuding Nickname",,"hl7.fhir.r5.core"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-loinc-education-level-attained,1.0.0,active,,VSLOINCEducationLevelAttained,Patient's highest education level attained (LOINC),"A list of LOINC education levels.",,"LOINC"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-occupation,1.0.0,active,,VSIndividualOccupation,Occupation,"Codes for classifying an individual's occupation.",,"SCT"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained,1.0.0,active,,VSProprietaryEducationLevelAttained,Patient's highest education level attained (Proprietary),"A list of proprietary education levels.",,"Internal"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-spouse-relation-type,1.0.0,active,,VSSpouseRelationCodes,Spouse Relation Types,"Codes for classifying the type of spouse.",,"SCT"
+http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-vaccines,1.0.0,active,,VSVaccines,Vaccine Codes,"A List of Vaccine Codes Use In Zambia",,"SCT,Other"

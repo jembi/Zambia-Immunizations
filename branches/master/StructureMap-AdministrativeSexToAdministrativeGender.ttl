@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AdministrativeSexToAdministrativeGender"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<span style=\"color: #cc00cc\">/// <b>url</b> = </span><span style=\"color: blue\">'http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender'</span>\r\n<span style=\"color: #cc00cc\">/// <b>name</b> = </span><span style=\"color: blue\">'AdministrativeSexToAdministrativeGender'</span>\r\n<span style=\"color: #cc00cc\">/// <b>title</b> = </span><span style=\"color: blue\">'Administrative Sex To Administrative Gender'</span>\r\n<span style=\"color: #cc00cc\">/// <b>status</b> = </span><span style=\"color: blue\">'active'</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R5/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">&quot; </span><b>alias </b>srcPatient <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R5/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">&quot; </span><b>alias </b>tgtPatient <b>as </b><b>target</b>\r\n\r\n<b>group </b>SetPatientGender<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">pat</span><span style=\"color: navy\"> : </span>srcPatient, <b>target</b> <span style=\"color: maroon\">patient</span><span style=\"color: navy\"> : </span>tgtPatient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  pat.gender<b> as </b><span style=\"color: maroon\">gender</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <b>translate</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">gender</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'code'</span><span style=\"color: navy\">)</span> <i>&quot;SetGender&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "AdministrativeSexToAdministrativeGender"] ; # 
+  fhir:title [ fhir:v "Administrative Sex To Administrative Gender"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-02-05T10:09:05+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Maps the Administrative Sex codes To Administrative Gender codes."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "srcPatient" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "tgtPatient" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "SetPatientGender" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "pat" ] ;
+       fhir:type [ fhir:v "srcPatient" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "patient" ] ;
+       fhir:type [ fhir:v "tgtPatient" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetGender" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "pat" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:variable [ fhir:v "gender" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:transform [ fhir:v "translate" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "gender" ]
+         ] [
+           fhir:value [ fhir:v "http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender" ]
+         ] [
+           fhir:value [ fhir:v "code" ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

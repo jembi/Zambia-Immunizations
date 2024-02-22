@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="SpouseOccupationObservationExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/spouse-occupation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="SpouseOccupationObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;SpouseOccupationObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-spouse-occupation.html">Spouse Occupation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Occupation of spouse (observable entity) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#447057006)</span></p><p><b>subject</b>: <a href="Patient-ImmunizationPatientExample.html">Patient/ImmunizationPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-SmartcareTargetFacilityEncounterExample.html">Encounter/SmartcareTargetFacilityEncounterExample</a></p><p><b>effective</b>: 2017-03-01 --&gt; (ongoing)</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: .NET Programmer</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="social-history"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="447057006"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ImmunizationPatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/SmartcareTargetFacilityEncounterExample"/>
+  </encounter>
+  <effectivePeriod>
+    <start value="2017-03-01"/>
+  </effectivePeriod>
+  <performer>
+    <reference value="Organization/OrganizationExample"/>
+  </performer>
+  <valueString value=".NET Programmer"/>
+</Observation>

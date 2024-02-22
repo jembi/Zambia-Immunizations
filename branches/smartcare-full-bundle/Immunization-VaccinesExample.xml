@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="VaccinesExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/vaccine-administration"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b><a name="VaccinesExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization &quot;VaccinesExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-vaccine-administration.html">Generic Vaccine Administration Profile</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: Vitamin A <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#82622003)</span></p><p><b>patient</b>: <a href="Patient-ImmunizationPatientExample.html">Patient/ImmunizationPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-SmartcareTargetFacilityEncounterExample.html">Encounter/SmartcareTargetFacilityEncounterExample</a></p><p><b>occurrence</b>: 2022-11-30</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Organization-SmartcareVaccinationSiteTypeExample.html">Organization/SmartcareVaccinationSiteTypeExample</a> &quot;facility name&quot;</td></tr></table><h3>ProtocolApplieds</h3><table class="grid"><tr><td style="display: none">-</td><td><b>DoseNumber</b></td></tr><tr><td style="display: none">*</td><td>0</td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <vaccineCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="82622003"/>
+    </coding>
+  </vaccineCode>
+  <patient>
+    <reference value="Patient/ImmunizationPatientExample"/>
+  </patient>
+  <encounter>
+    <reference value="Encounter/SmartcareTargetFacilityEncounterExample"/>
+  </encounter>
+  <occurrenceDateTime value="2022-11-30"/>
+  <performer>
+    <actor>
+      <reference value="Organization/SmartcareVaccinationSiteTypeExample"/>
+    </actor>
+  </performer>
+  <protocolApplied>
+    <doseNumber value="0"/>
+  </protocolApplied>
+</Immunization>

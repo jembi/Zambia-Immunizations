@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/Patient/HImmunizationPatientExample> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HImmunizationPatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1990-12-12 ( <code>http://openhie.org/fhir/zambia-immunizations/identifier/nupin</code>/12-999-22-2338)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://openhie.org/fhir/zambia-immunizations/identifier/nrc</code>/12-999-22-2338</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"A list of education levels.\"><a href=\"StructureDefinition-education-level-attained.html\">Patient's highest education level attained:</a></td><td colspan=\"3\"><ul><li><span title=\"Codes: {http://loinc.org LA42-7}\">Graduate degree</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This is an extension to capture whether the patient's date of birth was estimated.\"><a href=\"StructureDefinition-is-estimated-date-of-birth.html\">Patient's Date of Birth Is Estimated?:</a></td><td colspan=\"3\"><ul><li>false</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This is an extension to capture whether the patient was born in Zambia.\"><a href=\"StructureDefinition-born-in-zambia.html\">Patient born in Zambia?:</a></td><td colspan=\"3\"><ul><li>true</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/born-in-zambia"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "true"^^xsd:boolean ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/is-estimated-date-of-birth"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/education-level-attained"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a loinc:LA42-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA42-7" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://openhie.org/fhir/zambia-immunizations/identifier/nupin"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "12-999-22-2338" ]
+  ] [
+     fhir:system [ fhir:v "http://openhie.org/fhir/zambia-immunizations/identifier/nrc"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "12-999-22-2338" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Jane" ] [ fhir:v "Maria" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [
+     fhir:v "1990-12-12"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthTime"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "1983-05-22T16:40:17+02:00"^^xsd:dateTime ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

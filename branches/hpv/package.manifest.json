@@ -1,0 +1,6 @@
+{
+  "version" : "1.0.0",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20240218070732",
+  "name" : "openhie.fhir.zambia-immunizations"
+}

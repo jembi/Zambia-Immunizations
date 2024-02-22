@@ -1,0 +1,79 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "AdministrativeSexToAdministrativeGender",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-01-30 by Jembi Health Systems (Jembi Health Systems: <a href=\"https://www.jembi.org\">https://www.jembi.org</a>, <a href=\"mailto:info@jembi.org\">info@jembi.org</a>, Richard Langford: <a href=\"mailto:richard.langford@jembi.org\">richard.langford@jembi.org</a>). </p><div><p>Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender.</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html\">administrativeSex</a> to <a href=\"http://hl7.org/fhir/R5/codesystem-administrative-gender.html\">AdministrativeGender</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>M (Male)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>male</td></tr><tr><td>F (Female)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>female</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"http://hl7.org/fhir/R5/codesystem-administrative-gender.html\">AdministrativeGender</a> to <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html\">administrativeSex</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>M (Male)</td></tr><tr><td>female</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>F (Female)</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender",
+  "version" : "1.0.0",
+  "name" : "AdministrativeSexToAdministrativeGender",
+  "title" : "ConceptMap to and From administrative sex to administrative gender",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-01-30",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "group" : [{
+    "source" : "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "target" : "http://hl7.org/fhir/administrative-gender",
+    "element" : [{
+      "code" : "M",
+      "target" : [{
+        "code" : "male",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "F",
+      "target" : [{
+        "code" : "female",
+        "relationship" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.org/fhir/administrative-gender",
+    "target" : "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "element" : [{
+      "code" : "male",
+      "target" : [{
+        "code" : "M",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "female",
+      "target" : [{
+        "code" : "F",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

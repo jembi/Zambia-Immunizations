@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="34bcbcea-e603-4f45-bb75-2ac4ce1bbf6f"/>
+  <meta>
+    <lastUpdated value="2024-02-18T07:08:08.677+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-administrative-sex"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html">codesystem administrativeSex v2.1.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0001-M"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html#v2-0001-M">M</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v2-0001</td>
+                <td>Male</td>
+                <td>
+                  <div>
+                    <p>Male</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0001-F"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html#v2-0001-F">F</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v2-0001</td>
+                <td>Female</td>
+                <td>
+                  <div>
+                    <p>Female</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-administrative-sex"/>
+        <version value="1.0.0"/>
+        <name value="AdministrativeSex"/>
+        <title value="Administrative Sex"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:757eb18e-1412-473a-8122-a474783ddd72"/>
+          <timestamp value="2024-02-18T07:08:50+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v2-0001|2.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+            <code value="M"/>
+            <display value="Male"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+            <code value="F"/>
+            <display value="Female"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-home-language"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-home-language.html">codesystem Patient's Home Language v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 22 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Ambo"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Ambo">Ambo</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Ambo</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Aushi"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Aushi">Aushi</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Aushi</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Bemba"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Bemba">Bemba</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Bemba</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Bisa"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Bisa">Bisa</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Bisa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Chewa"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Chewa">Chewa</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Chewa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Chikunda"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Chikunda">Chikunda</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Chikunda</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Chokwe"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Chokwe">Chokwe</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Chokwe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Cishinga"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Cishinga">Cishinga</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Cishinga</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-English"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-English">English</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>English</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Gova"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Gova">Gova</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Gova</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Ila"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Ila">Ila</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Ila</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Iwa"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Iwa">Iwa</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Iwa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Kabende"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Kabende">Kabende</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Kabende</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Kaonde"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Kaonde">Kaonde</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Kaonde</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Lamba"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Lamba">Lamba</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Lamba</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Lenje"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Lenje">Lenje</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Lenje</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Lozi"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Lozi">Lozi</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Lozi</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Luvale"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Luvale">Luvale</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Luvale</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Namwanga"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Namwanga">Namwanga</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Namwanga</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Ngoni"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Ngoni">Ngoni</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Ngoni</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Soli"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Soli">Soli</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Soli</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-home-language-Tonga"> </a>  
+                  <a href="CodeSystem-cs-home-language.html#cs-home-language-Tonga">Tonga</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language</td>
+                <td>Tonga</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-home-language"/>
+        <version value="1.0.0"/>
+        <name value="VSHomeLanguage"/>
+        <title value="Patient's Home Language"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e9e60378-3080-4801-92a4-9d905cd6dd43"/>
+          <timestamp value="2024-02-18T07:08:50+00:00"/>
+          <total value="22"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Ambo"/>
+            <display value="Ambo"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Aushi"/>
+            <display value="Aushi"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Bemba"/>
+            <display value="Bemba"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Bisa"/>
+            <display value="Bisa"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Chewa"/>
+            <display value="Chewa"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Chikunda"/>
+            <display value="Chikunda"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Chokwe"/>
+            <display value="Chokwe"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Cishinga"/>
+            <display value="Cishinga"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="English"/>
+            <display value="English"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Gova"/>
+            <display value="Gova"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Ila"/>
+            <display value="Ila"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Iwa"/>
+            <display value="Iwa"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Kabende"/>
+            <display value="Kabende"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Kaonde"/>
+            <display value="Kaonde"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Lamba"/>
+            <display value="Lamba"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Lenje"/>
+            <display value="Lenje"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Lozi"/>
+            <display value="Lozi"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Luvale"/>
+            <display value="Luvale"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Namwanga"/>
+            <display value="Namwanga"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Ngoni"/>
+            <display value="Ngoni"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Soli"/>
+            <display value="Soli"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Tonga"/>
+            <display value="Tonga"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-loinc-education-level-attained"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.74</p>
+            <p>This value set contains 9 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA35-1"> </a>  
+                  <a href="https://loinc.org/LA35-1/">LA35-1</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>No schooling</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA30193-9"> </a>  
+                  <a href="https://loinc.org/LA30193-9/">LA30193-9</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>More than high school</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA32469-1"> </a>  
+                  <a href="https://loinc.org/LA32469-1/">LA32469-1</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>University undergraduate degree</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA32466-7"> </a>  
+                  <a href="https://loinc.org/LA32466-7/">LA32466-7</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Primary school education</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA36-9"> </a>  
+                  <a href="https://loinc.org/LA36-9/">LA36-9</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>8th grade/less</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA37-7"> </a>  
+                  <a href="https://loinc.org/LA37-7/">LA37-7</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>9-11 grades</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA12461-2"> </a>  
+                  <a href="https://loinc.org/LA12461-2/">LA12461-2</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA30185-5"> </a>  
+                  <a href="https://loinc.org/LA30185-5/">LA30185-5</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Doctoral degree (e.g., PhD, EdD)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA12459-6"> </a>  
+                  <a href="https://loinc.org/LA12459-6/">LA12459-6</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Associate degree (e.g., AA, AS)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-loinc-education-level-attained"/>
+        <version value="1.0.0"/>
+        <name value="VSLOINCEducationLevelAttained"/>
+        <title value="Patient's highest education level attained (LOINC)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:5fd17faf-5b04-4bbe-89ab-9a0cc1b5cd5f"/>
+          <timestamp value="2024-02-18T07:08:51+00:00"/>
+          <total value="9"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://loinc.org|2.74"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://loinc.org|2.74"/>
+          </parameter>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA35-1"/>
+            <display value="No schooling"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA30193-9"/>
+            <display value="More than high school"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA32469-1"/>
+            <display value="University undergraduate degree"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA32466-7"/>
+            <display value="Primary school education"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA36-9"/>
+            <display value="8th grade/less"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA37-7"/>
+            <display value="9-11 grades"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA12461-2"/>
+            <display value="Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA30185-5"/>
+            <display value="Doctoral degree (e.g., PhD, EdD)"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA12459-6"/>
+            <display value="Associate degree (e.g., AA, AS)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-proprietary-education-level-attained.html">codesystem Patient's highest education level attained (Proprietary) v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 9 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-CertificateGraduate"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-CertificateGraduate">CertificateGraduate</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Certificate Graduate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-DegreeGraduate"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-DegreeGraduate">DegreeGraduate</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Degree Graduate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-DiplomaGraduate"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-DiplomaGraduate">DiplomaGraduate</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Diploma Graduate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-JuniorSecondary"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-JuniorSecondary">JuniorSecondary</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Junior Secondary</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-MastersGraduate"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-MastersGraduate">MastersGraduate</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Masters Graduate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-NoFormalEducation"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-NoFormalEducation">NoFormalEducation</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>No Formal Education</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-PhDGraduate"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-PhDGraduate">PhDGraduate</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>PhD Graduate</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-Primary"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-Primary">Primary</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Primary</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-education-level-attained-SeniorSecondary"> </a>  
+                  <a href="CodeSystem-cs-proprietary-education-level-attained.html#cs-proprietary-education-level-attained-SeniorSecondary">SeniorSecondary</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</td>
+                <td>Senior Secondary</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained"/>
+        <version value="1.0.0"/>
+        <name value="VSProprietaryEducationLevelAttained"/>
+        <title value="Patient's highest education level attained (Proprietary)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:4308cfb4-a5d9-4629-a3ee-8b49de440084"/>
+          <timestamp value="2024-02-18T07:08:51+00:00"/>
+          <total value="9"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="CertificateGraduate"/>
+            <display value="Certificate Graduate"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="DegreeGraduate"/>
+            <display value="Degree Graduate"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="DiplomaGraduate"/>
+            <display value="Diploma Graduate"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="JuniorSecondary"/>
+            <display value="Junior Secondary"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="MastersGraduate"/>
+            <display value="Masters Graduate"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="NoFormalEducation"/>
+            <display value="No Formal Education"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="PhDGraduate"/>
+            <display value="PhD Graduate"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="Primary"/>
+            <display value="Primary"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="SeniorSecondary"/>
+            <display value="Senior Secondary"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-hpv-vaccination-site"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-proprietary-hpv-vaccination-site.html">codesystem Vaccination site types in HPV (Proprietary) v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 3 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-hpv-vaccination-site-Community"> </a>  
+                  <a href="CodeSystem-cs-proprietary-hpv-vaccination-site.html#cs-proprietary-hpv-vaccination-site-Community">Community</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site</td>
+                <td>Community</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-hpv-vaccination-site-Facility"> </a>  
+                  <a href="CodeSystem-cs-proprietary-hpv-vaccination-site.html#cs-proprietary-hpv-vaccination-site-Facility">Facility</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site</td>
+                <td>Facility</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-hpv-vaccination-site-School"> </a>  
+                  <a href="CodeSystem-cs-proprietary-hpv-vaccination-site.html#cs-proprietary-hpv-vaccination-site-School">School</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site</td>
+                <td>School</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-hpv-vaccination-site"/>
+        <version value="1.0.0"/>
+        <name value="VSProprietaryHPVVaccinationSite"/>
+        <title value="Vaccination site types in HPV (Proprietary)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:1431be11-b142-446d-b60f-102d0adf029c"/>
+          <timestamp value="2024-02-18T07:08:51+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site"/>
+            <code value="Community"/>
+            <display value="Community"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site"/>
+            <code value="Facility"/>
+            <display value="Facility"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site"/>
+            <code value="School"/>
+            <display value="School"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-smartcare-vaccination-site"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-proprietary-smartcare-vaccination-site.html">codesystem Vaccination site types in Smartcare (Proprietary) v1.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-smartcare-vaccination-site-Static"> </a>  
+                  <a href="CodeSystem-cs-proprietary-smartcare-vaccination-site.html#cs-proprietary-smartcare-vaccination-site-Static">Static</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site</td>
+                <td>Static</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-zambia-immunizations-CodeSystem-cs-proprietary-smartcare-vaccination-site-Outreach"> </a>  
+                  <a href="CodeSystem-cs-proprietary-smartcare-vaccination-site.html#cs-proprietary-smartcare-vaccination-site-Outreach">Outreach</a>
+                </td>
+                <td>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site</td>
+                <td>Outreach</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-smartcare-vaccination-site"/>
+        <version value="1.0.0"/>
+        <name value="VSProprietarySmartcareVaccinationSite"/>
+        <title value="Vaccination site types in Smartcare (Proprietary)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2024-02-18T07:08:08+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:194da040-8d58-4c30-8df9-229f10612928"/>
+          <timestamp value="2024-02-18T07:08:51+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site"/>
+            <code value="Static"/>
+            <display value="Static"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site"/>
+            <code value="Outreach"/>
+            <display value="Outreach"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="SpouseRelatedPersonExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/spouse-relation-to-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="SpouseRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;SpouseRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-spouse-relation-to-patient.html">Spouse Relation to Patient</a></p></div><p><b>patient</b>: <a href="Patient-ImmunizationPatientExample.html">Patient/ImmunizationPatientExample</a> &quot; SMITH&quot;</p><p><b>relationship</b>: Husband <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#127849001)</span></p><p><b>name</b>: Mike Jones (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27821234567">+27821234567</a></p></div>
+  </text>
+  <patient>
+    <reference value="Patient/ImmunizationPatientExample"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="127849001"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="Jones"/>
+    <given value="Mike"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+27821234567"/>
+  </telecom>
+</RelatedPerson>

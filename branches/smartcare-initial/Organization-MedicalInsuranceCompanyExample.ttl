@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/Organization/MedicalInsuranceCompanyExample> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedicalInsuranceCompanyExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/medical-insurance-company"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/StructureDefinition/medical-insurance-company>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"MedicalInsuranceCompanyExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;MedicalInsuranceCompanyExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medical-insurance-company.html\">Medical Insurance Company</a></p></div><p><b>identifier</b>: Medical insurance company identifier/medical-insurance-company-1</p><p><b>type</b>: Insurance Company <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-organization-type.html\">Organization type</a>#ins)</span></p><p><b>name</b>: Medical Insurance Company 1</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "Medical insurance company identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "medical-insurance-company-1" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ins" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Medical Insurance Company 1"] . # 
+
+# -------------------------------------------------------------------------------------
+

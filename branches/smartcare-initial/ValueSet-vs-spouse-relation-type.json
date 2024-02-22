@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-spouse-relation-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  127848009 (Spouse)</li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-spouse-relation-type",
+  "version" : "1.0.0",
+  "name" : "VSSpouseRelationCodes",
+  "title" : "Spouse Relation Types",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-02-05T07:35:54+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Codes for classifying the type of spouse.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "127848009"
+      }]
+    }]
+  }
+}

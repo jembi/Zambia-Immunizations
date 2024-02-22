@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-proprietary-education-level-attained",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-proprietary-education-level-attained.html\"><code>http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained</code></a></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained",
+  "version" : "1.0.0",
+  "name" : "VSProprietaryEducationLevelAttained",
+  "title" : "Patient's highest education level attained (Proprietary)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-02-21T06:53:43+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "A list of proprietary education levels.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"
+    }]
+  }
+}

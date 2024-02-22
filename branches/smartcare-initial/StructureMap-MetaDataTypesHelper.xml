@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="MetaDataTypesHelper"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<span style="color: #cc00cc">/// <b>url</b> = </span><span style="color: blue">'http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper'</span>
+<span style="color: #cc00cc">/// <b>name</b> = </span><span style="color: blue">'MetaDataTypesHelper'</span>
+<span style="color: #cc00cc">/// <b>title</b> = </span><span style="color: blue">'Structure Maps Helper'</span>
+<span style="color: #cc00cc">/// <b>status</b> = </span><span style="color: blue">'active'</span>
+
+<b>group </b>mapCodingtoCodeableConcept<span style="color: navy">(</span><b>source</b> <span style="color: maroon">coding</span><span style="color: navy"> : </span>Coding, <b>target</b> <span style="color: maroon">codeableConcept</span><span style="color: navy"> : </span>CodeableConcept<span style="color: navy">)</span><span style="color: navy"> {
+</span>  coding<span style="color: navy"><b> -&gt; </b></span>codeableConcept.coding = <span style="color: maroon">coding</span> <i>&quot;set coding&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://openhie.org/fhir/zambia-immunizations/StructureMap/MetaDataTypesHelper"/>
+  <version value="1.0.0"/>
+  <name value="MetaDataTypesHelper"/>
+  <title value="Structure Maps Helper"/>
+  <status value="active"/>
+  <date value="2024-02-04T10:42:21+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Structure maps helper."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <name value="mapCodingtoCodeableConcept"/>
+    <input>
+      <name value="coding"/>
+      <type value="Coding"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="codeableConcept"/>
+      <type value="CodeableConcept"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="set coding"/>
+      <source>
+        <context value="coding"/>
+      </source>
+      <target>
+        <context value="codeableConcept"/>
+        <element value="coding"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="coding"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

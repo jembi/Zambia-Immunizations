@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Medication",
+  "id" : "HPVVaccineExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-vaccine-details"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Medication</b><a name=\"HPVVaccineExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Medication &quot;HPVVaccineExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hpv-vaccine-details.html\">HPV Vaccine Details</a></p></div><p><b>code</b>: J07BM01 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mms#J07BM01)</span></p><h3>Batches</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>LotNumber</b></td></tr><tr><td style=\"display: none\">*</td><td>123</td></tr></table></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://id.who.int/icd11/mms",
+      "code" : "J07BM01"
+    }]
+  },
+  "batch" : {
+    "lotNumber" : "123"
+  }
+}

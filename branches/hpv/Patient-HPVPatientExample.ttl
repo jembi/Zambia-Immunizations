@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/Patient/HPVPatientExample> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HPVPatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-patient"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Dolo Bia Zinga </b> (no stated gender), DoB: 2000-01-01 ( <code>http://openhie.org/fhir/zambia-immunizations/identifier/cn</code>/CN0000000)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Id:</td><td colspan=\"3\">Patient passport number/PN0000000</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li><a href=\"mailto:mail@mail.com\">mail@mail.com</a></li><li><a href=\"tel:+27821234567\">+27821234567</a></li><li>100 Zimi Road Ndola City Ndola Copperbelt Province Zambia </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Facility one&quot;</li><li>Please refer to: <a href=\"RelatedPerson-HPVRelatedPersonExample.html\">RelatedPerson/HPVRelatedPersonExample</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This is an extension to capture that patient's administrative sex.\"><a href=\"StructureDefinition-administrative-sex.html\">Administrative Sex:</a></td><td colspan=\"3\"><ul><li><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0001 F}\">Female</span></li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/administrative-sex"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0001"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "F" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://openhie.org/fhir/zambia-immunizations/identifier/cn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "CN0000000" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ] ;
+         fhir:display [ fhir:v "Passport number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Patient passport number" ]
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/zambia-immunizations/identifier/pn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PN0000000" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Zinga" ] ;
+     fhir:given ( [ fhir:v "Dolo" ] [ fhir:v "Bia" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "mail@mail.com" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27821234567" ]
+  ] ) ; # 
+  fhir:birthDate [ fhir:v "2000-01-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "100" ] [ fhir:v "Zimi Road" ] [ fhir:v "Ndola City" ] ) ;
+     fhir:city [ fhir:v "Ndola" ] ;
+     fhir:district [ fhir:v "Ndola District" ] ;
+     fhir:state [ fhir:v "Copperbelt Province" ] ;
+     fhir:country [ fhir:v "Zambia" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://openhie.org/fhir/zambia-immunizations/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:link <http://openhie.org/fhir/zambia-immunizations/RelatedPerson/HPVRelatedPersonExample> ;
+       fhir:reference [ fhir:v "RelatedPerson/HPVRelatedPersonExample" ]
+     ] ;
+     fhir:type [ fhir:v "refer" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

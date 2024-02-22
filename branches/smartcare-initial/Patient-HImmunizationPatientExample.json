@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Patient",
+  "id" : "HImmunizationPatientExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1990-12-12 ( <code>http://openhie.org/fhir/zambia-immunizations/identifier/nupin</code>/12-999-22-2338)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://openhie.org/fhir/zambia-immunizations/identifier/nrc</code>/12-999-22-2338</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"A list of education levels.\"><a href=\"StructureDefinition-education-level-attained.html\">Patient's highest education level attained:</a></td><td colspan=\"3\"><ul><li><span title=\"Codes: {http://loinc.org LA42-7}\">Graduate degree</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This is an extension to capture whether the patient's date of birth was estimated.\"><a href=\"StructureDefinition-is-estimated-date-of-birth.html\">Patient's Date of Birth Is Estimated?:</a></td><td colspan=\"3\"><ul><li>false</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This is an extension to capture whether the patient was born in Zambia.\"><a href=\"StructureDefinition-born-in-zambia.html\">Patient born in Zambia?:</a></td><td colspan=\"3\"><ul><li>true</li></ul></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/born-in-zambia",
+    "valueBoolean" : true
+  },
+  {
+    "url" : "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/is-estimated-date-of-birth",
+    "valueBoolean" : false
+  },
+  {
+    "url" : "http://openhie.org/fhir/zambia-immunizations/StructureDefinition/education-level-attained",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA42-7"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://openhie.org/fhir/zambia-immunizations/identifier/nupin",
+    "value" : "12-999-22-2338"
+  },
+  {
+    "system" : "http://openhie.org/fhir/zambia-immunizations/identifier/nrc",
+    "value" : "12-999-22-2338"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Smith",
+    "given" : ["Jane",
+    "Maria"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1990-12-12",
+  "_birthDate" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+      "valueDateTime" : "1983-05-22T16:40:17+02:00"
+    }]
+  }
+}

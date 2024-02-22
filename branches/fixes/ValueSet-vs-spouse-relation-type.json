@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-spouse-relation-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/127849001\">127849001</a></td><td>Husband</td></tr><tr><td><a href=\"http://snomed.info/id/127850001\">127850001</a></td><td>Wife</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-spouse-relation-type",
+  "version" : "1.0.0",
+  "name" : "VSSpouseRelationCodes",
+  "title" : "Spouse Relation Types",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-02-06T20:23:38+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Codes for classifying the type of spouse.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "127849001",
+        "display" : "Husband"
+      },
+      {
+        "code" : "127850001",
+        "display" : "Wife"
+      }]
+    }]
+  }
+}

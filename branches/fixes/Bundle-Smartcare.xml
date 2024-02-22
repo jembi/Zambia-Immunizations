@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Smartcare"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Patient/ImmunizationPatientExample"/>
+    <resource>
+      <Patient>
+        <id value="ImmunizationPatientExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/immunization-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="ImmunizationPatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;ImmunizationPatientExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-immunization-patient.html">Patient Profile for Immunizations</a></p></div><p><b>Patient born in Zambia?</b>: true</p><p><b>Administrative Sex</b>: Female <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html">administrativeSex</a>#F)</span></p><p><b>Patient Religion</b>: Christian (non-Catholic, non-specific) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-ReligiousAffiliation.html">Religious Affiliation</a>#1013)</span></p><p><b>identifier</b>: <code>http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin</code>/1001-XXGB0-12345-5, <code>http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc</code>/999999/99/9</p><p><b>name</b>: Jane Maria Smith (OFFICIAL), Smitty (NICKNAME)</p><p><b>birthDate</b>: 1990-12-12</p><p><b>maritalStatus</b>: Married <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>#M)</span></p><p><b>managingOrganization</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><h3>Links</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Other</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td><a href="#RelatedPerson_SpouseRelatedPersonExample">See above (RelatedPerson/SpouseRelatedPersonExample)</a></td><td>seealso</td></tr></table></div>
+        </text>
+        <extension url="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/born-in-zambia">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/administrative-sex">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0001"/>
+              <code value="F"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1013"/>
+            </coding>
+            <text value="Christian (non-Catholic, non-specific)"/>
+          </valueCodeableConcept>
+        </extension>
+        <identifier>
+          <system value="http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin"/>
+          <value value="1001-XXGB0-12345-5"/>
+        </identifier>
+        <identifier>
+          <system value="http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"/>
+          <value value="999999/99/9"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Jane"/>
+          <given value="Maria"/>
+        </name>
+        <name>
+          <use value="nickname"/>
+          <given value="Smitty"/>
+        </name>
+        <birthDate value="1990-12-12">
+          <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+            <valueDateTime value="1983-05-22T16:40:17+02:00"/>
+          </extension>
+          <extension url="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/is-estimated-date-of-birth">
+            <valueBoolean value="false"/>
+          </extension>
+        </birthDate>
+        <maritalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <code value="M"/>
+          </coding>
+        </maritalStatus>
+        <managingOrganization>
+          <reference value="Organization/OrganizationExample"/>
+        </managingOrganization>
+        <link>
+          <other>
+            <reference value="RelatedPerson/SpouseRelatedPersonExample"/>
+          </other>
+          <type value="seealso"/>
+        </link>
+      </Patient>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Patient/ImmunizationPatientExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/SpouseRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="SpouseRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/spouse-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="SpouseRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;SpouseRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-spouse-relation-to-patient.html">Spouse Relation to Patient</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: Husband <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#127849001)</span></p><p><b>name</b>: Mike Jones (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27821234567">+27821234567</a></p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="127849001"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <family value="Jones"/>
+          <given value="Mike"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+27821234567"/>
+        </telecom>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/SpouseRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Observation/PatientEducationalLevelObservationExample"/>
+    <resource>
+      <Observation>
+        <id value="PatientEducationalLevelObservationExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-educational-level"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="PatientEducationalLevelObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;PatientEducationalLevelObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-patient-educational-level.html">Highest education level attained</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Highest Education Level <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LL5338-0)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: University undergraduate degree <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-cs-proprietary-education-level-attained.html">Patient's highest education level attained (Proprietary)</a>#DegreeGraduate)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LL5338-0"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"/>
+            <code value="DegreeGraduate"/>
+          </coding>
+          <text value="University undergraduate degree"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/PatientEducationalLevelObservationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Encounter/TargetFacilityEncounterExample"/>
+    <resource>
+      <Encounter>
+        <id value="TargetFacilityEncounterExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/target-facility-encounter"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="TargetFacilityEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter &quot;TargetFacilityEncounterExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-target-facility-encounter.html">Target Facility Encounter</a></p></div><p><b>status</b>: completed</p><p><b>class</b>: ambulatory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html">ActCode</a>#AMB)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>actualPeriod</b>: 2022-12-01 --&gt; 2023-01-20</p></div>
+        </text>
+        <status value="completed"/>
+        <class>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+          </coding>
+        </class>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <actualPeriod>
+          <start value="2022-12-01"/>
+          <end value="2023-01-20"/>
+        </actualPeriod>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Encounter/TargetFacilityEncounterExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/ChiefAtBirthRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="ChiefAtBirthRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/chief-at-birth-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="ChiefAtBirthRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;ChiefAtBirthRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-chief-at-birth-relation-to-patient.html">Chief at Birth</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: Person in the community environment (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#303119007)</span></p><p><b>name</b>: Jones (OFFICIAL)</p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="303119007"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <family value="Jones"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/ChiefAtBirthRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Observation/DatePatientFirstMarriedObservationExample"/>
+    <resource>
+      <Observation>
+        <id value="DatePatientFirstMarriedObservationExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/date-patient-first-married"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="DatePatientFirstMarriedObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;DatePatientFirstMarriedObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-date-patient-first-married.html">Patient's Date of First Marriage</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Finding of marital or partnership status (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#365581002)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: 1983-05-22 16:40:17+0200</p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="365581002"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <valueDateTime value="1983-05-22T16:40:17+02:00"/>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/DatePatientFirstMarriedObservationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/PatientFatherRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="PatientFatherRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/father-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="PatientFatherRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;PatientFatherRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-father-relation-to-patient.html">Father Relation to Patient</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: father <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#FTH)</span></p><p><b>name</b>: Mike (OFFICIAL)</p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FTH"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <given value="Mike"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/PatientFatherRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Observation/GuardianOccupationObservationExample"/>
+    <resource>
+      <Observation>
+        <id value="GuardianOccupationObservationExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/guardian-occupation"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="GuardianOccupationObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;GuardianOccupationObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-guardian-occupation.html">Guardian Occupation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Hx of Occupation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#11341-5)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2017-03-01 --&gt; (ongoing)</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: Accounts Manager [Advertising Sales Agents] <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#41-3011.00.000158)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11341-5"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <effectivePeriod>
+          <start value="2017-03-01"/>
+        </effectivePeriod>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.114222.4.5.327"/>
+            <code value="41-3011.00.000158"/>
+          </coding>
+          <text value="Accounts Manager [Advertising Sales Agents]"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/GuardianOccupationObservationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/GuardianRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="GuardianRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/guardian-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="GuardianRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;GuardianRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-guardian-relation-to-patient.html">Guardian Relation to Patient</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: Guardian (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#394619001)</span></p><p><b>name</b>: Mike Smith (OFFICIAL)</p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394619001"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Mike"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/GuardianRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/PatientMotherRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="PatientMotherRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/mother-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="PatientMotherRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;PatientMotherRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mother-relation-to-patient.html">Mother Relation to Patient</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: mother <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#MTH)</span></p><p><b>name</b>: Olivia Smith (OFFICIAL)</p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Olivia"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/PatientMotherRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/RelationToPatientExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="RelationToPatientExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="RelationToPatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;RelationToPatientExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-relation-to-patient.html">Generic Relation to Patient</a></p></div><p><b>identifier</b>: <code>http://openhie.org/fhir/zambia-immunizations/identifier/relative-nrc</code>/999999/99/9</p><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>name</b>: Olivia Smith (OFFICIAL)</p></div>
+        </text>
+        <identifier>
+          <system value="http://openhie.org/fhir/zambia-immunizations/identifier/relative-nrc"/>
+          <value value="999999/99/9"/>
+        </identifier>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Olivia"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/RelationToPatientExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/RelatedPerson/RelativeRelatedPersonExample"/>
+    <resource>
+      <RelatedPerson>
+        <id value="RelativeRelatedPersonExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/relative-relation-to-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="RelativeRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;RelativeRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-relative-relation-to-patient.html">Relative Relation to Patient</a></p></div><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>relationship</b>: Relative <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#125677006)</span></p><p><b>name</b>: Olivia Smith (OFFICIAL)</p></div>
+        </text>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="125677006"/>
+          </coding>
+        </relationship>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Olivia"/>
+        </name>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RelatedPerson/RelativeRelatedPersonExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Observation/SpouseOccupationObservationExample"/>
+    <resource>
+      <Observation>
+        <id value="SpouseOccupationObservationExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/spouse-occupation"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="SpouseOccupationObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;SpouseOccupationObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-spouse-occupation.html">Spouse Occupation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Occupation of spouse (observable entity) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#447057006)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2017-03-01 --&gt; (ongoing)</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: .NET Programmer [Computer Programmers] <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#15-1131.00.000002)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="447057006"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <effectivePeriod>
+          <start value="2017-03-01"/>
+        </effectivePeriod>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.114222.4.5.327"/>
+            <code value="15-1131.00.000002"/>
+          </coding>
+          <text value=".NET Programmer [Computer Programmers]"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/SpouseOccupationObservationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Observation/PatientHomeLanguageObservationExample"/>
+    <resource>
+      <Observation>
+        <id value="PatientHomeLanguageObservationExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/patient-home-language"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="PatientHomeLanguageObservationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;PatientHomeLanguageObservationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-patient-home-language.html">Patient's Home Language</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: First language <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#224076006)</span></p><p><b>subject</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Facility one&quot;</p><p><b>value</b>: Chokwe <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-cs-home-language.html">Patient's Home Language</a>#Chokwe)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="224076006"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"/>
+            <code value="Chokwe"/>
+          </coding>
+          <text value="Chokwe"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/PatientHomeLanguageObservationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Organization/MedicalInsuranceCompanyExample"/>
+    <resource>
+      <Organization>
+        <id value="MedicalInsuranceCompanyExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/medical-insurance-company"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="MedicalInsuranceCompanyExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;MedicalInsuranceCompanyExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medical-insurance-company.html">Medical Insurance Company</a></p></div><p><b>identifier</b>: Medical insurance company identifier/medical-insurance-company-1</p><p><b>type</b>: Insurance Company <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-organization-type.html">Organization type</a>#ins)</span></p><p><b>name</b>: Medical Insurance Company 1</p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="XX"/>
+            </coding>
+            <text value="Medical insurance company identifier"/>
+          </type>
+          <system value="http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"/>
+          <value value="medical-insurance-company-1"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="ins"/>
+          </coding>
+        </type>
+        <name value="Medical Insurance Company 1"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Organization/MedicalInsuranceCompanyExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/MedicalInsurance/MedicalInsuranceExample"/>
+    <resource>
+      <Coverage>
+        <id value="MedicalInsuranceExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/medical-insurance"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Coverage</b><a name="MedicalInsuranceExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Coverage &quot;MedicalInsuranceExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medical-insurance.html">Insurance or Medical Plan</a></p></div><p><b>status</b>: active</p><p><b>kind</b>: insurance</p><p><b>policyHolder</b>: <a href="#Organization_MedicalInsuranceCompanyExample">See above (Organization/MedicalInsuranceCompanyExample)</a></p><p><b>subscriberId</b>: <code>http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id</code>/504342245</p><p><b>beneficiary</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p></div>
+        </text>
+        <status value="active"/>
+        <kind value="insurance"/>
+        <policyHolder>
+          <reference value="Organization/MedicalInsuranceCompanyExample"/>
+        </policyHolder>
+        <subscriberId>
+          <system value="http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"/>
+          <value value="504342245"/>
+        </subscriberId>
+        <beneficiary>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </beneficiary>
+      </Coverage>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="MedicalInsurance/MedicalInsuranceExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/Immunization/VaccinesExample"/>
+    <resource>
+      <Immunization>
+        <id value="VaccinesExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/Vaccines"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b><a name="VaccinesExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization &quot;VaccinesExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Vaccines.html">Vaccine Administration</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: Vitamin A <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#82622003)</span></p><p><b>patient</b>: <a href="#Patient_ImmunizationPatientExample">See above (Patient/ImmunizationPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_TargetFacilityEncounterExample">See above (Encounter/TargetFacilityEncounterExample)</a></p><p><b>occurrence</b>: 2022-11-30</p><h3>ProtocolApplieds</h3><table class="grid"><tr><td style="display: none">-</td><td><b>DoseNumber</b></td></tr><tr><td style="display: none">*</td><td>0</td></tr></table></div>
+        </text>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="82622003"/>
+          </coding>
+        </vaccineCode>
+        <patient>
+          <reference value="Patient/ImmunizationPatientExample"/>
+        </patient>
+        <encounter>
+          <reference value="Encounter/TargetFacilityEncounterExample"/>
+        </encounter>
+        <occurrenceDateTime value="2022-11-30"/>
+        <protocolApplied>
+          <doseNumber value="0"/>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Immunization/VaccinesExample"/>
+    </request>
+  </entry>
+</Bundle>

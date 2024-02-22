@@ -1,0 +1,54 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-human-name-codes",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://hl7.org/fhir/R5/codesystem-name-use.html\"><code>http://hl7.org/fhir/name-use</code></a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/R5/codesystem-name-use.html\"><code>http://hl7.org/fhir/name-use</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R5/codesystem-name-use.html#name-use-nickname\">nickname</a></td><td style=\"color: #cccccc\">Nickname</td><td>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-human-name-codes",
+  "version" : "1.0.0",
+  "name" : "HumanNameCodes",
+  "title" : "HumanName Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-02-06T13:57:27+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "A List of HumanName Codes Exlcuding Nickname",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/name-use"
+    }],
+    "exclude" : [{
+      "system" : "http://hl7.org/fhir/name-use",
+      "concept" : [{
+        "code" : "nickname"
+      }]
+    }]
+  }
+}

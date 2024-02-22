@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="GuardianRelatedPersonExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/zambia-immunizations/StructureDefinition/guardian-relation-to-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RelatedPerson</b><a name="GuardianRelatedPersonExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RelatedPerson &quot;GuardianRelatedPersonExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-guardian-relation-to-patient.html">Guardian Relation to Patient</a></p></div><p><b>patient</b>: <a href="Patient-ImmunizationPatientExample.html">Patient/ImmunizationPatientExample</a> &quot;&quot;</p><p><b>relationship</b>: Guardian (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#394619001)</span></p><p><b>name</b>: Mike Smith (OFFICIAL)</p></div>
+  </text>
+  <patient>
+    <reference value="Patient/ImmunizationPatientExample"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394619001"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="Smith"/>
+    <given value="Mike"/>
+  </name>
+</RelatedPerson>

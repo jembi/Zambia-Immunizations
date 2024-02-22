@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-human-name-codes"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://hl7.org/fhir/R5/codesystem-name-use.html"><code>http://hl7.org/fhir/name-use</code></a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R5/codesystem-name-use.html"><code>http://hl7.org/fhir/name-use</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R5/codesystem-name-use.html#name-use-nickname">nickname</a></td><td style="color: #cccccc">Nickname</td><td>A name that is used to address the person in an informal manner, but is not part of their formal or usual name.</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-human-name-codes"/>
+  <version value="1.0.0"/>
+  <name value="HumanNameCodes"/>
+  <title value="HumanName Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-02-06T13:57:27+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="A List of HumanName Codes Exlcuding Nickname"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/name-use"/>
+    </include>
+    <exclude>
+      <system value="http://hl7.org/fhir/name-use"/>
+      <concept>
+        <code value="nickname"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

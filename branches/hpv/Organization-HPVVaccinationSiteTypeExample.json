@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Organization",
+  "id" : "HPVVaccinationSiteTypeExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/zambia-immunizations/StructureDefinition/hpv-vaccination-site-type"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"HPVVaccinationSiteTypeExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;HPVVaccinationSiteTypeExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hpv-vaccination-site-type.html\">Vaccination site type in HPV</a></p></div><p><b>type</b>: Community <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-proprietary-hpv-vaccination-site.html\">Vaccination site types in HPV (Proprietary)</a>#Community)</span></p><p><b>name</b>: facility name</p></div>"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-hpv-vaccination-site",
+      "code" : "Community"
+    }]
+  }],
+  "name" : "facility name"
+}

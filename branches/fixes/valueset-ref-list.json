@@ -1,0 +1,90 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-administrative-sex",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "AdministrativeSex",
+      "title" : "Administrative Sex",
+      "description" : "A List of Administrative Sex codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0001"],
+      "uses" : {
+      },
+      "StructureDefinition-administrative-sex.html" : "Administrative Sex"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-home-language",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSHomeLanguage",
+      "title" : "Patient's Home Language",
+      "description" : "A list of languages.",
+      "systems" : [
+        "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-home-language.html" : "Patient's Home Language"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-loinc-education-level-attained",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSLOINCEducationLevelAttained",
+      "title" : "Patient's highest education level attained (LOINC)",
+      "description" : "A list of LOINC education levels.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-proprietary-education-level-attained",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSProprietaryEducationLevelAttained",
+      "title" : "Patient's highest education level attained (Proprietary)",
+      "description" : "A list of proprietary education levels.",
+      "systems" : [
+        "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-educational-level.html" : "Highest education level attained"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-spouse-relation-type",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSSpouseRelationCodes",
+      "title" : "Spouse Relation Types",
+      "description" : "Codes for classifying the type of spouse.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-spouse-relation-to-patient.html" : "Spouse Relation to Patient"
+    },
+    {
+      "url" : "http://openhie.org/fhir/zambia-immunizations/ValueSet/vs-vaccines",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VSVaccines",
+      "title" : "Vaccine Codes",
+      "description" : "A List of Vaccine Codes Use In Zambia",
+      "systems" : ["http://id.who.int/icd11/mms", "http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Vaccines.html" : "Vaccine Administration"
+    },
+    {
+      "url" : "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901",
+      "version" : "1",
+      "status" : "active",
+      "name" : "PHVS_Occupation_CDC_ONET-SOC2010_ODH",
+      "title" : "Occupation CDC ONET-SOC 2010 (ODH)",
+      "description" : "The Occupation CDC O*NET-SOC 2010 (ODH) value set is to be used to capture self-reported occupation within electronic health information systems to support direct patient care, population health and public health activities.  Occupation is the type of work done by the subject.  It is based on the 2010 O*Net-SOC Classification System.  For more information, a mapping to 2010 Census Codes, and tips on using this value set go to the Occupational Data for Health (ODH) Hot Topics section on the PHIN VADS home page.",
+      "systems" : ["urn:oid:2.16.840.1.114222.4.5.327"],
+      "uses" : {
+      },
+      "StructureDefinition-spouse-occupation.html" : "Spouse Occupation",
+      "StructureDefinition-guardian-occupation.html" : "Guardian Occupation"
+    }
+  ]
+}

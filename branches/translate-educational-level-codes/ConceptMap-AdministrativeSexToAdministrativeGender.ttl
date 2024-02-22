@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AdministrativeSexToAdministrativeGender"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-01-30 by Jembi Health Systems (Jembi Health Systems: <a href=\"https://www.jembi.org\">https://www.jembi.org</a>, <a href=\"mailto:info@jembi.org\">info@jembi.org</a>, Richard Langford: <a href=\"mailto:richard.langford@jembi.org\">richard.langford@jembi.org</a>). </p><div><p>Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender.</p>\n</div><br/><p><b>Group 1</b>Mapping from <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html\">administrativeSex</a> to <a href=\"http://hl7.org/fhir/R5/codesystem-administrative-gender.html\">AdministrativeGender</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>M (Male)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>male</td></tr><tr><td>F (Female)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>female</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href=\"http://hl7.org/fhir/R5/codesystem-administrative-gender.html\">AdministrativeGender</a> to <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0001.html\">administrativeSex</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>M (Male)</td></tr><tr><td>female</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>F (Female)</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "AdministrativeSexToAdministrativeGender"] ; # 
+  fhir:title [ fhir:v "ConceptMap to and From administrative sex to administrative gender"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-01-30"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Mapping to and from FHIR Administrative Sex coding to FHIR Administrative Gender."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v2-0001"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/CodeSystem/v2-0001>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/administrative-gender>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "M" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "male" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "F" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "female" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/administrative-gender>
+     ] ;
+     fhir:target [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v2-0001"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/CodeSystem/v2-0001>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "male" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "M" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "female" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "F" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

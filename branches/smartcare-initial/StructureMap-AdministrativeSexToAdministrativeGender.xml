@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="AdministrativeSexToAdministrativeGender"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<span style="color: #cc00cc">/// <b>url</b> = </span><span style="color: blue">'http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender'</span>
+<span style="color: #cc00cc">/// <b>name</b> = </span><span style="color: blue">'AdministrativeSexToAdministrativeGender'</span>
+<span style="color: #cc00cc">/// <b>title</b> = </span><span style="color: blue">'Administrative Sex To Administrative Gender'</span>
+<span style="color: #cc00cc">/// <b>status</b> = </span><span style="color: blue">'active'</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R5/patient.html" title="Patient">http://hl7.org/fhir/StructureDefinition/Patient</a><span style="color: navy">&quot; </span><b>alias </b>srcPatient <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R5/patient.html" title="Patient">http://hl7.org/fhir/StructureDefinition/Patient</a><span style="color: navy">&quot; </span><b>alias </b>tgtPatient <b>as </b><b>target</b>
+
+<b>group </b>SetPatientGender<span style="color: navy">(</span><b>source</b> <span style="color: maroon">pat</span><span style="color: navy"> : </span>srcPatient, <b>target</b> <span style="color: maroon">patient</span><span style="color: navy"> : </span>tgtPatient<span style="color: navy">)</span><span style="color: navy"> {
+</span>  pat.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>patient.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://openhie.org/fhir/zambia-immunizations/StructureMap/AdministrativeSexToAdministrativeGender"/>
+  <version value="1.0.0"/>
+  <name value="AdministrativeSexToAdministrativeGender"/>
+  <title value="Administrative Sex To Administrative Gender"/>
+  <status value="active"/>
+  <date value="2024-02-05T07:35:54+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Maps the Administrative Sex codes To Administrative Gender codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <mode value="source"/>
+    <alias value="srcPatient"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <mode value="target"/>
+    <alias value="tgtPatient"/>
+  </structure>
+  <group>
+    <name value="SetPatientGender"/>
+    <input>
+      <name value="pat"/>
+      <type value="srcPatient"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="patient"/>
+      <type value="tgtPatient"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetGender"/>
+      <source>
+        <context value="pat"/>
+        <element value="gender"/>
+        <variable value="gender"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <element value="gender"/>
+        <transform value="translate"/>
+        <parameter>
+          <valueId value="gender"/>
+        </parameter>
+        <parameter>
+          <valueString value="http://openhie.org/fhir/zambia-immunizations/ConceptMap/AdministrativeSexToAdministrativeGender"/>
+        </parameter>
+        <parameter>
+          <valueString value="code"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

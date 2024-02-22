@@ -1,0 +1,25 @@
+{
+  "resourceType" : "RelatedPerson",
+  "id" : "HPVGuardianRelatedPersonExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/zambia-immunizations/StructureDefinition/guardian-relation-to-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RelatedPerson</b><a name=\"HPVGuardianRelatedPersonExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RelatedPerson &quot;HPVGuardianRelatedPersonExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-guardian-relation-to-patient.html\">Guardian Relation to Patient Profile</a></p></div><p><b>patient</b>: <a href=\"Patient-HPVImmunizationPatientExample.html\">Patient/HPVImmunizationPatientExample</a> &quot; JONES&quot;</p><p><b>relationship</b>: guardian <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#GUARD)</span></p><p><b>name</b>: Mike Smith (OFFICIAL)</p></div>"
+  },
+  "patient" : {
+    "reference" : "Patient/HPVImmunizationPatientExample"
+  },
+  "relationship" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "GUARD"
+    }]
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Smith",
+    "given" : ["Mike"]
+  }]
+}
