@@ -4,10 +4,10 @@ This is an empty IG
 <br> </br>
 ###
 ### Publication
-This ImplementationGuide is published in the following locations:
+This Implementation Guide is published in the following locations:
 
 Continuous Build: __http://build.fhir.org/ig/jembi/Zambia-Immunizations/branches/main/index.html__  
-Canonical / permanent URL: __https://jembi.github.io/Zambia-Immunizations/index.html__
+Canonical / permanent URL: __http://openhie.org/fhir/zambia-immunizations__
 <br> </br>
 
 ### Issues
