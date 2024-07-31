@@ -6,7 +6,7 @@ This is an empty IG
 ### Publication
 This Implementation Guide is published in the following locations:
 
-Continuous Build: __http://build.fhir.org/ig/jembi/Zambia-Immunizations/branches/main/index.html__  
+Continuous Build: __http://build.fhir.org/ig/jembi/Zambia-Immunizations/branches/master/index.html__  
 Canonical / permanent URL: __http://openhie.org/fhir/zambia-immunizations__
 <br> </br>
 
