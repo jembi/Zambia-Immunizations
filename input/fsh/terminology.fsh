@@ -1,6 +1,5 @@
 Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
-Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
 Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
@@ -10,7 +9,7 @@ Alias: $HumanName = http://hl7.org/fhir/name-use
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
 Title: "Patient's highest education level attained (Proprietary)"
-Description: "A list of proprietary education levels."
+Description: "A list of education levels based on Zambia point of care systems."
 * ^experimental = false
 * ^caseSensitive = true
 * #CertificateGraduate "Certificate Graduate"
@@ -26,7 +25,7 @@ Description: "A list of proprietary education levels."
 CodeSystem: CSProprietarySmartcareVaccinationSite
 Id: cs-proprietary-smartcare-vaccination-site
 Title: "Vaccination site types in Smartcare (Proprietary)"
-Description: "A list of vaccination sites (posts) where the vaccination was administered."
+Description: "A list of the type of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
 * ^caseSensitive = true
 * #Static "Static"
@@ -35,14 +34,14 @@ Description: "A list of vaccination sites (posts) where the vaccination was admi
 ValueSet: VSProprietarySmartcareVaccinationSite
 Id: vs-proprietary-smartcare-vaccination-site
 Title: "Vaccination site types in Smartcare (Proprietary)"
-Description: "A list of vaccination sites (posts) where the vaccination was administered."
+Description: "A list of the type of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
 * include codes from system CSProprietarySmartcareVaccinationSite
 
 ValueSet: VSProprietaryEducationLevelAttained
 Id: vs-proprietary-education-level-attained
 Title: "Patient's highest education level attained (Proprietary)"
-Description: "A list of proprietary education levels."
+Description: "A list of education levels based on Zambia point of care systems."
 * ^experimental = false
 * include codes from system CSProprietaryEducationLevelAttained
 
@@ -60,14 +59,6 @@ Description: "A list of LOINC education levels."
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
 * $LNC#LA12459-6 "Associate degree (e.g., AA, AS)"
-
-/*ValueSet: VSSpouseRelationCodes
-Id: vs-spouse-relation-type
-Title: "Spouse Relation Types"
-Description: "Codes for classifying the type of spouse."
-* ^experimental = false
-* $SCT#127849001 "Husband"
-* $SCT#127850001 "Wife"*/
 
 CodeSystem: CSHomeLanguage
 Id: cs-home-language
@@ -108,7 +99,7 @@ Description: "A list of languages."
 ValueSet: VSVaccines
 Id: vs-vaccines
 Title: "Vaccine Codes"
-Description: "A List of Vaccine Codes Use In Zambia"
+Description: "A List of Vaccine Codes Used In Zambia"
 * ^experimental = false
 * $ICD11#XM8866 "BBIBP-CorV"
 * $ICD11#J07AE "Cholera vaccines"
@@ -154,14 +145,6 @@ Description: "A List of Vaccine Codes Use In Zambia"
 * $ICD11#J07AN01 "tuberculosis, live attenuated"
 * $LNC#LP31687-4 "Vitamin A"
 * $ICD11#XM52P3 "ZyCov-D"
-
-/*ValueSet: HumanNameCodes
-Id: vs-human-name-codes
-Title: "HumanName Codes"
-Description: "A List of HumanName Codes Exlcuding Nickname"
-* ^experimental = false
-* include codes from system $HumanName
-* exclude $HumanName#nickname*/
 
 ValueSet: AdministrativeSex
 Id: vs-administrative-sex
