@@ -7,10 +7,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: openhie.fhir.zambia-immunizations
-canonical: http://openhie.org/fhir/zambia-immunizations
-url: http://openhie.org/fhir/zambia-immunizations/ImplementationGuide/openhie.fhir.zambia-immunizations
-name: ZambiaImmunizationsIG
+id: zambia.hie.fhir
+canonical: http://moh.gov.zm/fhir/immunizations
+url: http://moh.gov.zm/fhir/immunizations/ImplementationGuide/zambia.hie.fhir
+name: ZambiaImmunizations
 title: "Zambia Immunizations FHIR Implementation Guide"
 description: Zambia Immunizations FHIR Implementation Guide.
 status: active

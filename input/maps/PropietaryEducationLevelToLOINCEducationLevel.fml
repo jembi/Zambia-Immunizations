@@ -1,4 +1,4 @@
-/// url = 'http://openhie.org/fhir/zambia-immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel'
+/// url = 'http://moh.gov.zm/fhir/immunizations/StructureMap/PropietaryEducationLevelToLOINCEducationLevel'
 /// name = 'PropietaryEducationLevelToLOINCEducationLevel'
 /// description = 'Maps the Propietary Educational Level codes To LOINC Educational Level codes.'
 /// title = 'Propietary Educational Level To LOINC Educational Level'
@@ -11,7 +11,7 @@ group SetPatientEducationalLevel(source obs : srcObservation, target observation
     obs.value : CodeableConcept as vs -> observation.value = create('CodeableConcept') as vt then {
 
         vs.coding as coding then {
-            coding -> vt = translate(coding, 'http://openhie.org/fhir/zambia-immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducationCode";
+            coding -> vt = translate(coding, 'http://moh.gov.zm/fhir/immunizations/ConceptMap/ProprietaryEducationLevelToLOINCEducationLevel', 'code') "SetPatientEducationCode";
         } "SetPatientEducationCoding";
     } "SetEducationLevel";
 }

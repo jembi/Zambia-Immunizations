@@ -1,15 +1,18 @@
 Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
+Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 Alias: $SEX = http://terminology.hl7.org/CodeSystem/v2-0001
-Alias: $PROPRIETARY_EDU_LEVEL = http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-education-level-attained
+Alias: $PROPRIETARY_EDU_LEVEL = http://moh.gov.zm/fhir/immunizations/CodeSystem/cs-proprietary-education-level-attained
 Alias: $PARENT_RELATIONSHIP_CODES = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $ICD11 = http://id.who.int/icd11/mms
 Alias: $HumanName = http://hl7.org/fhir/name-use
+Alias: $AllergyType = http://hl7.org/fhir/allergy-intolerance-type
+Alias: $AllergyCategory = http://hl7.org/fhir/allergy-intolerance-category
 
 CodeSystem: CSProprietaryEducationLevelAttained
 Id: cs-proprietary-education-level-attained
 Title: "Patient's highest education level attained (Proprietary)"
-Description: "A list of education levels based on Zambia point of care systems."
+Description: "A list of proprietary education levels."
 * ^experimental = false
 * ^caseSensitive = true
 * #CertificateGraduate "Certificate Graduate"
@@ -22,26 +25,10 @@ Description: "A list of education levels based on Zambia point of care systems."
 * #Primary "Primary"
 * #SeniorSecondary "Senior Secondary"
 
-CodeSystem: CSProprietarySmartcareVaccinationSite
-Id: cs-proprietary-smartcare-vaccination-site
-Title: "Vaccination site types in Smartcare (Proprietary)"
-Description: "A list of the type of vaccination sites (posts) where the vaccination was administered."
-* ^experimental = false
-* ^caseSensitive = true
-* #Static "Static"
-* #Outreach "Outreach"
-
-ValueSet: VSProprietarySmartcareVaccinationSite
-Id: vs-proprietary-smartcare-vaccination-site
-Title: "Vaccination site types in Smartcare (Proprietary)"
-Description: "A list of the type of vaccination sites (posts) where the vaccination was administered."
-* ^experimental = false
-* include codes from system CSProprietarySmartcareVaccinationSite
-
 ValueSet: VSProprietaryEducationLevelAttained
 Id: vs-proprietary-education-level-attained
 Title: "Patient's highest education level attained (Proprietary)"
-Description: "A list of education levels based on Zambia point of care systems."
+Description: "A list of proprietary education levels."
 * ^experimental = false
 * include codes from system CSProprietaryEducationLevelAttained
 
@@ -59,6 +46,14 @@ Description: "A list of LOINC education levels."
 * $LNC#LA12461-2 "Master's degree (e.g., MA, MS, MEng, MEd, MSW, MBA)"
 * $LNC#LA30185-5 "Doctoral degree (e.g., PhD, EdD)"
 * $LNC#LA12459-6 "Associate degree (e.g., AA, AS)"
+
+/*ValueSet: VSSpouseRelationCodes
+Id: vs-spouse-relation-type
+Title: "Spouse Relation Types"
+Description: "Codes for classifying the type of spouse."
+* ^experimental = false
+* $SCT#127849001 "Husband"
+* $SCT#127850001 "Wife"*/
 
 CodeSystem: CSHomeLanguage
 Id: cs-home-language
@@ -99,7 +94,7 @@ Description: "A list of languages."
 ValueSet: VSVaccines
 Id: vs-vaccines
 Title: "Vaccine Codes"
-Description: "A List of Vaccine Codes Used In Zambia"
+Description: "A List of Vaccine Codes Use In Zambia"
 * ^experimental = false
 * $ICD11#XM8866 "BBIBP-CorV"
 * $ICD11#J07AE "Cholera vaccines"
@@ -146,6 +141,14 @@ Description: "A List of Vaccine Codes Used In Zambia"
 * $LNC#LP31687-4 "Vitamin A"
 * $ICD11#XM52P3 "ZyCov-D"
 
+/*ValueSet: HumanNameCodes
+Id: vs-human-name-codes
+Title: "HumanName Codes"
+Description: "A List of HumanName Codes Exlcuding Nickname"
+* ^experimental = false
+* include codes from system $HumanName
+* exclude $HumanName#nickname*/
+
 ValueSet: AdministrativeSex
 Id: vs-administrative-sex
 Title: "Administrative Sex"
@@ -154,19 +157,48 @@ Description: "A List of Administrative Sex codes."
 * $SEX#M "Male"
 * $SEX#F "Female"
 
+CodeSystem: CSProprietarySmartcareVaccinationSite
+Id: cs-proprietary-smartcare-vaccination-site
+Title: "Vaccination site types in Smartcare (Proprietary)"
+Description: "A list of vaccination sites (posts) where the vaccination was administered."
+* ^experimental = false
+* ^caseSensitive = true
+* #Static "Static" "Administering site type in Smartcare"
+* #Outreach "Outreach" "Administering site in Smartcare"
+
 CodeSystem: CSProprietaryHPVVaccinationSite
 Id: cs-proprietary-hpv-vaccination-site
 Title: "Vaccination site types in HPV (Proprietary)"
 Description: "A list of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
 * ^caseSensitive = true
-* #Community "Community"
-* #Facility "Facility"
-* #School "School"
+* #Community "Community" "Administering site type in HPV"
+* #Facility "Facility" "Administering site type in HPV"
+* #School "School" "Administering site type in HPV"
 
-ValueSet: VSProprietaryHPVVaccinationSite
-Id: vs-proprietary-hpv-vaccination-site
-Title: "Vaccination site types in HPV (Proprietary)"
+ValueSet: VSProprietaryVaccinationSiteTypes
+Id: vs-proprietary-vaccination-site-type
+Title: "Vaccination site types (Proprietary)"
 Description: "A list of vaccination sites (posts) where the vaccination was administered."
 * ^experimental = false
+* include codes from system CSProprietarySmartcareVaccinationSite
 * include codes from system CSProprietaryHPVVaccinationSite
+
+ValueSet: VSUnderlyingCondition
+Id: vs-underlying-condition
+Title: "Underlying Conditions"
+Description:  "A list of possible underlying conditions."
+* ^experimental = false
+* $LNC#LA28577-7 "Human immunodeficiency virus (HIV)"
+* $LNC#LA25673-7 "Med: Diabetes mellitus"
+* $LNC#LA22199-6 "Cardio/pulm: Chronic obstructive lung disease"
+* $LNC#LA25639-8 "Cardio/pulm: Heart failure"
+* $LNC#LA25642-2 "Cardio/pulm: Hypertensive disorder"
+* $LNC#LA22098-0 "Integumentary: Skin disorder (e.g. fungal rashes, contact dermatitis, moisture associated dermatitis, psoriasis )"
+* $LNC#LA25692-7 "MSK: Musculoskeletal pain"
+* $SCT#27550009 "Vascular disorder"
+* $LNC#54532-7 "Cancer"
+* $LNC#54534-3 "Gastrointestinal"
+* $LNC#LP31403-6 "Neuromuscular"
+* $LNC#LP345046-9 "Immunology"
+* $LNC#LP56737-7 "Endocrine disorders"
