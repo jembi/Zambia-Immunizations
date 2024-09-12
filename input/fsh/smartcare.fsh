@@ -9,7 +9,7 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NUPIN].value 1..1
   * obeys NUPIN-SmartcareID-1
 * identifier[NUPIN].system 1..1
-* identifier[NUPIN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin"
+* identifier[NUPIN].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-nupin"
 
 * birthDate.extension contains patient-birthTime named birthTime 0..1 MS
 * birthDate.extension[birthTime] ^definition =
@@ -189,7 +189,7 @@ Description: "Insurance or medical plan details"
 * subscriberId 1..1
 * subscriberId.value 1..1
 * subscriberId.system 1..1
-* subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
+* subscriberId.system = "http://moh.gov.zm/fhir/immunizations/identifier/beneficiary-insurance-id"
 * policyHolder 1..1
 * policyHolder only Reference(MedicalInsuranceCompany)
 
@@ -209,7 +209,7 @@ Description: "A company that provides insurance to its subscribers that may incl
 * identifier contains
     XX 0..1
 * identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"
+* identifier[XX].system = "http://moh.gov.zm/fhir/immunizations/identifier/medical-insurance-company"
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Medical insurance company identifier"

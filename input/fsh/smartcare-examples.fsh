@@ -4,9 +4,9 @@ Usage: #example
 Title: "Patient - Smartcare Immunization Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
 * identifier[NUPIN][+].value = "1001-XXGB0-12345-5"
-* identifier[NUPIN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nupin"
+* identifier[NUPIN][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-nupin"
 * identifier[NRC][+].value = "999999/99/9"
-* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
+* identifier[NRC][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-nrc"
 
 * name[+].use = #official
 * name[=].family = "Smith"
@@ -162,7 +162,7 @@ Usage: #example
 Title: "Generic Relation to Patient"
 Description: "This profile acts as a base profile from which more specific RelatedPerson profiles can be derived."
 * identifier[NRC][+].value = "999999/99/9"
-* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/relative-nrc"
+* identifier[NRC][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/relative-nrc"
 * patient = Reference(SmartcareImmunizationPatientExample)
 * name[+].use = #official
 * name[=].given[+] = "Olivia"
@@ -208,7 +208,7 @@ Description: "Records the home language for the patient"
 * subject = Reference (SmartcareImmunizationPatientExample)
 * performer = Reference(OrganizationExample)
 * valueCodeableConcept.coding.code = #Chokwe
-* valueCodeableConcept.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-home-language"
+* valueCodeableConcept.coding.system = "http://moh.gov.zm/fhir/immunizations/CodeSystem/cs-home-language"
 * valueCodeableConcept.text = "Chokwe"
 
 Instance: MedicalInsuranceCompanyExample
@@ -217,7 +217,7 @@ Usage: #example
 Title: "Organization - Medical Insurance Company"
 Description: "A company that provides insurance to its subscribers that may include healthcare related policies."
 * identifier[XX].value = "medical-insurance-company-1"
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/medical-insurance-company"
+* identifier[XX].system = "http://moh.gov.zm/fhir/immunizations/identifier/medical-insurance-company"
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Medical insurance company identifier"
@@ -233,7 +233,7 @@ Description: "Insurance or medical plan details"
 * kind = #insurance
 * beneficiary = Reference(SmartcareImmunizationPatientExample)
 * subscriberId.value = "504342245"
-* subscriberId.system = "http://openhie.org/fhir/zambia-immunizations/identifier/beneficiary-insurance-id"
+* subscriberId.system = "http://moh.gov.zm/fhir/immunizations/identifier/beneficiary-insurance-id"
 * policyHolder = Reference(MedicalInsuranceCompanyExample)
 
 Instance: VaccinesExample
@@ -254,6 +254,6 @@ InstanceOf: ServiceProvider
 Usage: #example
 Title: "Vaccination site type"
 Description: "Indicates whether the vaccination was administered at the facility or at an outreach post."
-* type.coding.system = "http://openhie.org/fhir/zambia-immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site"
+* type.coding.system = "http://moh.gov.zm/fhir/immunizations/CodeSystem/cs-proprietary-smartcare-vaccination-site"
 * type.coding.code = #Outreach
 * name = "facility name"

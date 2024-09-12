@@ -10,13 +10,13 @@ Description: "Patient profile for Covax use case"
 * identifier[CN] ^definition =
     "reason(s) why this should be supported."
 * identifier[CN].value 1..1
-* identifier[CN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-card-number"
+* identifier[CN].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-card-number"
 
 * identifier[PN] ^definition =
     "reason(s) why this should be supported."
 * identifier[PN].value 1..1
   * obeys Passport-1
-* identifier[PN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-passport"
+* identifier[PN].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-passport"
 
 * name.given 1..*
 * name.family 1..1

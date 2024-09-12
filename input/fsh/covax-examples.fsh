@@ -4,13 +4,13 @@ Usage: #example
 Title: "Patient - COVAX Immunization Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
 * identifier[CN][+].value = "CN0000000"
-* identifier[CN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-card-number"
+* identifier[CN][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-card-number"
 
 * identifier[PN][+].value = "PN15685241"
-* identifier[PN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-passport"
+* identifier[PN][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-passport"
 
 * identifier[NRC][+].value = "999999/99/9"
-* identifier[NRC][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
+* identifier[NRC][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-nrc"
 
 * name[+].use = #official
 * name[=].family = "Jones"
@@ -42,7 +42,7 @@ Usage: #example
 Title: "Related Person - Guardian Relation to Patient Profile (COVAX)"
 Description: "A guardian to the patient."
 * identifier[PN][+].value = "PN15685241"
-* identifier[PN][=].system = "http://openhie.org/fhir/zambia-immunizations/identifier/passport-number"
+* identifier[PN][=].system = "http://moh.gov.zm/fhir/immunizations/identifier/passport-number"
 * patient = Reference(CovaxImmunizationPatientExample)
 * name[+].use = #official
 * name[=].given[+] = "Mike"

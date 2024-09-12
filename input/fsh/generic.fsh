@@ -17,7 +17,7 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NRC].value 1..1
   * obeys NRC-SmartcareID-1
 * identifier[NRC].system 1..1
-* identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/patient-nrc"
+* identifier[NRC].system = "http://moh.gov.zm/fhir/immunizations/identifier/patient-nrc"
 
 * name 1..*
   * obeys PatientName-Smartcare-1 and PatientName-Smartcare-2
@@ -122,7 +122,7 @@ Description: "An organization that provides healthcare services."
 * identifier contains
     XX 0..1
 * identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/zambia-immunizations/identifier/healthcare-service-provider"
+* identifier[XX].system = "http://moh.gov.zm/fhir/immunizations/identifier/healthcare-service-provider"
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Healthcare service provider identifier"
@@ -153,7 +153,7 @@ Description: "This profile acts as a base profile from which more specific Relat
 * identifier[NRC].value 1..1
   * obeys NRC-SmartcareID-1
 * identifier[NRC].system 1..1
-* identifier[NRC].system = "http://openhie.org/fhir/zambia-immunizations/identifier/relative-nrc"
+* identifier[NRC].system = "http://moh.gov.zm/fhir/immunizations/identifier/relative-nrc"
 
 * patient 1..1
 * name 0..* MS
@@ -201,7 +201,7 @@ Description: "A guardian to the patient."
     "reason(s) why this should be supported."
 * identifier[PN].value 1..1
   * obeys Passport-1
-* identifier[PN].system = "http://openhie.org/fhir/zambia-immunizations/identifier/passport-number"
+* identifier[PN].system = "http://moh.gov.zm/fhir/immunizations/identifier/passport-number"
 
 * relationship 1..1
 * relationship = $PARENT_RELATIONSHIP_CODES#GUARD
